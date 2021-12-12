@@ -21,6 +21,7 @@ class CreateComponentPantaisTable extends Migration
             $table->text('desc_right')->nullable();
             $table->string('filter');
             $table->enum('status_tingkatan', ['header', 'sub']);
+            $table->integer('status_aktif')->default('1');
             $table->timestamps();
         });
     }

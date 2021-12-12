@@ -24,7 +24,7 @@
             <h4 class="card-title">Add List Content</h4>
           </div>
           <div class="card-body">
-            <form action="{{Route('save_addcontent')}}" method="POST" id="step-form-horizontal" class="step-form-horizontal" >
+            <form action="{{Route('save_addcontentIntro1')}}" method="POST" id="step-form-horizontal" class="step-form-horizontal" >
               @csrf
               <div>
                 <section>

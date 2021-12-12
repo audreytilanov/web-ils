@@ -21,11 +21,14 @@ class Intro1Controller extends Controller
 
     public function save_addcontent(Request $request)
     {
-        $temp= TableContent::create([
-            'nama_component'=>$request->nama_component,
-            'status_aktif'=>$request->status_aktif
+        // 'title', 'desc_left', 'desc_right'
+        $temp= ComponentIntro1::create([
+            'title'=>$request->title,
+            'desc_left'=>$request->desc_left,
+            'desc_right'=>$request->desc_right
         ]);
-        return redirect()->route('home_admin');
+        // dd($temp);
+        return redirect()->route('list_intro1')->with('success', 'Berhasil Menambahkan Konten Intro 1');;
     }
 
     public function edit_content($id)
@@ -36,12 +39,23 @@ class Intro1Controller extends Controller
 
     public function save_editcontent($id, Request $request)
     {
-        $temp= TableContent::where('id','=',$id)->get();
+        $temp= ComponentIntro1::where('id','=',$id)->get()->first();
+        // dd($request);
         $temp->update([
-            'nama_component'=>$request->nama_component,
+            'title'=>$request->title,
+            'desc_left'=>$request->desc_left,
+            'desc_right'=>$request->desc_right,
             'status_aktif'=>$request->status_aktif
         ]);
-        return redirect()->route('home_admin');
+        return redirect()->route('list_intro1')->with('success', 'Berhasil Mengubah Konten Intro 1');;
+    }
+
+    public function delete_content($id){
+        $data = ComponentIntro1::find($id);
+        // dd($data);
+        $data->delete();
+        return redirect()->route('list_intro1')->with('success', 'Berhasil Menghapus Konten Intro 1');;
+
     }
 
     

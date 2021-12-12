@@ -10,5 +10,5 @@ class ComponentIntro2 extends Model
     use HasFactory;
     protected $table='component_intro2s';
     protected $primarykey='id';
-    protected $fillable=['title', 'desc', 'image', 'status'];
+    protected $fillable=['title', 'desc', 'image', 'status', 'status_aktif'];
 }

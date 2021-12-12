@@ -22,6 +22,7 @@ class CreateComponentPembangunansTable extends Migration
             $table->string('sumber');
             $table->string('image1');
             $table->string('image2');
+            $table->integer('status_aktif')->default('1');
             $table->timestamps();
         });
     }

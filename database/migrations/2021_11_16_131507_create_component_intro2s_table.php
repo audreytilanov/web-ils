@@ -19,6 +19,7 @@ class CreateComponentIntro2sTable extends Migration
             $table->string('desc');
             $table->string('image');
             $table->enum('status', ['primary', 'sub']);
+            $table->integer('status_aktif')->default('1');
             $table->timestamps();
         });
     }

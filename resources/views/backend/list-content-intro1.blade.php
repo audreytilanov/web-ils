@@ -46,11 +46,18 @@
                 <td>{{$content->title}}</td>
                 <td>{{Str::words($content->desc_left, $words = 20, $end = '...')}}</td>
                 <td>{{Str::words($content->desc_right, $words = 20, $end = '...')}}</td>
+                @if ($content->status_aktif == 0)
+                  <td class="text-warning">Nonaktif</td>
+                @elseif ($content->status_aktif == 1)
+                  <td class="text-success">Aktif</td>
+                @else 
+                  <td class="text-primary">Undefined (!0/1)</td>
+                @endif
                 <td>
                   <div class="d-flex">
                     <a href="{{Route('edit_contentIntro1', $content->id)}}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
                     <div class="sweetalert">
-                      <form action="{{Route('delete_content', $content->id)}}" method="POST">
+                      <form action="{{Route('delete_content_intro1', $content->id)}}" method="POST">
                         @csrf
                         <button type="submit"   onclick="return confirm('Yakin Ingin Mengapus Data?')" class="btn btn-danger shadow btn-xs sharp sweet-success-cancel"><i class="fa fa-trash"></i></button>                 
                       </form>

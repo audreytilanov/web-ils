@@ -19,6 +19,7 @@ class CreateComponentFoodTable extends Migration
             $table->text('desc')->nullable();
             $table->string('image')->nullable();
             $table->enum('status', ['header', 'sub']);
+            $table->integer('status_aktif')->default('1');
             $table->timestamps();
         });
     }

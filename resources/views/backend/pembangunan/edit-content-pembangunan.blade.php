@@ -13,11 +13,11 @@
     <div class="page-titles">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{Route('home_admin')}}">Dashboard</a></li>
-        <li class="breadcrumb-item"><a href="javascript:void(0)">Content Intro I</a></li>
+        <li class="breadcrumb-item"><a href="javascript:void(0)">Content Pembangunan</a></li>
       </ol>
     </div>
     <!-- row -->
-    @foreach($contents as $content)
+    {{-- @foreach($contents as $content) --}}
     <div class="row">
       <div class="col-xl-12 col-xxl-12">
         <div class="card">
@@ -25,13 +25,13 @@
             <h4 class="card-title">Edit List Content Pembangunan</h4>
           </div>
           <div class="card-body">
-            <form action="{{Route('save_addcontentIntro1')}}" method="POST" id="step-form-horizontal" class="step-form-horizontal" >
+            <form action="{{Route('save_editcontentPembangunan',['id'=> $content->id])}}" method="POST" enctype="multipart/form-data" id="step-form-horizontal" class="step-form-horizontal" >
               @csrf
               <div>
                 <section>
                   <div class="row">
                     <div class="col-lg-12 mb-2">
-                      <div class="form-group">
+                      <div class="form-group"> 
                         <label class="text-label">title*</label>
                         <input type="text" class="form-control" id="title" name="title" aria-describedby="inputGroupPrepend2" value="{{$content->title}}" required>
                       </div>
@@ -48,35 +48,43 @@
                         <textarea class="form-control" rows="5" id="desc_right" name="desc_right" >{{$content->desc_right}}</textarea>
                       </div>
                     </div>
+                    <div class="col-lg-12 mb-2">
+                      <div class="form-group">
+                          <label class="text-label">Sumber*</label>
+                          <input type="text" class="form-control" id="sumber" name="sumber" placeholder="Jika Karya Sendiri, Tulislah Nama Anda" aria-describedby="inputGroupPrepend2" value="{{ $content->sumber }}" required>
+                      </div>
+                  </div>
                     <div class="col-lg-12 mb-3">
                       <div class="form-group">
-                        <label class="text-label">Photo*</label>
-                        <img src="{{asset('../storage/'.$content->image1)}}" class="img-thumbnail row mb-3" id="update_image_nasabah" style="height:300px; width:400px;">
+                        <label class="text-label">Image 1* (Preview File Lama - Bukan yang Baru</label>
+                        <img src="{{URL::asset('asset/pembangunan/'.$content->image1)}}" class="img-thumbnail row mb-3" id="image1" style="height:300px; width:400px;">
                         <div class="input-group mb-3">
                           <div class="custom-file">
-                            <input type="text" class="form-control" id="check" name="check"  value="0" required style="display:none">
-                            <input name="file" type="file" class="custom-file-input" id="foto_nasabah"  accept="image/*">
-                            <label class="custom-file-label" id="custom-text">{{$content->image1}}</label>
-                          </div>
-                          <div class="input-group-append">
-                              <span class="input-group-text">Upload</span>
+                            <input type="file" class="form-control-file" id="image1" name="image1" accept="image/*">
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="col-lg-12 mb-3">
                       <div class="form-group">
-                        <label class="text-label">Photo*</label>
-                        <img src="{{asset('../storage/'.$content->image2)}}" class="img-thumbnail row mb-3" id="update_image_nasabah2" style="height:300px; width:400px;">
+                        <label class="text-label">Image 2* (Preview File Lama - Bukan yang Baru)</label>
+                        <img src="{{URL::asset('asset/pembangunan/'.$content->image2)}}" class="img-thumbnail row mb-3" id="image2" style="height:300px; width:400px;">
                         <div class="input-group mb-3">
                           <div class="custom-file">
-                            <input type="text" class="form-control" id="check2" name="check"  value="0" required style="display:none">
-                            <input name="file" type="file" class="custom-file-input" id="foto_nasabah2"  accept="image/*">
-                            <label class="custom-file-label" id="custom-text2">{{$content->image2}}</label>
+                            <input type="file" class="form-control-file" id="image2" name="image2" accept="image/*">
                           </div>
-                          <div class="input-group-append">
-                              <span class="input-group-text">Upload</span>
-                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 mb-2">
+                      <div class="form-group">
+                        <label class="text-label">Status Aktif*</label>
+                        <div class="dropdown bootstrap-select form-control dropup">
+                          <select name="status_aktif" id="status_aktif" class="form-control" tabindex="-98">
+                              <option selected value="" disabled>Pilih Status Aktif</option>
+                              <option value="1" @if ($content->status_aktif == 1) {{'selected="selected"'}} @endif >Aktif</option>
+                              <option value="0" @if ($content->status_aktif == 0) {{'selected="selected"'}} @endif >Nonaktif</option>
+                          </select>
                         </div>
                       </div>
                     </div>
@@ -92,7 +100,7 @@
         </div>
       </div>
     </div>
-    @endforeach
+    {{-- @endforeach --}}
   </div>
 </div>
 

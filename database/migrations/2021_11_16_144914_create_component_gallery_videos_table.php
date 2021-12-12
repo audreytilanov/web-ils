@@ -20,6 +20,7 @@ class CreateComponentGalleryVideosTable extends Migration
             $table->string('image')->nullable();
             $table->string('link_yt')->nullable();
             $table->enum('status', ['header', 'sub']);
+            $table->integer('status_aktif')->default('1');
             $table->timestamps();
         });
     }

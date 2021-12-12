@@ -18,6 +18,7 @@ class CreateComponentIntro1sTable extends Migration
             $table->string('title');
             $table->text('desc_left');
             $table->text('desc_right');
+            $table->integer('status_aktif')->default('1');
             $table->timestamps();
         });
     }
