@@ -137,16 +137,16 @@ Route::group(['middleware'=>'auth'], function(){
     // // list content Pantai
     Route::get('/contentAdmin/list-content-pantai', [PantaiController::class, 'index'])->name('pantai.index');
 
-    // //create / add Pantai 
-    // Route::get('/contentAdmin/add-content-pantai', [PantaiController::class, 'add'])->name('pantai.add');
-    // Route::post('/contentAdmin/add-content-pantai/save', [PantaiController::class, 'addSave'])->name('pantai.add.save');
+    //create / add Pantai 
+    Route::get('/contentAdmin/add-content-pantai', [PantaiController::class, 'add'])->name('pantai.add');
+    Route::post('/contentAdmin/add-content-pantai/save', [PantaiController::class, 'addSave'])->name('pantai.add.save');
 
-    // // edit list Pantai
-    // Route::get('contentAdmin/edit-content-pantai/{id}', [PantaiController::class, 'edit'])->name('pantai.edit');
-    // Route::post('/contentAdmin/edit-content-pantai-save-{id}', [PantaiController::class, 'editSave'])->name('pantai.edit.save');
+    // edit list Pantai
+    Route::get('contentAdmin/edit-content-pantai/{id}', [PantaiController::class, 'edit'])->name('pantai.edit');
+    Route::post('/contentAdmin/edit-content-pantai-save-{id}', [PantaiController::class, 'editSave'])->name('pantai.edit.save');
 
-    // //delete Pantai
-    // Route::post('/contentAdmin/delete-content-pantai/{id}', [PantaiController::class, 'delete'])->name('pantai.delete');
+    //delete Pantai
+    Route::post('/contentAdmin/delete-content-pantai/{id}', [PantaiController::class, 'delete'])->name('pantai.delete');
 
 
 
