@@ -29,6 +29,8 @@ use App\Http\Controllers\WisataHiburanController;
 */
 
 Route::get('/', [UserController::class, 'index'])->name('home');
+Route::get('/detail-blog', [UserController::class, 'view_detailBlog'])->name('detail-blog');
+Route::get('/list-blog', [UserController::class, 'view_listBlog'])->name('list-blog');
 
 Route::group(['middleware' => 'auth'], function () {
     // list content
