@@ -11,4 +11,6 @@ class UserController extends Controller
         $contents = TableContent::all();
         return view('pages.home')->with(compact('contents'));
     }
+
+    // public function list
 }
