@@ -9,6 +9,7 @@ class ChildComponentPantai extends Model
 {
     use HasFactory;
     protected $table='child_component_pantais';
+    protected $fillable=['image', 'parent_id'];
 
     public function component_pantais()
     {

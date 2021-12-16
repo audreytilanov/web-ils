@@ -150,7 +150,10 @@ Route::group(['middleware'=>'auth'], function(){
 
 
 
-
+    // //--------------------- Child Pantai ----------------------
+    Route::get('/contentAdmin/list-content-pantai/child/{id}', [PantaiController::class, 'childIndex'])->name('pantai.child.index');
+    Route::post('/contentAdmin/add-content-pantai/child/{id}', [PantaiController::class, 'childAdd'])->name('pantai.child.add');
+    Route::post('/contentAdmin/delete-content-pantai/child/{id}/{parent_id}', [PantaiController::class, 'childDelete'])->name('pantai.child.delete');
 
 
     //--------------------- Desa ----------------------

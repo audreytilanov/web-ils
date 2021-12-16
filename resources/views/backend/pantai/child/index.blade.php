@@ -33,42 +33,18 @@
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>Title</th>
-                  <th>Sub Title</th>
-                  <th>Deskripsi Kiri</th>
-                  <th>Deskripsi Kanan</th>
-                  {{-- <th>List Image</th> --}}
-                  <th>Filter</th>
-                  <th>Status Tingkatan</th>
-                  <th>Status Aktif</th>
+                  <th>Gambar</th>
                 </tr>
               </thead>
               <tbody>
               @foreach($contents as $content)
               <tr>
                 <td>{{$loop->iteration}}</td>
-                <td>{{$content->title}}</td>
-                <td>{{$content->sub_title}}</td>
-                <td>{{Str::words($content->desc_left, $words = 20, $end = '...')}}</td>
-                <td>{{Str::words($content->desc_right, $words = 20, $end = '...')}}</td>
-                {{-- <td>
-                    <img src="{{URL::asset('asset/pantai/'.$content->image)}}" alt="{{ $content->image }}" width="100px" height="auto">
-                </td> --}}
-                <td>{{$content->filter}}</td>
-                <td>{{$content->status_tingkatan}}</td>
-                @if ($content->status_aktif == 0)
-                  <td class="text-warning">Nonaktif</td>
-                @elseif ($content->status_aktif == 1)
-                  <td class="text-success">Aktif</td>
-                @else 
-                  <td class="text-primary">Undefined (!0/1)</td>
-                @endif
+                <td><img src="{{URL::asset('asset/pantai/'.$content->image)}}" alt="" width="350px"></td>
                 <td>
                   <div class="d-flex">
-                    <a href="{{Route('pantai.child.index', $content->id)}}" class="btn btn-info shadow btn-xs sharp mr-1"><i class="fa fa-image"></i></a>
-                    <a href="{{Route('pantai.edit', $content->id)}}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
                     <div class="sweetalert">
-                      <form action="{{Route('pantai.delete', $content->id)}}" method="POST">
+                      <form action="{{Route('pantai.child.delete',['id' => $content->id, 'parent_id'=>$content->parent_id])}}" method="POST">
                         @csrf
                         <button type="submit" onclick="return confirm('Yakin Ingin Mengapus Data?')" class="btn btn-danger shadow btn-xs sharp sweet-success-cancel"><i class="fa fa-trash"></i></button>                 
                       </form>
@@ -85,6 +61,41 @@
     </div>
   </div>
 </div>
+<div class="content-body">
+    <div class="container-fluid">
+      <!-- row -->
+      <div class="row">
+        <div class="col-xl-12 col-xxl-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">Add Pantai Child Image</h4>
+            </div>
+            <div class="card-body">
+              <form action="{{Route('pantai.child.add',['id' =>$content->parent_id])}}" method="POST" enctype="multipart/form-data" id="step-form-horizontal" class="step-form-horizontal">
+                @csrf
+                <div>
+                  <section>
+                    <div class="row">
+                      <div class="col-lg-12 mb-2">
+                          <div class="form-group">
+                              <label for="image1">Image</label>
+                              <input type="file" class="form-control-file" id="image" name="image" required>
+                          </div>
+                      </div>
+                      <div class="col-lg-12 mb-3">
+                        <button type="submit" class="btn btn-primary" style="float:right;">Submit</button>
+                        <a href="{{Route('pantai.index')}}" class="btn btn-info" style="float:left;">Back</a>   
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 <!--**********************************
     Content body end
 ***********************************-->
