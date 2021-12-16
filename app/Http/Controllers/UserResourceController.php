@@ -54,7 +54,7 @@ class UserResourceController extends Controller
             }
         }
         if ($request->intro2) {
-            foreach ($request->intro1 as $key => $value) {
+            foreach ($request->intro2 as $key => $value) {
                 UserHasPermission::create([
                     'user_id' => $user->id,
                     'component_name' => 'intro2',
@@ -63,7 +63,7 @@ class UserResourceController extends Controller
             }
         }
         if ($request->pembangunan) {
-            foreach ($request->intro1 as $key => $value) {
+            foreach ($request->pembangunan as $key => $value) {
                 UserHasPermission::create([
                     'user_id' => $user->id,
                     'component_name' => 'pembangunan',
@@ -72,7 +72,7 @@ class UserResourceController extends Controller
             }
         }
         if ($request->sejarah) {
-            foreach ($request->intro1 as $key => $value) {
+            foreach ($request->sejarah as $key => $value) {
                 UserHasPermission::create([
                     'user_id' => $user->id,
                     'component_name' => 'sejarah',
@@ -81,7 +81,7 @@ class UserResourceController extends Controller
             }
         }
         if ($request->wisata_hiburan) {
-            foreach ($request->intro1 as $key => $value) {
+            foreach ($request->wisata_hiburan as $key => $value) {
                 UserHasPermission::create([
                     'user_id' => $user->id,
                     'component_name' => 'wisata_hiburan',
@@ -90,7 +90,7 @@ class UserResourceController extends Controller
             }
         }
         if ($request->pantai) {
-            foreach ($request->intro1 as $key => $value) {
+            foreach ($request->pantai as $key => $value) {
                 UserHasPermission::create([
                     'user_id' => $user->id,
                     'component_name' => 'pantai',
@@ -99,7 +99,7 @@ class UserResourceController extends Controller
             }
         }
         if ($request->desa) {
-            foreach ($request->intro1 as $key => $value) {
+            foreach ($request->desa as $key => $value) {
                 UserHasPermission::create([
                     'user_id' => $user->id,
                     'component_name' => 'desa',
@@ -108,7 +108,7 @@ class UserResourceController extends Controller
             }
         }
         if ($request->makanan_khas) {
-            foreach ($request->intro1 as $key => $value) {
+            foreach ($request->makanan_khas as $key => $value) {
                 UserHasPermission::create([
                     'user_id' => $user->id,
                     'component_name' => 'makanan_khas',
@@ -117,7 +117,7 @@ class UserResourceController extends Controller
             }
         }
         if ($request->gallery_video) {
-            foreach ($request->intro1 as $key => $value) {
+            foreach ($request->gallery_video as $key => $value) {
                 UserHasPermission::create([
                     'user_id' => $user->id,
                     'component_name' => 'gallery_video',
@@ -176,7 +176,7 @@ class UserResourceController extends Controller
             }
         }
         if ($request->intro2) {
-            foreach ($request->intro1 as $key => $value) {
+            foreach ($request->intro2 as $key => $value) {
                 UserHasPermission::create([
                     'user_id' => $user->id,
                     'component_name' => 'intro2',
@@ -185,7 +185,7 @@ class UserResourceController extends Controller
             }
         }
         if ($request->pembangunan) {
-            foreach ($request->intro1 as $key => $value) {
+            foreach ($request->pembangunan as $key => $value) {
                 UserHasPermission::create([
                     'user_id' => $user->id,
                     'component_name' => 'pembangunan',
@@ -194,7 +194,7 @@ class UserResourceController extends Controller
             }
         }
         if ($request->sejarah) {
-            foreach ($request->intro1 as $key => $value) {
+            foreach ($request->sejarah as $key => $value) {
                 UserHasPermission::create([
                     'user_id' => $user->id,
                     'component_name' => 'sejarah',
@@ -203,7 +203,7 @@ class UserResourceController extends Controller
             }
         }
         if ($request->wisata_hiburan) {
-            foreach ($request->intro1 as $key => $value) {
+            foreach ($request->wisata_hiburan as $key => $value) {
                 UserHasPermission::create([
                     'user_id' => $user->id,
                     'component_name' => 'wisata_hiburan',
@@ -212,7 +212,7 @@ class UserResourceController extends Controller
             }
         }
         if ($request->pantai) {
-            foreach ($request->intro1 as $key => $value) {
+            foreach ($request->pantai as $key => $value) {
                 UserHasPermission::create([
                     'user_id' => $user->id,
                     'component_name' => 'pantai',
@@ -221,7 +221,7 @@ class UserResourceController extends Controller
             }
         }
         if ($request->desa) {
-            foreach ($request->intro1 as $key => $value) {
+            foreach ($request->desa as $key => $value) {
                 UserHasPermission::create([
                     'user_id' => $user->id,
                     'component_name' => 'desa',
@@ -230,7 +230,7 @@ class UserResourceController extends Controller
             }
         }
         if ($request->makanan_khas) {
-            foreach ($request->intro1 as $key => $value) {
+            foreach ($request->makanan_khas as $key => $value) {
                 UserHasPermission::create([
                     'user_id' => $user->id,
                     'component_name' => 'makanan_khas',
@@ -239,7 +239,7 @@ class UserResourceController extends Controller
             }
         }
         if ($request->gallery_video) {
-            foreach ($request->intro1 as $key => $value) {
+            foreach ($request->gallery_video as $key => $value) {
                 UserHasPermission::create([
                     'user_id' => $user->id,
                     'component_name' => 'gallery_video',
