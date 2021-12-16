@@ -12,5 +12,11 @@ class UserController extends Controller
         return view('pages.home')->with(compact('contents'));
     }
 
-    // public function list
+    public function view_detailBlog(){
+        return view('pages.detail-blog');
+    }
+
+    public function view_listBlog(){
+        return view('pages.list-blog');
+    }
 }
