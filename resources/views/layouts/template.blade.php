@@ -9,10 +9,10 @@
   <!-- Favicon icon -->
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
   <!-- Datatable -->
-  <link href="../vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+  <link href="{{ URL::asset('vendor/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet">
   <!-- Custom Stylesheet -->
-  <link href="../vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
-  <link href="../css/style.css" rel="stylesheet">
+  <link href="{{ URL::asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
+  <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -85,7 +85,7 @@
               </li>
               <li class="nav-item dropdown header-profile">
                 <a class="nav-link" href="javascript:;" role="button" data-toggle="dropdown">
-                  <img src="../asset/umum/admin.jfif" width="20" alt=""/>
+                  <img src="{{ URL::asset('/asset/umum/admin.jfif') }}" width="20" alt=""/>
                   <div class="header-info">
                     <span>Hello,<strong> {{ Auth::user()->name }}</strong></span>
                   </div>
@@ -135,15 +135,15 @@
             </a>
             <ul aria-expanded="false">
               <li><a href="{{Route('list_intro1')}}">Intro1</a></li>
-              <li><a href="#">Intro2</a></li>
+              <li><a href="{{ route('list_intro2') }}">Intro2</a></li>
               <li><a href="{{Route('list_pembangunan')}}">Pembangunan</a></li>
-              <li><a href="#">Sejarah</a></li>
-              <li><a href="#">Tempat Wisata Hiburan</a></li>
-              <li><a href="#">Pantai</a></li>
-              <li><a href="#">Desa</a></li>
-              <li><a href="#">Pura</a></li>
-              <li><a href="#">Makanan Khas</a></li>
-              <li><a href="#">Gallery Video</a></li>
+              <li><a href="{{Route('sejarah.index')}}">Sejarah</a></li>
+              <li><a href="{{Route('wisata.index')}}">Tempat Wisata Hiburan</a></li>
+              <li><a href="{{Route('pantai.index')}}">Pantai</a></li>
+              <li><a href="{{Route('desa.index')}}">Desa</a></li>
+              <li><a href="{{Route('pura.index')}}">Pura</a></li>
+              <li><a href="{{Route('food.index')}}">Makanan Khas</a></li>
+              <li><a href="{{Route('video.index')}}">Gallery Video</a></li>
             </ul>
             </li>
             <li>
@@ -181,15 +181,15 @@
         Scripts
   ***********************************-->
   <!-- Required vendors -->
-  <script src="../vendor/global/global.min.js"></script>
-	<script src="../vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-  <script src="../js-backend/custom.min.js"></script>
-	<script src="../js-backend/deznav-init.js"></script>
+  <script src="{{ URL::asset('/vendor/global/global.min.js') }}"></script>
+	<script src="{{ URL::asset('/vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
+  <script src="{{ URL::asset('/js-backend/custom.min.js') }}"></script>
+	<script src="{{ URL::asset('/js-backend/deznav-init.js') }}"></script>
 	
   <!-- Datatable -->
-  <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
-  <script src="../js-backend/plugins-init/datatables.init.js"></script>
+  <script src="{{ URL::asset('/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
+  <script src="{{ URL::asset('/js-backend/plugins-init/datatables.init.js') }}"></script>
   <!-- Form validate init -->
-  <script src="../js-backend/plugins-init/jquery.validate-init.js"></script>
+  <script src="{{ URL::asset('/js-backend/plugins-init/jquery.validate-init.js') }}"></script>
 </body>
 </html>

@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class ComponentDesa extends Model
 {
     use HasFactory;
+
+    protected $fillable=['title', 'sub_title', 'desc_left', 'desc_right', 'image', 'status_aktif'];
 }

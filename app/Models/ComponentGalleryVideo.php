@@ -10,5 +10,5 @@ class ComponentGalleryVideo extends Model
     use HasFactory;
     protected $table='component_gallery_videos';
     protected $primarykey='id';
-    protected $fillable=['title', 'sub_title','image', 'link_yt', 'status'];
+    protected $fillable=['title', 'image', 'link_yt', 'status', 'status_aktif'];
 }

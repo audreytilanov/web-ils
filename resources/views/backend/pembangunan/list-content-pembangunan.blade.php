@@ -12,7 +12,7 @@
     <div class="page-titles">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="javascript:void(0)">Table</a></li>
-        <li class="breadcrumb-item active"><a href="#">Content Intro I</a></li>
+        <li class="breadcrumb-item active"><a href="#">Content Pembangunan</a></li>
       </ol>
     </div>
     @if(session()->has('success'))
@@ -24,8 +24,8 @@
     <div class="col-lg-12">
       <div class="card">
         <div class="card-header">
-            <h4 class="card-title">Table Content Intro I</h4>
-            <a href="{{Route('add_contentIntro1')}}"><div class="btn btn-primary">Add Content Intro I</div></a>
+            <h4 class="card-title">Table Content Pembangunan</h4>
+            <a href="{{Route('add_contentPembangunan')}}"><div class="btn btn-primary">Add Content Pembangunan</div></a>
         </div>
         <div class="card-body">
           <div class="table-responsive">
@@ -36,6 +36,8 @@
                   <th>Title</th>
                   <th>Deskripsi Paragraf Kiri</th>
                   <th>Deskripsi Paragraf Kanan</th>
+                  <th>Sumber</th>
+                  <th>Tanggal</th>
                   <th style="text-center">Img I</th>
                   <th style="text-center">Img II</th>
                   <th>Action</th>
@@ -48,13 +50,15 @@
                 <td>{{$content->title}}</td>
                 <td>{{Str::words($content->desc_left, $words = 20, $end = '...')}}</td>
                 <td>{{Str::words($content->desc_right, $words = 20, $end = '...')}}</td>
-                <td class="sorting_1"><img src="{{asset('../storage/'.$content->image1)}}" alt="" style="display:block; margin-left:auto;margin-right:auto; width:60px; height:60px;"></td>
-                <td class="sorting_1"><img src="{{asset('../storage/'.$content->image2)}}" alt="" style="display:block; margin-left:auto;margin-right:auto; width:60px; height:60px;"></td>
+                <td>{{ $content->sumber }}</td>
+                <td>{{ $content->tanggal }}</td>
+                <td class="sorting_1"><img src="{{URL::asset('asset/pembangunan/'.$content->image1)}}" alt="" style="display:block; margin-left:auto;margin-right:auto;" width="100px" height="auto"></td>
+                <td class="sorting_1"><img src="{{URL::asset('asset/pembangunan/'.$content->image2)}}" alt="" style="display:block; margin-left:auto;margin-right:auto;" width="100px" height="auto"></td>
                 <td>
                   <div class="d-flex">
                     <a href="{{Route('edit_contentPembangunan', $content->id)}}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
                     <div class="sweetalert">
-                      <form action="{{Route('delete_content', $content->id)}}" method="POST">
+                      <form action="{{Route('delete_content_pembangunan', $content->id)}}" method="POST">
                         @csrf
                         <button type="submit"   onclick="return confirm('Yakin Ingin Mengapus Data?')" class="btn btn-danger shadow btn-xs sharp sweet-success-cancel"><i class="fa fa-trash"></i></button>                 
                       </form>

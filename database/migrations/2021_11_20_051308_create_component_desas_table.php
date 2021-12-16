@@ -20,6 +20,7 @@ class CreateComponentDesasTable extends Migration
             $table->text('desc_left');
             $table->text('desc_right');
             $table->string('image');
+            $table->integer('status_aktif')->default('1');
             $table->timestamps();
         });
     }
