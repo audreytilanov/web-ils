@@ -32,7 +32,9 @@
     </div>
   </div>
   @endif
+  
   @endforeach
+
   <div class="container drag-this-up">
     <div id="portfolio-widget-tab-content">
       @foreach($pantais as $pantai)
@@ -45,10 +47,11 @@
       @endforeach
       
       @endforeach
+    <a href="{{ route('pantai.view') }}" class="btn btn-warning text-white hover-more" style="float: right;border-radius:50px;">Load More</a>
+
     </div>
-    <a class="mx-auto button-style-1 load-more" style="color:transparent" href="#">LOAD MORE</a>
   </div>
-  <div class="container" style="margin-top: 50px;margin-bottom: 60px;">
+  <div class="container" style="margin-top: 80px;margin-bottom: 60px;">
     <div class="break-line"><hr></div>
   </div>
 </section>

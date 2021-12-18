@@ -29,7 +29,19 @@ use App\Http\Controllers\WisataHiburanController;
 
 Route::get('/', [UserController::class, 'index'])->name('home');
 Route::get('/detail-blog', [UserController::class, 'view_detailBlog'])->name('detail-blog');
-Route::get('/list-blog', [UserController::class, 'view_listBlog'])->name('list-blog');
+
+// LIST CONTENT
+Route::get('/list-blog/sejarah', [UserController::class, 'sejarah'])->name('sejarah.view');
+Route::get('/list-blog/wisata-hiburan', [UserController::class, 'wisata'])->name('wisata.view');
+Route::get('/list-blog/pantai', [UserController::class, 'pantai'])->name('pantai.view');
+Route::get('/list-blog/desa', [UserController::class, 'desa'])->name('desa.view');
+Route::get('/list-blog/pura', [UserController::class, 'pura'])->name('pura.view');
+Route::get('/list-blog/makanan', [UserController::class, 'makanan'])->name('makanan.view');
+
+// DETAIL CONTENT
+Route::get('/detail-blog/sejarah/{slug}-{id}', [UserController::class, 'sejarahDetail'])->name('sejarah.detail');
+Route::get('/detail-blog/wisata/{slug}-{id}', [UserController::class, 'wisataDetail'])->name('wisata.detail');
+
 
 Route::group(['middleware'=>'auth'], function(){
     // list content

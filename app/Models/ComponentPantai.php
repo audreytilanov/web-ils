@@ -14,6 +14,6 @@ class ComponentPantai extends Model
 
     public function child_component_pantais()
     {
-        return $this->hasMany(ChildComponentPantai::class);
+        return $this->hasMany(ChildComponentPantai::class, 'parent_id', 'id');
     }
 }

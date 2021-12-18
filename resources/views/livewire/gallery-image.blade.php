@@ -6,7 +6,7 @@
       @foreach($galleryImages as $galleryImage)
       <div class="insta-item col-sm-2 col-6 col-md-2">
         <a href="#">
-          <img src="../asset/gallery-image/{{$galleryImage->image}}" alt="insta-title" />
+          <img src="{{  URL::asset('asset/gallery-image/'.$galleryImage->image)}}" alt="insta-title" />
         </a>
       </div>
       @endforeach
