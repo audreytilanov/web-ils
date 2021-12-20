@@ -30,7 +30,7 @@ $page="Detail Blog"
             <!-- post -->
             <div class="post post-list clearfix">
               <div class="thumb rounded">
-                <a href="{{ route('sejarah.detail', ['slug'=>$sejarah->title, 'id' =>$sejarah->id]) }}">
+                <a href="{{ route('sejarah.detail', ['slug'=>$sejarah->slug]) }}">
                   <div class="inner">
                     <img src="{{ URL::asset('asset/sejarah/'.$sejarah->image) }}" alt="post-title" />
                   </div>
@@ -42,7 +42,7 @@ $page="Detail Blog"
                   <li class="list-inline-item"><a style="cursor:default;">New Post</a></li>
                   <li class="list-inline-item">{{ date('d-m-Y', strtotime($sejarah->created_at)); }}</li>
                 </ul>
-                <h5 class="post-title"><a href="{{ route('sejarah.detail', ['id' =>$sejarah->id, 'slug'=>$sejarah->title]) }}">{{ $sejarah->title }}</a></h5>
+                <h5 class="post-title"><a href="{{ route('sejarah.detail', ['slug'=>$sejarah->slug]) }}">{{ $sejarah->title }}</a></h5>
                 <p class="excerpt mb-0">{{ Str::limit($sejarah->desc_left, 20) }}</p>
                 <div class="post-bottom clearfix d-flex align-items-center">
                   <div class="social-share me-auto">

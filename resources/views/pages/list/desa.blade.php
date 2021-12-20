@@ -30,7 +30,7 @@ $page="Detail Blog"
             <!-- post -->
             <div class="post post-list clearfix">
               <div class="thumb rounded">
-                <a href="blog-single.html">
+                <a href="{{ route('desa.detail', ['slug'=>$content->slug]) }}">
                   <div class="inner">
                     <img src="{{ URL::asset('asset/desa/'.$content->image) }}" alt="post-title" />
                   </div>
@@ -42,7 +42,7 @@ $page="Detail Blog"
                   <li class="list-inline-item"><a style="cursor:default;">New Post</a></li>
                   <li class="list-inline-item">{{ date('d-m-Y', strtotime($content->created_at)); }}</li>
                 </ul>
-                <h5 class="post-title"><a href="blog-single.html">{{ $content->title }}</a></h5>
+                <h5 class="post-title"><a href="{{ route('desa.detail', ['slug'=>$content->slug]) }}">{{ $content->title }}</a></h5>
                 <p class="excerpt mb-0">{{ Str::limit($content->desc_left, 100) }}</p>
                 <div class="post-bottom clearfix d-flex align-items-center">
                   <div class="social-share me-auto">

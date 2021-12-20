@@ -16,22 +16,22 @@ $page="Detail Blog"
                 <!-- post header -->
                 <div class="post-header">
                   <h1 class="title mt-0">{{ $content->title }}</h1> 
-                  <h5 style="font-size: 15px">{{ $content->sub_title }}</h5>
+                  <h5 style="font-size: 15px">{!! $content->sub_title !!}</h5>
                   <ul class="meta list-inline mb-0">
                     <li class="list-inline-item"><a href="#"><img src="{{ URL::asset('asset/images/other/author-sm.png') }}" class="author" alt="author"/>ILS TI</a></li>
-                    <li class="list-inline-item"><a href="{{ route('sejarah.view') }}">{{ $judul }}</a></li>
+                    <li class="list-inline-item"><a href="{{ route('wisata.view') }}">{{ $judul }}</a></li>
                     <li class="list-inline-item">{{ date('d-m-Y', strtotime($content->created_at)); }}</li>
                   </ul>
                 </div>
                 <!-- featured image -->
                 <div class="featured-image">
-                  <img width="600px" src="{{ URL::asset('asset/sejarah/'.$content->image)}}" alt="post-title" />
+                  <img width="600px" src="{{ URL::asset('asset/wisata-hiburan/'.$content->image)}}" alt="post-title" />
                 </div>
                 <!-- post content -->
                 <div class="post-content clearfix">
-                  <p>{{ $content->desc_left }}</p>
+                  <p>{!! $content->desc_left !!}</p>
 
-                  <p>{{ $content->desc_right }}</p>
+                  <p>{!! $content->desc_right !!}</p>
 
                 </div>
                 <!-- post bottom section -->
@@ -72,14 +72,14 @@ $page="Detail Blog"
                     <div class="post post-list-sm circle">
                       <div class="thumb circle">
                         <span class="number">{{ $loop->iteration }}</span>
-                        <a href="blog-single.html">
+                        <a href="{{ route('wisata.detail', ['slug'=>$item->slug]) }}">
                           <div class="inner">
-                            <img src="{{ URL::asset('asset/sejarah/'.$item->image) }}" alt="post-title" />
+                            <img src="{{ URL::asset('asset/wisata-hiburan/'.$item->image) }}" alt="post-title" />
                           </div>
                         </a>
                       </div>
                       <div class="details clearfix">
-                        <h6 class="post-title my-0"><a href="{{ route('sejarah.detail', ['slug'=>$item->title, 'id' =>$item->id]) }}">{{ $item->title }}</a></h6>
+                        <h6 class="post-title my-0"><a href="{{ route('wisata.detail', ['slug'=>$item->slug]) }}">{{ $item->title }}</a></h6>
                         <ul class="meta list-inline mt-1 mb-0">
                           <li class="list-inline-item">{{ date('d-m-Y', strtotime($item->created_at)); }}</li>
                         </ul>

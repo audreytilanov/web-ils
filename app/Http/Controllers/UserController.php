@@ -74,25 +74,33 @@ class UserController extends Controller
 
     // DETAIL CONTENT
 
-    public function sejarahDetail($slug, $id){
+    public function sejarahDetail($slug){
         // dd
-        $sejarah = ComponentSejarah::find($id);
+        $sejarah = ComponentSejarah::where('slug','=', $slug)->get()->first();
         $sejarahLimit = ComponentSejarah::orderBy('created_at', 'DESC')->limit(3)->get();
-
-        // $slug = str_replace(' ', '_', $sejarah->title);
-        // dd($sejarahLimit);
         $judul = "Sejarah";
-        return view('pages.detail.wisata', compact('sejarah','judul', 'sejarahLimit'));
+        return view('pages.detail.sejarah', compact('sejarah','judul', 'sejarahLimit'));
     }
 
-    public function wisataDetail($slug, $id){
+    public function wisataDetail($slug){
         // dd
-        $content = ComponentWisataHiburan::find($id);
+        $content = ComponentWisataHiburan::where('slug','=', $slug)->get()->first();
         // dd($slug);
         $contentLimit = ComponentWisataHiburan::orderBy('created_at', 'DESC')->limit(3)->get();
 
         // dd($sejarahLimit);
         $judul = "Wisata Hiburan";
         return view('pages.detail.wisata', compact('content','judul', 'contentLimit'));
+    }
+
+    public function desaDetail($slug){
+        // dd
+        $content = ComponentDesa::where('slug','=', $slug)->get()->first();
+        // dd($slug);
+        $contentLimit = ComponentDesa::orderBy('created_at', 'DESC')->limit(3)->get();
+
+        // dd($sejarahLimit);
+        $judul = "Desa";
+        return view('pages.detail.desa', compact('content','judul', 'contentLimit'));
     }
 }
