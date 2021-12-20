@@ -44,7 +44,7 @@ class UserController extends Controller
     }
 
     public function pantai(){
-        $content = ComponentPantai::where('status','=','sub')->where('status_aktif','=','1')->get();
+        $content = ComponentPantai::where('status_tingkatan','=','sub')->where('status_aktif','=','1')->get();
         // $contentImage = ChildComponentPantai::where('parent_id','=',$content->id)->get()->first();
         $judul = "Pantai";
         return view('pages.list.pantai', compact('judul','content'));
@@ -124,5 +124,16 @@ class UserController extends Controller
         // dd($sejarahLimit);
         $judul = "Pura";
         return view('pages.detail.makanan', compact('content','judul', 'contentLimit'));
+    }
+
+    public function pantaiDetail($slug){
+        // dd
+        $content = ComponentPantai::where('slug','=', $slug)->get()->first();
+        // dd($slug);
+        $contentLimit = ComponentPantai::orderBy('created_at', 'DESC')->limit(3)->get();
+
+        // dd($sejarahLimit);
+        $judul = "Pura";
+        return view('pages.detail.pantai', compact('content','judul', 'contentLimit'));
     }
 }

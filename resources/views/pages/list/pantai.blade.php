@@ -30,7 +30,7 @@ $page="Detail Blog"
             <!-- post -->
             <div class="post post-list clearfix">
               <div class="thumb rounded">
-                <a href="blog-single.html">
+                <a href="{{ route('pantai.detail', ['slug'=>$content->slug]) }}">
                   <div class="inner">
                     {{-- {{ dd($content->child_component_pantais->first()) }} --}}
                     @if (is_null($content->child_component_pantais->first()))
@@ -50,9 +50,9 @@ $page="Detail Blog"
                 </ul>
                 {{-- {{ dd($content->title) }} --}}
                 @if ($content->title)
-                  <h5 class="post-title"><a href="blog-single.html">{{ strip_tags($content->title) }}</a></h5>
+                  <h5 class="post-title"><a href="{{ route('pantai.detail', ['slug'=>$content->slug]) }}">{{ strip_tags($content->title) }}</a></h5>
                 @else
-                  <h5 class="post-title"><a href="blog-single.html">{{ strip_tags($content->sub_title) }}</a></h5>
+                  <h5 class="post-title"><a href="{{ route('pantai.detail', ['slug'=>$content->slug]) }}">{{ strip_tags($content->sub_title) }}</a></h5>
                 @endif
                 <p class="excerpt mb-0">{{ Str::limit($content->desc_left, 100) }}</p>
                 <div class="post-bottom clearfix d-flex align-items-center">
