@@ -59,6 +59,9 @@
           </ul>
       </div><!-- /.col-lg-6 -->
     </div><!-- /.row -->
+    <br>
+    <a href="{{ route('makanan.view') }}" class="btn btn-warning text-white hover-more" style="float: right;border-radius:50px;">Load More</a>
+
   </div><!-- /.container -->
 </section><!-- /.testimonials-style-one -->
 

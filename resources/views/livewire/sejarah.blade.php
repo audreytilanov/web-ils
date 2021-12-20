@@ -36,6 +36,7 @@
         </div>
         @endforeach
       </div>
+      <a href="{{ route('sejarah.view') }}" class="btn btn-warning text-white hover-more" style="float: right;border-radius:50px;">Load More</a>
   </div>
 </section>
 <div class="container" style="margin-top: 100px;margin-bottom: 60px;">

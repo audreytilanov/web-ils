@@ -29,6 +29,7 @@ class PuraController extends Controller
         // dd($request->file('image1'));
         Storage::disk('asset')->put('asset/pura/'.$fileName2, file_get_contents($file2));
         ComponentPura::create([
+            'slug' => $request->slug,
             'title' => $request->title,
             'sub_title' => $request->sub_title,
             'desc_left' => $request->desc_left,
@@ -61,6 +62,7 @@ class PuraController extends Controller
             Storage::disk('asset')->put('asset/pura/'.$fileName2, file_get_contents($file2));
 
             $temp->update([
+                'slug' => $request->slug,
                 'title' => $request->title,
                 'sub_title' => $request->sub_title,
                 'desc_left' => $request->desc_left,
@@ -76,6 +78,7 @@ class PuraController extends Controller
             Storage::disk('asset')->put('asset/pura/'.$fileName, file_get_contents($file));
 
             $temp->update([
+                'slug' => $request->slug,
                 'title' => $request->title,
                 'sub_title' => $request->sub_title,
                 'desc_left' => $request->desc_left,
@@ -90,6 +93,7 @@ class PuraController extends Controller
             Storage::disk('asset')->put('asset/pura/'.$fileName, file_get_contents($file));
 
             $temp->update([
+                'slug' => $request->slug,
                 'title' => $request->title,
                 'sub_title' => $request->sub_title,
                 'desc_left' => $request->desc_left,
@@ -99,6 +103,7 @@ class PuraController extends Controller
             ]);
         }else{
             $temp->update([
+                'slug' => $request->slug,
                 'title' => $request->title,
                 'sub_title' => $request->sub_title,
                 'desc_left' => $request->desc_left,

@@ -34,6 +34,7 @@ class PembangunanController extends Controller
         // dd($file2);
         Storage::disk('asset')->put('asset/pembangunan/'.$fileName2, file_get_contents($file2));
         ComponentPembangunan::create([
+            'slug' => $request->slug,
             'title' => $request->title,
             'desc_left' => $request->desc_left,
             'desc_right' => $request->desc_right,
@@ -69,6 +70,7 @@ class PembangunanController extends Controller
             Storage::disk('asset')->put('asset/pembangunan/'.$fileName2, file_get_contents($file2));
 
             $temp->update([
+                'slug' => $request->slug,
                 'title' => $request->title,
                 'desc_left' => $request->desc_left,
                 'desc_right' => $request->desc_right,
@@ -84,6 +86,7 @@ class PembangunanController extends Controller
             Storage::disk('asset')->put('asset/pembangunan/'.$fileName, file_get_contents($file));
 
             $temp->update([
+                'slug' => $request->slug,
                 'title' => $request->title,
                 'desc_left' => $request->desc_left,
                 'desc_right' => $request->desc_right,
@@ -98,6 +101,7 @@ class PembangunanController extends Controller
             Storage::disk('asset')->put('asset/pembangunan/'.$fileName, file_get_contents($file));
 
             $temp->update([
+                'slug' => $request->slug,
                 'title' => $request->title,
                 'desc_left' => $request->desc_left,
                 'desc_right' => $request->desc_right,
@@ -107,6 +111,7 @@ class PembangunanController extends Controller
             ]);
         }else{
             $temp->update([
+                'slug' => $request->slug,
                 'title' => $request->title,
                 'desc_left' => $request->desc_left,
                 'desc_right' => $request->desc_right,

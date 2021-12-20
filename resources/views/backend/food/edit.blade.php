@@ -32,6 +32,12 @@
                   <div class="row">
                     <div class="col-lg-12 mb-2">
                       <div class="form-group">
+                        <label class="text-label">slug*</label>
+                        <input type="text" value="{{ $content->slug }}" class="form-control" id="slug" name="slug" placeholder="Ex. pantai-sanur" aria-describedby="inputGroupPrepend2" required>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 mb-2">
+                      <div class="form-group">
                         <label class="text-label">title*</label>
                         <input type="text" class="form-control" id="title" name="title" aria-describedby="inputGroupPrepend2" value="{{$content->title}}" required>
                       </div>

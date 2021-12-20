@@ -24,6 +24,7 @@ class SejarahController extends Controller
         // dd($request->file('image'));
         Storage::disk('asset')->put('asset/sejarah/'.$fileName, file_get_contents($file));
         ComponentSejarah::create([
+            'slug'=>$request->slug,
             'header'=>$request->header,
             'title'=>$request->title,
             'sub_title'=>$request->sub_title,
@@ -51,6 +52,7 @@ class SejarahController extends Controller
             Storage::disk('asset')->put('asset/sejarah/'.$fileName, file_get_contents($file));
 
             $temp->update([
+                'slug'=>$request->slug,
                 'header'=>$request->header,
                 'title'=>$request->title,
                 'sub_title'=>$request->sub_title,
@@ -62,6 +64,7 @@ class SejarahController extends Controller
             ]);
         }else{
             $temp->update([
+                'slug'=>$request->slug,
                 'header'=>$request->header,
                 'title'=>$request->title,
                 'sub_title'=>$request->sub_title,

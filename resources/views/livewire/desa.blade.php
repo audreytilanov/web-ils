@@ -24,12 +24,14 @@
                   <p class="me-4" data-aos="fade-up" data-aos-delay="300" style="text-align:justify; "><?php echo $desa->sub_title ?></p> 
                 </div>
               </div>
+              
               <div class="post__thumb" style="float:right;">
                 <div class="background-img shadow-large" style="background-image:url(../asset/desa/{{$desa->image}})"></div>
                 <a href="#" class="link-overlay"></a>
               </div>                
             </article>
-          </div>         
+          </div>      
+          <a href="{{ route('desa.view') }}" class="btn btn-warning text-white hover-more" style="float: right;border-radius:50px;">Load More</a>
         </div>
       </div>
     @endforeach

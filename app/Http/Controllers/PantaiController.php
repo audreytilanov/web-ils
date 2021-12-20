@@ -27,6 +27,7 @@ class PantaiController extends Controller
         $nextId = $statement[0]->Auto_increment;
         // dd();
         $new = ComponentPantai::create([
+            'slug'=>$request->slug,
             'title'=>$request->title,
             'sub_title'=>$request->sub_title,
             'desc_left'=>$request->desc_left,
@@ -50,6 +51,7 @@ class PantaiController extends Controller
         $temp= ComponentPantai::where('id','=',$id)->get()->first();
 
         $temp->update([
+            'slug'=>$request->slug,
             'title'=>$request->title,
             'sub_title'=>$request->sub_title,
             'desc_left'=>$request->desc_left,
@@ -74,8 +76,9 @@ class PantaiController extends Controller
     public function childIndex($id){
         $contents = ChildComponentPantai::where('parent_id','=',$id)->get();
         $content = ChildComponentPantai::where('parent_id','=',$id)->get()->first();
+        $parent_id = $id;
         // dd($content);
-        return view('backend.pantai.child.index',compact('contents', 'content'));
+        return view('backend.pantai.child.index',compact('contents', 'content','parent_id'));
 
     }
 

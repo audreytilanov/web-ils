@@ -26,6 +26,8 @@
       <p class="me-4" data-aos="fade-up" data-aos-delay="300" style="text-align:justify"><?php echo $pura->desc_right ?></p>
     </div>
   </div>
+  <a href="{{ route('pura.view') }}" class="btn btn-warning text-white hover-more" style="float: right;border-radius:50px;">Load More</a>
+
   <div class="break-line" style="margin-top: 100px;margin-bottom: 60px;"><hr></div>
 </div>
 @endforeach

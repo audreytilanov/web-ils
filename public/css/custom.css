@@ -2592,5 +2592,10 @@ article{
   }
 }
 
-
+.hover-more:hover{
+  background-color: white!important;
+  border: 2px solid #ffc107!important;
+  color: #ffc107!important;
+  transition: 0.2s ease;
+}
 

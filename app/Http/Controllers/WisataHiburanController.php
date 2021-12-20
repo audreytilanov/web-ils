@@ -25,6 +25,7 @@ class WisataHiburanController extends Controller
         // dd($request->file('image'));
         Storage::disk('asset')->put('/asset/wisata-hiburan/'.$fileName, file_get_contents($file));
         ComponentWisataHiburan::create([
+            'slug'=>$request->slug,
             'title'=>$request->title,
             'desc_left'=>$request->desc_left,
             'desc_right'=>$request->desc_right,
@@ -50,7 +51,7 @@ class WisataHiburanController extends Controller
             Storage::disk('asset')->put('asset/wisata-hiburan/'.$fileName, file_get_contents($file));
 
             $temp->update([
-                'title'=>$request->title,
+                'slug'=>$request->slug,
                 'desc_left'=>$request->desc_left,
                 'desc_right'=>$request->desc_right,
                 'image'=>$request->image->getClientOriginalName(),
@@ -59,10 +60,10 @@ class WisataHiburanController extends Controller
             ]);
         }else{
             $temp->update([
+                'slug'=>$request->slug,
                 'title'=>$request->title,
                 'desc_left'=>$request->desc_left,
                 'desc_right'=>$request->desc_right,
-                'image'=>$request->image->getClientOriginalName(),
                 'status_aktif' => $request->status_aktif
 
             ]);

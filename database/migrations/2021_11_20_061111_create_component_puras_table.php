@@ -15,6 +15,7 @@ class CreateComponentPurasTable extends Migration
     {
         Schema::create('component_puras', function (Blueprint $table) {
             $table->id();
+            $table->string('slug');
             $table->string('title');
             $table->text('sub_title');
             $table->text('desc_left');

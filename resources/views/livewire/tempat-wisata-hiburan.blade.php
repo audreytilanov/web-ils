@@ -14,6 +14,7 @@
       </div>
     </div>
     @endforeach
+    <a href="{{ route('wisata.view') }}" class="btn btn-warning text-white hover-more" style="float: right;border-radius:50px;">Load More</a>
   </div>
   <div class="no-margin-row row" style="padding-left:0; padding-right:0;">
   <?php $i=1;?>
@@ -27,6 +28,7 @@
   <?php $i++;?>
   @endforeach
   </div>  
+  
 </section>
 <div class="container" style="margin-top: 100px;margin-bottom: 60px;">
   <div class="break-line"><hr></div>

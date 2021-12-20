@@ -15,6 +15,7 @@ class CreateComponentPantaisTable extends Migration
     {
         Schema::create('component_pantais', function (Blueprint $table) {
             $table->id();
+            $table->string('slug');
             $table->string('title')->nullable();
             $table->string('sub_title');
             $table->text('desc_left')->nullable();

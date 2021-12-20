@@ -24,6 +24,7 @@ class DesaController extends Controller
         // dd($request->file('image'));
         Storage::disk('asset')->put('asset/desa/'.$fileName, file_get_contents($file));
         ComponentDesa::create([
+            'slug'=>$request->slug,
             'title'=>$request->title,
             'sub_title'=>$request->sub_title,
             'desc_left'=>$request->desc_left,
@@ -50,6 +51,7 @@ class DesaController extends Controller
             Storage::disk('asset')->put('asset/desa/'.$fileName, file_get_contents($file));
 
             $temp->update([
+                'slug'=>$request->slug,
                 'title'=>$request->title,
                 'sub_title'=>$request->sub_title,
                 'desc_left'=>$request->desc_left,
@@ -60,6 +62,7 @@ class DesaController extends Controller
             ]);
         }else{
             $temp->update([
+                'slug'=>$request->slug,
                 'title'=>$request->title,
                 'sub_title'=>$request->sub_title,
                 'desc_left'=>$request->desc_left,

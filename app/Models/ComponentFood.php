@@ -10,5 +10,5 @@ class ComponentFood extends Model
     use HasFactory;
     protected $table='component_food';
     protected $primarykey='id';
-    protected $fillable=['title', 'desc', 'image', 'status', 'status_aktif'];
+    protected $fillable=['title','slug', 'desc', 'image', 'status', 'status_aktif'];
 }
