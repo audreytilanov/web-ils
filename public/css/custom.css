@@ -37,6 +37,8 @@ https://templatemo.com/tm-567-nomad-force
   --font-weight-black:          900;
   --switch-color : #fefefe;
   --switch-font-color : #142b4f;
+  --switch-font-color-p : #717275;
+  --switch-color-intro2 : #142b4f;
 }
 
 body,
@@ -111,10 +113,14 @@ h6 {
 }
 
 p {
-  color: var(--p-color);
+  color: var(--switch-font-color-p);
   font-size: var(--p-font-size);
   font-weight: var(--font-weight-light);
   letter-spacing: 0.5px;
+}
+
+.background-intro2{
+  background-color: var(--switch-color-intro2)!important;
 }
 
 .text-secondary-white-color {
@@ -632,7 +638,7 @@ body.dark .video-block .video-card{
 -----------------------------------------*/
 .other-sites{
   padding: 40px 0;
-  background-color: #142b4f;
+  background-color: var(--switch-color-intro2)!important;
   align-items: center;
   display: inline-block;
   width: 100%;

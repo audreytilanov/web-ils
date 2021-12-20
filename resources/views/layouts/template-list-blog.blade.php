@@ -37,6 +37,7 @@
     <!-- Link Custom CSS -->
     <!-- <link href="../css/custom-2.css" rel="stylesheet"> -->
     <link href="../css/custom.css" rel="stylesheet">
+    <link href="../css/style-3.css" rel="stylesheet">
     
 
     <!-- Vendor JS -->
@@ -108,15 +109,15 @@
       </div>
       <h3>Chose a theme</h3>
       <div class="theme-buttons-container">
-        <span class="theme-buttons" data-color="#091426" data-color-font="#fefefe" data-color-p="#fefefe" data-color-intro2="#142b4f" style="background: #091426;"></span>
-        <span class="theme-buttons" data-color="#fefefe" data-color-font="#091426" data-color-p="##717275" data-color-intro2="#142b4f" style="background: #fefefe;"></span>
-        <span class="theme-buttons" data-color="#fca721" data-color-font="#fefefe" data-color-p="#fefefe" data-color-intro2="#d68b13" style="background: #fca721;"></span>
-        <span class="theme-buttons" data-color="#27ae60" data-color-font="#fefefe" data-color-p="#fefefe" data-color-intro2="#21cc69" style="background: #27ae60;"></span>
-        <span class="theme-buttons" data-color="#ae2027" data-color-font="#fefefe" data-color-p="#fefefe"  data-color-intro2="#db2a32" style="background: #ae2027;"></span>
-        <span class="theme-buttons" data-color="#b33270" data-color-font="#fefefe" data-color-p="#fefefe" data-color-intro2="#e84393" style="background: #b33270;"></span>
-        <span class="theme-buttons" data-color="#d43745" data-color-font="#fefefe" data-color-p="#fefefe" data-color-intro2="#ff4757" style="background: #d43745;"></span>
-        <span class="theme-buttons" data-color="#e0ac12" data-color-font="#fefefe" data-color-p="#fefefe"  data-color-intro2="#ffc312"style="background: #e0ac12;"></span>
-        <span class="theme-buttons" data-color="#16a7cc" data-color-font="#fefefe" data-color-p="#fefefe" data-color-intro2="#17c0eb" style="background: #16a7cc;"></span>
+        <span class="theme-buttons" data-color="#091426" data-color-font="#fefefe" style="background: #091426;"></span>
+        <span class="theme-buttons" data-color="#fefefe" data-color-font="#091426" style="background: #fefefe;"></span>
+        <span class="theme-buttons" data-color="#f39c12" data-color-font="#fefefe" style="background: #f39c12;"></span>
+        <span class="theme-buttons" data-color="#27ae60" data-color-font="#fefefe" style="background: #27ae60;"></span>
+        <span class="theme-buttons" data-color="#ae2027" data-color-font="#fefefe" style="background: #ae2027;"></span>
+        <span class="theme-buttons" data-color="#e84393" style="background: #e84393;"></span>
+        <span class="theme-buttons" data-color="#ff4757" style="background: #ff4757;"></span>
+        <span class="theme-buttons" data-color="#ffc312" style="background: #ffc312;"></span>
+        <span class="theme-buttons" data-color="#17c0eb" style="background: #17c0eb;"></span>
       </div>
     </div>
 
