@@ -30,7 +30,7 @@ $page="Detail Blog"
             <!-- post -->
             <div class="post post-list clearfix">
               <div class="thumb rounded">
-                <a href="blog-single.html">
+                <a href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}">
                   <div class="inner">
                     @if ($content->image)
                     <img src="{{ URL::asset('asset/food/'.$content->image) }}" alt="post-title" />
@@ -46,7 +46,7 @@ $page="Detail Blog"
                   <li class="list-inline-item"><a style="cursor:default;">New Post</a></li>
                   <li class="list-inline-item">{{ date('d-m-Y', strtotime($content->created_at)); }}</li>
                 </ul>
-                <h5 class="post-title"><a href="blog-single.html">{{ strip_tags($content->title) }}</a></h5>
+                <h5 class="post-title"><a href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}">{{ strip_tags($content->title) }}</a></h5>
                 <p class="excerpt mb-0">{{ Str::limit($content->desc, 100) }}</p>
                 <div class="post-bottom clearfix d-flex align-items-center">
                   <div class="social-share me-auto">

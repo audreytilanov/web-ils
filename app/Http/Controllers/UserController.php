@@ -103,4 +103,26 @@ class UserController extends Controller
         $judul = "Desa";
         return view('pages.detail.desa', compact('content','judul', 'contentLimit'));
     }
+
+    public function puraDetail($slug){
+        // dd
+        $content = ComponentPura::where('slug','=', $slug)->get()->first();
+        // dd($slug);
+        $contentLimit = ComponentPura::orderBy('created_at', 'DESC')->limit(3)->get();
+
+        // dd($sejarahLimit);
+        $judul = "Pura";
+        return view('pages.detail.pura', compact('content','judul', 'contentLimit'));
+    }
+
+    public function makananDetail($slug){
+        // dd
+        $content = ComponentFood::where('slug','=', $slug)->get()->first();
+        // dd($slug);
+        $contentLimit = ComponentFood::orderBy('created_at', 'DESC')->limit(3)->get();
+
+        // dd($sejarahLimit);
+        $judul = "Pura";
+        return view('pages.detail.makanan', compact('content','judul', 'contentLimit'));
+    }
 }

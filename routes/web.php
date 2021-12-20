@@ -42,6 +42,9 @@ Route::get('/list-blog/makanan', [UserController::class, 'makanan'])->name('maka
 Route::get('/detail-blog/sejarah/{slug}', [UserController::class, 'sejarahDetail'])->name('sejarah.detail');
 Route::get('/detail-blog/wisata/{slug}', [UserController::class, 'wisataDetail'])->name('wisata.detail');
 Route::get('/detail-blog/desa/{slug}', [UserController::class, 'desaDetail'])->name('desa.detail');
+Route::get('/detail-blog/pura/{slug}', [UserController::class, 'puraDetail'])->name('pura.detail');
+Route::get('/detail-blog/makanan/{slug}', [UserController::class, 'makananDetail'])->name('makanan.detail');
+Route::get('/detail-blog/pantai/{slug}', [UserController::class, 'pantaiDetail'])->name('pantai.detail');
 
 
 Route::group(['middleware'=>'auth'], function(){

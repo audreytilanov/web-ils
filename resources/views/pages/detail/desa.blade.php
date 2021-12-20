@@ -19,7 +19,7 @@ $page="Detail Blog"
                   <h5 style="font-size: 15px">{!! $content->sub_title !!}</h5>
                   <ul class="meta list-inline mb-0">
                     <li class="list-inline-item"><a href="#"><img src="{{ URL::asset('asset/images/other/author-sm.png') }}" class="author" alt="author"/>ILS TI</a></li>
-                    <li class="list-inline-item"><a href="{{ route('wisata.view') }}">{{ $judul }}</a></li>
+                    <li class="list-inline-item"><a href="{{ route('desa.view') }}">{{ $judul }}</a></li>
                     <li class="list-inline-item">{{ date('d-m-Y', strtotime($content->created_at)); }}</li>
                   </ul>
                 </div>
@@ -29,9 +29,9 @@ $page="Detail Blog"
                 </div>
                 <!-- post content -->
                 <div class="post-content clearfix">
-                  <p>{!! $content->desc_left !!}</p>
+                  <p style="text-align: justify;">&emsp;&emsp;&emsp;{!! $content->desc_left !!}</p>
 
-                  <p>{!! $content->desc_right !!}</p>
+                  <p style="text-align: justify;">&emsp;&emsp;&emsp;{!! $content->desc_right !!}</p>
 
                 </div>
                 <!-- post bottom section -->

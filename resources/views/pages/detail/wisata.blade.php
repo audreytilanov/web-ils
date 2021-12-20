@@ -29,9 +29,9 @@ $page="Detail Blog"
                 </div>
                 <!-- post content -->
                 <div class="post-content clearfix">
-                  <p>{!! $content->desc_left !!}</p>
+                  <p style="text-align: justify;">&emsp;&emsp;&emsp;{!! $content->desc_left !!}</p>
 
-                  <p>{!! $content->desc_right !!}</p>
+                  <p style="text-align: justify;">&emsp;&emsp;&emsp;{!! $content->desc_right !!}</p>
 
                 </div>
                 <!-- post bottom section -->
