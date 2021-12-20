@@ -10,7 +10,7 @@ class ComponentPantai extends Model
     use HasFactory;
     protected $table='component_pantais';
     protected $primarykey='id';
-    protected $fillable=['title', 'sub_title', 'desc_left', 'desc_right', 'filter', 'status_tingkatan'];
+    protected $fillable=['title','slug', 'sub_title', 'desc_left', 'desc_right', 'filter', 'status_tingkatan'];
 
     public function child_component_pantais()
     {

@@ -15,6 +15,7 @@ class CreateComponentDesasTable extends Migration
     {
         Schema::create('component_desas', function (Blueprint $table) {
             $table->id();
+            $table->string('slug');
             $table->string('title');
             $table->text('sub_title');
             $table->text('desc_left');

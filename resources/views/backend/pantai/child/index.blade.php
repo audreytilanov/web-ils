@@ -25,7 +25,7 @@
       <div class="card">
         <div class="card-header">
             <h4 class="card-title">Table Content Pantai</h4>
-            <a href="{{Route('pantai.add')}}"><div class="btn btn-primary">Add Content Pantai</div></a>
+            {{-- <a href="{{Route('pantai.add')}}"><div class="btn btn-primary">Add Content Pantai</div></a> --}}
         </div>
         <div class="card-body">
           <div class="table-responsive">
@@ -71,7 +71,7 @@
               <h4 class="card-title">Add Pantai Child Image</h4>
             </div>
             <div class="card-body">
-              <form action="{{Route('pantai.child.add',['id' =>$content->parent_id])}}" method="POST" enctype="multipart/form-data" id="step-form-horizontal" class="step-form-horizontal">
+              <form action="{{Route('pantai.child.add',['id' =>$parent_id])}}" method="POST" enctype="multipart/form-data" id="step-form-horizontal" class="step-form-horizontal">
                 @csrf
                 <div>
                   <section>

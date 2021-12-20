@@ -79,14 +79,16 @@ class UserController extends Controller
         $sejarah = ComponentSejarah::find($id);
         $sejarahLimit = ComponentSejarah::orderBy('created_at', 'DESC')->limit(3)->get();
 
+        // $slug = str_replace(' ', '_', $sejarah->title);
         // dd($sejarahLimit);
         $judul = "Sejarah";
-        return view('pages.detail.sejarah', compact('sejarah','judul', 'sejarahLimit'));
+        return view('pages.detail.wisata', compact('sejarah','judul', 'sejarahLimit'));
     }
 
     public function wisataDetail($slug, $id){
         // dd
         $content = ComponentWisataHiburan::find($id);
+        // dd($slug);
         $contentLimit = ComponentWisataHiburan::orderBy('created_at', 'DESC')->limit(3)->get();
 
         // dd($sejarahLimit);

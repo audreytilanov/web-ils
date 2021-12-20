@@ -33,6 +33,7 @@
               <thead>
                 <tr>
                   <th>#</th>
+                  <th>Slug</th>
                   <th>Title</th>
                   <th>Deskripsi</th>
                   <th>Image</th>
@@ -44,6 +45,7 @@
               @foreach($contents as $content)
               <tr>
                 <td>{{$loop->iteration}}</td>
+                <td>{{$content->slug}}</td>
                 <td>{{$content->title}}</td>
                 <td>{{Str::words($content->desc, $words = 20, $end = '...')}}</td>
                 <td><img src="{{URL::asset('asset/food/'.$content->image)}}" alt="{{ $content->image }}" width="100px" height="auto"></td>

@@ -30,7 +30,7 @@ $page="Detail Blog"
             <!-- post -->
             <div class="post post-list clearfix">
               <div class="thumb rounded">
-                <a href="{{ route('wisata.detail', ['slug'=>$content->title, 'id' =>$content->id]) }}">
+                <a href="{{ route('wisata.detail', ['slug'=>str_replace(' ', '-', $content->title), 'id' =>$content->id]) }}">
                   <div class="inner">
                     <img src="{{ URL::asset('asset/wisata-hiburan/'.$content->image) }}" alt="post-title" />
                   </div>
@@ -42,7 +42,7 @@ $page="Detail Blog"
                   <li class="list-inline-item"><a style="cursor:default;">New Post</a></li>
                   <li class="list-inline-item">{{ date('d-m-Y', strtotime($content->created_at)); }}</li>
                 </ul>
-                <h5 class="post-title"><a href="{{ route('wisata.detail', ['slug'=>$content->title, 'id' =>$content->id]) }}">{{ $content->title }}</a></h5>
+                <h5 class="post-title"><a href="{{ route('wisata.detail', ['slug'=>str_replace(' ', '-', $content->title), 'id' =>$content->id]) }}">{{ $content->title }}</a></h5> 
                 <p class="excerpt mb-0">{{ Str::limit($content->desc_left, 100) }}</p>
                 <div class="post-bottom clearfix d-flex align-items-center">
                   <div class="social-share me-auto">

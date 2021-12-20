@@ -15,6 +15,7 @@ class CreateComponentFoodTable extends Migration
     {
         Schema::create('component_food', function (Blueprint $table) {
             $table->id();
+            $table->string('slug');
             $table->string('title')->nullable();
             $table->text('desc')->nullable();
             $table->string('image')->nullable();
