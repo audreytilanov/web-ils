@@ -37,6 +37,7 @@
     <!-- Link Custom CSS -->
     <!-- <link href="../css/custom-2.css" rel="stylesheet"> -->
     <link href="../css/custom.css" rel="stylesheet">
+    <link href="../css/style-3.css" rel="stylesheet">
     
 
     <!-- Vendor JS -->

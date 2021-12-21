@@ -10,7 +10,7 @@
       <div class="col-lg-3 col-12 p-0">      
         <img src="../asset/intro2/{{$intro2->image}}" width="735" height="919" class="img-fluid about-image" alt="">
       </div>
-      <div class="col-lg-3 col-12" style="background-color: #142b4f;">  
+      <div class="col-lg-3 col-12 background-intro2">  
         <div class="d-flex flex-column flex-wrap justify-content-center h-100 py-5 px-4 pt-lg-4 pb-lg-0">
           <h3 class="text-white mb-3" data-aos="fade-up"><?php echo $intro2->title?></h3>
           <p class="text-secondary-white-color" data-aos="fade-up" style="font-weight: 400;"><?php echo $intro2->desc?></p>
@@ -28,7 +28,7 @@
             @if($intro2->id ==2)
             <div class="carousel-item active">
               <img src="../asset/intro2/{{$intro2->image}}" class="img-fluid team-image" alt="">
-              <div class="team-thumb" style="background-color: #142b4f;">
+              <div class="team-thumb background-intro2">
                 <h3 class="text-white mb-0"><?php echo $intro2->title?></h3>
                 <p class="text-secondary-white-color mb-0"><?php echo $intro2->desc?></p>
               </div>
@@ -36,7 +36,7 @@
             @else
             <div class="carousel-item">
               <img src="../asset/intro2/{{$intro2->image}}" width="1500" height="971"  class="img-fluid team-image" alt="" style="height:400px">
-              <div class="team-thumb" style="background-color: #142b4f;" >
+              <div class="team-thumb background-intro2" >
                 <h3 class="text-white mb-0"><?php echo $intro2->title?></h3>
                 <p class="text-secondary-white-color mb-0"><?php echo $intro2->desc?></p>
               </div>

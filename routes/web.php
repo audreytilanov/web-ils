@@ -14,6 +14,7 @@ use App\Http\Controllers\ContentController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\PembangunanController;
 use App\Http\Controllers\GalleryVideoController;
+use App\Http\Controllers\UserResourceController;
 use App\Http\Controllers\WisataHiburanController;
 
 /*
@@ -47,7 +48,7 @@ Route::get('/detail-blog/makanan/{slug}', [UserController::class, 'makananDetail
 Route::get('/detail-blog/pantai/{slug}', [UserController::class, 'pantaiDetail'])->name('pantai.detail');
 
 
-Route::group(['middleware'=>'auth'], function(){
+Route::group(['middleware' => 'auth'], function () {
     // list content
     Route::get('/contentAdmin', [HomeController::class, 'index'])->name('home_admin');
 
@@ -241,8 +242,14 @@ Route::group(['middleware'=>'auth'], function(){
 
     //delete GalleryVideo
     Route::post('/contentAdmin/delete-content-video/{id}', [GalleryVideoController::class, 'delete'])->name('video.delete');
+
+    //--------------------- CRUD User ----------------------
+    Route::get('/contentAdmin/users', [UserResourceController::class, 'index'])->name('user.index');
+    Route::get('/contentAdmin/users/create', [UserResourceController::class, 'create'])->name('user.create');
+    Route::post('/contentAdmin/users/create', [UserResourceController::class, 'store'])->name('user.store');
+    Route::get('/contentAdmin/users/{id}/edit', [UserResourceController::class, 'edit'])->name('user.edit');
+    Route::post('/contentAdmin/users/{id}/edit', [UserResourceController::class, 'update'])->name('user.update');
+    Route::post('/contentAdmin/users/{id}/destroy', [UserResourceController::class, 'destroy'])->name('user.destroy');
 });
 
 Auth::routes();
-
-

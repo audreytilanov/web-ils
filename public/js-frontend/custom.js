@@ -83,8 +83,12 @@ themeButtons.forEach(color=>{
   color.addEventListener('click', ()=>{
     let dataColor = color.getAttribute('data-color');
     let dataColorFont = color.getAttribute('data-color-font');
+    let dataColorFontP = color.getAttribute('data-color-p');
+    let dataColorIntro2 = color.getAttribute('data-color-intro2');
     document.querySelector(':root').style.setProperty('--switch-color', dataColor);
     document.querySelector(':root').style.setProperty('--switch-font-color', dataColorFont);
+    document.querySelector(':root').style.setProperty('--switch-font-color-p', dataColorFontP);
+    document.querySelector(':root').style.setProperty('--switch-color-intro2', dataColorIntro2);
   });
 });
 
