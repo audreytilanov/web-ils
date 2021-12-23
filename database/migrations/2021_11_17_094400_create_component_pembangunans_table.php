@@ -15,6 +15,7 @@ class CreateComponentPembangunansTable extends Migration
     {
         Schema::create('component_pembangunans', function (Blueprint $table) {
             $table->id();
+            $table->string('slug');
             $table->string('title');
             $table->text('desc_left');
             $table->text('desc_right');

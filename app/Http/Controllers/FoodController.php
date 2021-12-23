@@ -23,6 +23,7 @@ class FoodController extends Controller
         $file = $request->file('image');
         Storage::disk('asset')->put('asset/food/'.$fileName, file_get_contents($file));
         ComponentFood::create([
+            'slug'=>$request->slug,
             'title'=>$request->title,
             'desc'=>$request->desc,
             'image'=>$request->image->getClientOriginalName(),
@@ -49,6 +50,7 @@ class FoodController extends Controller
             Storage::disk('asset')->put('asset/food/'.$fileName, file_get_contents($file));
 
             $temp->update([
+                'slug'=>$request->slug,
                 'title'=>$request->title,
                 'desc'=>$request->desc,
                 'image'=>$request->image->getClientOriginalName(),
@@ -57,6 +59,7 @@ class FoodController extends Controller
             ]);
         }else{
             $temp->update([
+                'slug'=>$request->slug,
                 'title'=>$request->title,
                 'desc'=>$request->desc,
                 'status'=> $request->status,

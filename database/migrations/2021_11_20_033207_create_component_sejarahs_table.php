@@ -15,6 +15,7 @@ class CreateComponentSejarahsTable extends Migration
     {
         Schema::create('component_sejarahs', function (Blueprint $table) {
             $table->id();
+            $table->string('slug');
             $table->string('header');
             $table->string('title');
             $table->string('sub_title');

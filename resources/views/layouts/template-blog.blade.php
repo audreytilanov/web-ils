@@ -11,8 +11,8 @@
 
 
     <!-- Favicon -->
-    <link rel="shorcut icon" href="{{asset('../asset/logo/favicon.ico')}}" type="image/x-icon">
-    <link rel="icon" href="{{asset('../asset/logo/favicon.ico')}}" type="image/x-icon">
+    <link rel="shorcut icon" href="{{URL::asset('asset/logo/favicon.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{URL::asset('asset/logo/favicon.ico')}}" type="image/x-icon">
 
     <!-- Font Awesome-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
@@ -25,19 +25,19 @@
 
 
     <!-- Vendor CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/magnific-popup.css">
-    <link rel="stylesheet" href="../css/css/jquery.bxslider.min.css">
+    <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/bootstrap-icons.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ URL::asset('css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/css/jquery.bxslider.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.0/venobox.min.css">
     <!-- <link href="../css/aos.css" rel="stylesheet"> -->
-    <link href="../plugin/opins-icon/style.css" rel="stylesheet">
+    <link href=".{{ URL::asset('plugin/opins-icon/style.css') }}" rel="stylesheet">
 
     <!-- Link Custom CSS -->
     <!-- <link href="../css/custom-2.css" rel="stylesheet"> -->
-    <link href="../css/custom.css" rel="stylesheet">
-    <link href="../css/style-3.css" rel="stylesheet">
+    <link href="{{ URL::asset('css/custom.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/style-3.css') }}" rel="stylesheet">
     
 
     <!-- Vendor JS -->
@@ -62,9 +62,9 @@
               <p><a class="text-decoration-none text-white" href="#">Ministry of Tourism and Creative Economy<br><span> Republic of Indonesia</span></a>
               </p>
             </div>
-            <div class="col-lg-2 col-sm-4 my-3 col-4 d-flex justify-content-center text-center image"><a href="#"> <img src="../asset/umum/yatch.svg" alt="" width="100%"></a></div>
-            <div class="col-lg-2 col-sm-4 my-3 col-4 d-flex justify-content-center text-center image"><a href="#"> <img src="../asset/umum/yatch.svg" alt="" width="100%"></a></div>
-            <div class="col-lg-2 col-sm-4 my-3 col-4 d-flex justify-content-center text-center image"><a href="#"> <img src="../asset/umum/yatch.svg" alt="" width="100%"></a></div>
+            <div class="col-lg-2 col-sm-4 my-3 col-4 d-flex justify-content-center text-center image"><a href="#"> <img src="{{ URL::asset('asset/umum/yatch.svg') }}" alt="" width="100%"></a></div>
+            <div class="col-lg-2 col-sm-4 my-3 col-4 d-flex justify-content-center text-center image"><a href="#"> <img src="{{ URL::asset('asset/umum/yatch.svg') }}" alt="" width="100%"></a></div>
+            <div class="col-lg-2 col-sm-4 my-3 col-4 d-flex justify-content-center text-center image"><a href="#"> <img src="{{ URL::asset('asset/umum/yatch.svg') }}" alt="" width="100%"></a></div>
           </div>
         </div>
       </section>
@@ -122,17 +122,17 @@
     </div>
 
     <!-- JAVASCRIPT FILES -->
-    <script src="../js-frontend/jquery.min.js"></script>
-    <script src="../js-frontend/bootstrap.bundle.min.js"></script>
-    <script src="../js-frontend/jquery.sticky.js"></script>
-    <script src="../js-frontend/aos.js"></script>
+    <script src="{{ URL::asset('js-frontend/jquery.min.js') }}"></script>
+    <script src="{{ URL::asset('js-frontend/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ URL::asset('js-frontend/jquery.sticky.js') }}"></script>
+    <script src="{{ URL::asset('js-frontend/aos.js') }}"></script>
 
     <!-- VENDOR JS -->
-    <script src="../js-frontend/jquery.magnific-popup.min.js"></script>
-    <script src="../js-frontend/magnific-popup-options.js"></script>
-    <script src="../js-frontend/js/jquery.bxslider.min.js"></script>
-    <script src="../plugin/isotope/isotope.pkgd.min.js"></script>
-    <script src="../plugin/slick/slick.min.js"></script>
+    <script src="{{ URL::asset('js-frontend/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ URL::asset('js-frontend/magnific-popup-options.js') }}"></script>
+    <script src="{{ URL::asset('js-frontend/js/jquery.bxslider.min.js') }}"></script>
+    <script src="{{ URL::asset('plugin/isotope/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ URL::asset('plugin/slick/slick.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.0/venobox.min.js"></script>
     <!-- <script src="js/scrollspy.min.js"></script> -->
@@ -189,7 +189,7 @@
     <script src="../js/js/jquery.easing.min.js"></script>
     <script src="../js/js/jquery.counterup.min.js"></script>
     <script src="../js/js/wow.js"></script> -->
-    <script src="../js-frontend/custom.js"></script>
+    <script src="{{ URL::asset('js-frontend/custom.js') }}"></script>
 
   </body>
 </html>

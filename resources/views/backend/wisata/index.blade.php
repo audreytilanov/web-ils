@@ -33,6 +33,7 @@
               <thead>
                 <tr>
                   <th>#</th>
+                  <th>Slug</th>
                   <th>Title</th>
                   <th>Deskripsi Kiri</th>
                   <th>Deskripsi Kanan</th>
@@ -44,6 +45,7 @@
               @foreach($contents as $content)
               <tr>
                 <td>{{$loop->iteration}}</td>
+                <td>{{$content->slug}}</td>
                 <td>{{$content->title}}</td>
                 <td>{{Str::words($content->desc_left, $words = 20, $end = '...')}}</td>
                 <td>{{Str::words($content->desc_right, $words = 20, $end = '...')}}</td>

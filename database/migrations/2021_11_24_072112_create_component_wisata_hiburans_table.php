@@ -15,6 +15,7 @@ class CreateComponentWisataHiburansTable extends Migration
     {
         Schema::create('component_wisata_hiburans', function (Blueprint $table) {
             $table->id();
+            $table->string('slug');
             $table->string('title');
             $table->text('desc_left');
             $table->text('desc_right');

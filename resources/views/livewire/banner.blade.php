@@ -5,7 +5,7 @@
   </div>
   <div class="videoWrapper">
     <video autoplay="" loop="" muted="" class="custom-video" poster="banner/banner.png">
-      <source src="../asset/banner/{{$banner->video_banner}}" type="video/mp4">Your browser does not support the video tag.
+      <source src="{{  URL::asset('asset/banner/'.$banner->video_banner)}}" type="video/mp4">Your browser does not support the video tag.
     </video>
   </div>
   <div class="overlay"></div>

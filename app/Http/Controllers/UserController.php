@@ -2,6 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ChildComponentPantai;
+use App\Models\ComponentDesa;
+use App\Models\ComponentFood;
+use App\Models\ComponentPantai;
+use App\Models\ComponentPura;
+use App\Models\ComponentSejarah;
+use App\Models\ComponentWisataHiburan;
 use Illuminate\Http\Request;
 use App\Models\TableContent;
 
@@ -18,5 +25,115 @@ class UserController extends Controller
 
     public function view_listBlog(){
         return view('pages.list-blog');
+    }
+
+    // LIST CONTENT
+
+    public function sejarah(){
+        $content = TableContent::where('nama_component','=', 'sejarah')->get()->first();
+        // dd
+        $sejarah = ComponentSejarah::where('status_aktif','=','1')->get();
+        $judul = $content->nama_component;
+        return view('pages.list.sejarah', compact('judul','sejarah'));
+    }
+
+    public function wisata(){
+        $content = ComponentWisataHiburan::where('status_aktif','=','1')->get();
+        $judul = "Wisata Hiburan";
+        return view('pages.list.wisata', compact('judul','content'));
+    }
+
+    public function pantai(){
+        $content = ComponentPantai::where('status_tingkatan','=','sub')->where('status_aktif','=','1')->get();
+        // $contentImage = ChildComponentPantai::where('parent_id','=',$content->id)->get()->first();
+        $judul = "Pantai";
+        return view('pages.list.pantai', compact('judul','content'));
+    }
+
+    public function desa(){
+        $content = ComponentDesa::where('status_aktif','=','1')->get();
+        // $contentImage = ChildComponentPantai::where('parent_id','=',$content->id)->get()->first();
+        $judul = "Desa";
+        return view('pages.list.desa', compact('judul','content'));
+    }
+
+    public function pura(){
+        $content = ComponentPura::where('status_aktif','=','1')->get();
+        // $contentImage = ChildComponentPantai::where('parent_id','=',$content->id)->get()->first();
+        $judul = "Pura";
+        return view('pages.list.pura', compact('judul','content'));
+    }
+
+    public function makanan(){
+        $content = ComponentFood::where('status','=','sub')->where('status_aktif','=','1')->get();
+        // $contentImage = ChildComponentPantai::where('parent_id','=',$content->id)->get()->first();
+        $judul = "Makanan";
+        return view('pages.list.makanan', compact('judul','content'));
+    }
+
+
+    // DETAIL CONTENT
+
+    public function sejarahDetail($slug){
+        // dd
+        $sejarah = ComponentSejarah::where('slug','=', $slug)->get()->first();
+        $sejarahLimit = ComponentSejarah::orderBy('created_at', 'DESC')->limit(3)->get();
+        $judul = "Sejarah";
+        return view('pages.detail.sejarah', compact('sejarah','judul', 'sejarahLimit'));
+    }
+
+    public function wisataDetail($slug){
+        // dd
+        $content = ComponentWisataHiburan::where('slug','=', $slug)->get()->first();
+        // dd($slug);
+        $contentLimit = ComponentWisataHiburan::orderBy('created_at', 'DESC')->limit(3)->get();
+
+        // dd($sejarahLimit);
+        $judul = "Wisata Hiburan";
+        return view('pages.detail.wisata', compact('content','judul', 'contentLimit'));
+    }
+
+    public function desaDetail($slug){
+        // dd
+        $content = ComponentDesa::where('slug','=', $slug)->get()->first();
+        // dd($slug);
+        $contentLimit = ComponentDesa::orderBy('created_at', 'DESC')->limit(3)->get();
+
+        // dd($sejarahLimit);
+        $judul = "Desa";
+        return view('pages.detail.desa', compact('content','judul', 'contentLimit'));
+    }
+
+    public function puraDetail($slug){
+        // dd
+        $content = ComponentPura::where('slug','=', $slug)->get()->first();
+        // dd($slug);
+        $contentLimit = ComponentPura::orderBy('created_at', 'DESC')->limit(3)->get();
+
+        // dd($sejarahLimit);
+        $judul = "Pura";
+        return view('pages.detail.pura', compact('content','judul', 'contentLimit'));
+    }
+
+    public function makananDetail($slug){
+        // dd
+        $content = ComponentFood::where('slug','=', $slug)->get()->first();
+        // dd($slug);
+        $contentLimit = ComponentFood::orderBy('created_at', 'DESC')->limit(3)->get();
+
+        // dd($sejarahLimit);
+        $judul = "Pura";
+        return view('pages.detail.makanan', compact('content','judul', 'contentLimit'));
+    }
+
+    public function pantaiDetail($slug){
+        // dd
+        $content = ComponentPantai::where('slug','=', $slug)->get()->first();
+        // dd($slug);
+        $contentLimit = ComponentPantai::orderBy('created_at', 'DESC')->limit(3)->get();
+
+        // dd($sejarahLimit);
+        $judul = "Pura";
+        return view('pages.detail.pantai', compact('content','judul', 'contentLimit'));
     }
 }

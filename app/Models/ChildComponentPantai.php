@@ -13,6 +13,6 @@ class ChildComponentPantai extends Model
 
     public function component_pantais()
     {
-        return $this->belongsTo(ComponentPantai::class);
+        return $this->belongsTo(ComponentPantai::class, 'parent_id','id');
     }
 }
