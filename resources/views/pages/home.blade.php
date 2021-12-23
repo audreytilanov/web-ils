@@ -11,5 +11,6 @@ $a = 'layouts.template';
     @livewire($content->nama_component)
   @endif
   @endforeach
+  @livewire('review')
 
 @endsection
