@@ -183,6 +183,17 @@
                             <li><a href="{{ Route('review.index') }}">Review</a></li>
                         </ul>
                     </li>
+                    <li class="#">
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-381-layer-1"></i>
+                            <span class="nav-text">Component</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ Route('list_banner') }}">Banner</a></li>
+                            <li><a href="{{ route('list_intro2') }}">Navbar</a></li>
+                            <li><a href="{{ Route('list_pembangunan') }}">Footer</a></li>
+                        </ul>
+                    </li>
                     <li>
                         <a class="ai-icon" href="{{ route('user.index') }}" aria-expanded="false">
                             <i class="flaticon-381-user"></i>
@@ -191,7 +202,7 @@
                     </li>
                     <li>
                         <a class="ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-381-layer-1"></i>
+                            <i class="flaticon-381-notepad"></i>
                             <span class="nav-text">History</span>
                     </li>
                 </ul>

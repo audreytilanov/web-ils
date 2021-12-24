@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\DesaController;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\HomeController;
@@ -65,6 +66,21 @@ Route::group(['middleware' => 'auth'], function () {
     //delete list content
     Route::post('/contentAdmin/delete-content-{id}', [ContentController::class, 'delete_content'])->name('delete_content');
 
+    //--------------------- Banner ----------------------
+    // list content intro1
+    Route::get('/contentAdmin/list-component-banner', [BannerController::class, 'index'])->name('list_banner');
+
+    //create / add intro 1
+    Route::get('/contentAdmin/add-component-banner', [BannerController::class, 'add_content'])->name('add_banner');
+    Route::post('/save_componentBanner', [BannerController::class, 'save_addcontent'])->name('save_addBanner');
+
+    // edit intro 1
+    Route::get('/contentAdmin/edit-componentBanner-{id}', [BannerController::class, 'edit_content'])->name('edit_banner');
+    Route::post('/contentAdmin/save_componentBanner-{id}', [BannerController::class, 'save_editcontent'])->name('save_editBanner');
+
+    // delete intro 1
+    Route::post('/contentAdmin/delete-componentBanner-{id}', [BannerController::class, 'delete_content'])->name('delete_banner');
+
     //--------------------- Intro 1 ----------------------
     // list content intro1
     Route::get('/contentAdmin/list-content-intro1', [Intro1Controller::class, 'index'])->name('list_intro1');
@@ -93,7 +109,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/contentAdmin/save_addcontentIntro2-{id}', [Intro2Controller::class, 'save_editcontent'])->name('save_editcontentIntro2');
 
     // delete intro 2
-    Route::post('/contentAdmin/delete-contentintro2-{id}', [Intro2Controller::class, 'delete_content'])->name('delete_content_intro2');
+    Route::post('/contentAdmin/delete-contentIntro2-{id}', [Intro2Controller::class, 'delete_content'])->name('delete_content_intro2');
 
 
 

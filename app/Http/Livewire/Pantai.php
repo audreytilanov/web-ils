@@ -10,7 +10,7 @@ class Pantai extends Component
 {
     public function render()
     {
-        $pantais = ComponentPantai::all();
+        $pantais = ComponentPantai::where('status_aktif', '=',1)->get();
         $childpantais = ChildComponentPantai::all();
         return view('livewire.pantai')->with(compact('pantais', 'childpantais'));
     }
