@@ -41,6 +41,7 @@
                   <th>Tanggal</th>
                   <th style="text-center">Img I</th>
                   <th style="text-center">Img II</th>
+                  <th>Status</th>
                   <th>Action</th>
                 </tr>
               </thead>
@@ -56,6 +57,13 @@
                 <td>{{ $content->tanggal }}</td>
                 <td class="sorting_1"><img src="{{URL::asset('asset/pembangunan/'.$content->image1)}}" alt="" style="display:block; margin-left:auto;margin-right:auto;" width="100px" height="auto"></td>
                 <td class="sorting_1"><img src="{{URL::asset('asset/pembangunan/'.$content->image2)}}" alt="" style="display:block; margin-left:auto;margin-right:auto;" width="100px" height="auto"></td>
+                @if ($content->status_aktif == 0)
+                  <td class="text-warning">Nonaktif</td>
+                @elseif ($content->status_aktif == 1)
+                  <td class="text-success">Aktif</td>
+                @else 
+                  <td class="text-primary">Undefined (!0/1)</td>
+                @endif
                 <td>
                   <div class="d-flex">
                     <a href="{{Route('edit_contentPembangunan', $content->id)}}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>

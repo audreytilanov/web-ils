@@ -36,6 +36,7 @@
                   <th>Title</th>
                   <th>Deskripsi Paragraf Kiri</th>
                   <th>Deskripsi Paragraf Kanan</th>
+                  <th>Status</th>
                   <th>Action</th>
                 </tr>
               </thead>

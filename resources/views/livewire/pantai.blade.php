@@ -50,11 +50,11 @@
       @endforeach
       
       @endforeach
-    <a href="{{ route('pantai.view') }}" class="btn btn-warning text-white hover-more" style="float: right;border-radius:50px;">Load More</a>
 
     </div>
   </div>
-  <div class="container" style="margin-top: 80px;margin-bottom: 60px;">
+  <div class="container" style="margin-top: 100px;margin-bottom: 100px;">
+    <a href="{{ route('pantai.view') }}" class="btn btn-warning text-white hover-more" style="border-radius:50px; margin-bottom:40px;margin-left:auto">Load More</a>
     <div class="break-line"><hr></div>
   </div>
 </section>

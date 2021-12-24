@@ -59,7 +59,7 @@
                   <div class="d-flex">
                     <a href="{{Route('edit_contentIntro2', $content->id)}}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
                     <div class="sweetalert">
-                      <form action="{{Route('delete_content_intro2', $content->id)}}" method="POST">
+                      <form action="{{Route('delete_content_intro2', $content->id)}}" method="post">
                         @csrf
                         <button type="submit" onclick="return confirm('Yakin Ingin Mengapus Data?')" class="btn btn-danger shadow btn-xs sharp sweet-success-cancel"><i class="fa fa-trash"></i></button>                 
                       </form>

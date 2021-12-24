@@ -151,21 +151,21 @@
       const element1 = document.getElementById("text-desc-left");
       const element2 = document.getElementById("text-desc-right");
       const titletemp = document.getElementById("text-title-temp");
-      const desc_pantai_left = document.getElementById("desc-pantai-left");
-      const desc_pantai_right = document.getElementById("desc-pantai-right");
-      document.getElementById("click-pantai-1").addEventListener("click", function() {
-        var pantai1_desc_left = document.getElementById("desc_pantai1_left").value;
-        var pantai1_desc_right = document.getElementById("desc_pantai1_right").value;
-        desc_pantai_left.innerHTML= pantai1_desc_left;
-        desc_pantai_right.innerHTML= pantai1_desc_right;
-      });
+      // const desc_pantai_left = document.getElementById("desc-pantai-left");
+      // const desc_pantai_right = document.getElementById("desc-pantai-right");
+      // document.getElementById("click-pantai-1").addEventListener("click", function() {
+      //   var pantai1_desc_left = document.getElementById("desc_pantai1_left").value;
+      //   var pantai1_desc_right = document.getElementById("desc_pantai1_right").value;
+      //   desc_pantai_left.innerHTML= pantai1_desc_left;
+      //   desc_pantai_right.innerHTML= pantai1_desc_right;
+      // });
 
-      document.getElementById("click-pantai-2").addEventListener("click", function() {
-        var pantai2_desc_left = document.getElementById("desc_pantai2_left").value;
-        var pantai2_desc_right = document.getElementById("desc_pantai2_right").value;
-        desc_pantai_left.innerHTML= pantai2_desc_left;
-        desc_pantai_right.innerHTML= pantai2_desc_right;
-      });
+      // document.getElementById("click-pantai-2").addEventListener("click", function() {
+      //   var pantai2_desc_left = document.getElementById("desc_pantai2_left").value;
+      //   var pantai2_desc_right = document.getElementById("desc_pantai2_right").value;
+      //   desc_pantai_left.innerHTML= pantai2_desc_left;
+      //   desc_pantai_right.innerHTML= pantai2_desc_right;
+      // });
 
       document.getElementById("image-1").addEventListener("click", function() {
         var titlechange = document.getElementById("text-title1").value;

@@ -91,7 +91,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/contentAdmin/save_addcontentIntro2-{id}', [Intro2Controller::class, 'save_editcontent'])->name('save_editcontentIntro2');
 
     // delete intro 2
-    Route::post('/contentAdmin/delete-contentintro2-{id}', [Intro2Controller::class, 'delete_content'])->name('delete_content_intro2');
+    Route::post('/contentAdmin/delete-contentIntro2-{id}', [Intro2Controller::class, 'delete_content'])->name('delete_content_intro2');
 
 
 

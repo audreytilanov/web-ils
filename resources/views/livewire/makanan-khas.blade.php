@@ -39,10 +39,8 @@
       </div><!-- /.col-lg-6 -->
       <div class="col-lg-6 testimonial-content" style="margin-top:50px;">
         <div class="block-title ">
-          @foreach($foods as $food)
-          @if ($food->status == "header" and $food->id ==1)
+          @foreach($foods_header as $food)
           <h2><?php echo $food->title ?></h2>
-          @endif
           @endforeach
         </div><!-- /.block-title -->
           <ul class="slider testimonials-slider">
