@@ -14,8 +14,10 @@ use App\Http\Controllers\ContentController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\PembangunanController;
 use App\Http\Controllers\GalleryVideoController;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserResourceController;
 use App\Http\Controllers\WisataHiburanController;
+use App\Models\Review;
 
 /*
 |--------------------------------------------------------------------------
@@ -242,6 +244,22 @@ Route::group(['middleware' => 'auth'], function () {
 
     //delete GalleryVideo
     Route::post('/contentAdmin/delete-content-video/{id}', [GalleryVideoController::class, 'delete'])->name('video.delete');
+
+
+    //--------------------- REVIEW ----------------------
+    // list content REVIEW
+    Route::get('/contentAdmin/list-content-review', [ReviewController::class, 'index'])->name('review.index');
+
+    //create / add REVIEW 
+    Route::get('/contentAdmin/add-content-review', [ReviewController::class, 'add'])->name('review.add');
+    Route::post('/contentAdmin/add-content-review/save', [ReviewController::class, 'addSave'])->name('review.add.save');
+
+    // edit list REVIEW
+    Route::get('contentAdmin/edit-content-review/{id}', [ReviewController::class, 'edit'])->name('review.edit');
+    Route::post('/contentAdmin/edit-content-review-save-{id}', [ReviewController::class, 'editSave'])->name('review.edit.save');
+
+    //delete REVIEW
+    Route::post('/contentAdmin/delete-content-review/{id}', [ReviewController::class, 'delete'])->name('review.delete');
 
     //--------------------- CRUD User ----------------------
     Route::get('/contentAdmin/users', [UserResourceController::class, 'index'])->name('user.index');

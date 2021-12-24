@@ -180,6 +180,7 @@
                             <li><a href="{{ Route('pura.index') }}">Pura</a></li>
                             <li><a href="{{ Route('food.index') }}">Makanan Khas</a></li>
                             <li><a href="{{ Route('video.index') }}">Gallery Video</a></li>
+                            <li><a href="{{ Route('review.index') }}">Review</a></li>
                         </ul>
                     </li>
                     <li>
