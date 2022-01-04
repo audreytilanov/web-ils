@@ -170,17 +170,39 @@
                             <span class="nav-text">Table Content</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ Route('list_intro1') }}">Intro1</a></li>
-                            <li><a href="{{ route('list_intro2') }}">Intro2</a></li>
-                            <li><a href="{{ Route('list_pembangunan') }}">Pembangunan</a></li>
-                            <li><a href="{{ Route('sejarah.index') }}">Sejarah</a></li>
-                            <li><a href="{{ Route('wisata.index') }}">Tempat Wisata Hiburan</a></li>
-                            <li><a href="{{ Route('pantai.index') }}">Pantai</a></li>
-                            <li><a href="{{ Route('desa.index') }}">Desa</a></li>
-                            <li><a href="{{ Route('pura.index') }}">Pura</a></li>
-                            <li><a href="{{ Route('food.index') }}">Makanan Khas</a></li>
-                            <li><a href="{{ Route('video.index') }}">Gallery Video</a></li>
-                            <li><a href="{{ Route('review.index') }}">Review</a></li>
+                            @if (auth()->user()->userHasPermissions->where('component_name', 'intro1')->isNotEmpty())
+                                <li><a href="{{ Route('list_intro1') }}">Intro1</a></li>
+                            @endif
+                            @if (auth()->user()->userHasPermissions->where('component_name', 'intro2')->isNotEmpty())
+                                <li><a href="{{ route('list_intro2') }}">Intro2</a></li>
+                            @endif
+                            @if (auth()->user()->userHasPermissions->where('component_name', 'pembangunan')->isNotEmpty())
+                                <li><a href="{{ Route('list_pembangunan') }}">Pembangunan</a></li>
+                            @endif
+                            @if (auth()->user()->userHasPermissions->where('component_name', 'sejarah')->isNotEmpty())
+                                <li><a href="{{ Route('sejarah.index') }}">Sejarah</a></li>
+                            @endif
+                            @if (auth()->user()->userHasPermissions->where('component_name', 'wisata_hiburan')->isNotEmpty())
+                                <li><a href="{{ Route('wisata.index') }}">Tempat Wisata Hiburan</a></li>
+                            @endif
+                            @if (auth()->user()->userHasPermissions->where('component_name', 'pantai')->isNotEmpty())
+                                <li><a href="{{ Route('pantai.index') }}">Pantai</a></li>
+                            @endif
+                            @if (auth()->user()->userHasPermissions->where('component_name', 'desa')->isNotEmpty())
+                                <li><a href="{{ Route('desa.index') }}">Desa</a></li>
+                            @endif
+                            @if (auth()->user()->userHasPermissions->where('component_name', 'pura')->isNotEmpty())
+                                <li><a href="{{ Route('pura.index') }}">Pura</a></li>
+                            @endif
+                            @if (auth()->user()->userHasPermissions->where('component_name', 'makanan_khas')->isNotEmpty())
+                                <li><a href="{{ Route('food.index') }}">Makanan Khas</a></li>
+                            @endif
+                            @if (auth()->user()->userHasPermissions->where('component_name', 'gallery_video')->isNotEmpty())
+                                <li><a href="{{ Route('video.index') }}">Gallery Video</a></li>
+                            @endif
+                            @if (auth()->user()->userHasPermissions->where('component_name', 'review')->isNotEmpty())
+                                <li><a href="{{ Route('review.index') }}">Review</a></li>
+                            @endif
                         </ul>
                     </li>
                     <li class="#">
@@ -194,12 +216,14 @@
                             <li><a href="{{ Route('list_pembangunan') }}">Footer</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a class="ai-icon" href="{{ route('user.index') }}" aria-expanded="false">
-                            <i class="flaticon-381-user"></i>
-                            <span class="nav-text">User</span>
-                        </a>
-                    </li>
+                    @if (auth()->user()->userHasPermissions->where('component_name', 'user')->isNotEmpty())
+                        <li>
+                            <a class="ai-icon" href="{{ route('user.index') }}" aria-expanded="false">
+                                <i class="flaticon-381-user"></i>
+                                <span class="nav-text">User</span>
+                            </a>
+                        </li>
+                    @endif
                     <li>
                         <a class="ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-381-notepad"></i>

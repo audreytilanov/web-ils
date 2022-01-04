@@ -9,6 +9,13 @@ use Illuminate\Support\Facades\Hash;
 
 class UserResourceController extends Controller
 {
+
+    public function __construct()
+    {
+        // if (auth()->user()->userHasPermissions->where('component_name', 'user')->where('permissions', 'admin')->isEmpty()) {
+        //     return abort(403);
+        // }
+    }
     /**
      * Display a listing of the resource.
      *
@@ -124,6 +131,22 @@ class UserResourceController extends Controller
                     'permissions' => $value,
                 ]);
             }
+        }
+        if ($request->pura) {
+            foreach ($request->pura as $key => $value) {
+                UserHasPermission::create([
+                    'user_id' => $user->id,
+                    'component_name' => 'pura',
+                    'permissions' => $value,
+                ]);
+            }
+        }
+        if ($request->isAdmin == 'true') {
+            UserHasPermission::create([
+                'user_id' => $user->id,
+                'component_name' => 'user',
+                'permissions' => 'admin',
+            ]);
         }
         return redirect()->route('user.index')->with('success', 'Berhasil Menambahkan User');
     }
@@ -246,6 +269,34 @@ class UserResourceController extends Controller
                     'permissions' => $value,
                 ]);
             }
+        }
+        if ($request->review) {
+            foreach ($request->review as $key => $value) {
+                UserHasPermission::create([
+                    'user_id' => $user->id,
+                    'component_name' => 'review',
+                    'permissions' => $value,
+                ]);
+            }
+        }
+        if ($request->pura) {
+            foreach ($request->pura as $key => $value) {
+                UserHasPermission::create([
+                    'user_id' => $user->id,
+                    'component_name' => 'pura',
+                    'permissions' => $value,
+                ]);
+            }
+        }
+        if ($request->isAdmin == 'true') {
+            UserHasPermission::create([
+                'user_id' => $user->id,
+                'component_name' => 'user',
+                'permissions' => 'admin',
+            ]);
+        }
+        if ($request->isAdmin == 'false') {
+            UserHasPermission::where('user_id', $user->id)->where('component_name', 'admin')->delete();
         }
         return redirect()->route('user.index')->with('success', 'Berhasil Mengedit User');
     }
