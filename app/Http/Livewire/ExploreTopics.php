@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\ComponentDesa;
 use App\Models\ComponentFood;
 use App\Models\ComponentPantai;
+use App\Models\ComponentPembangunan;
 use App\Models\ComponentPura;
 use App\Models\ComponentSejarah;
 use App\Models\ComponentWisataHiburan;
@@ -20,6 +21,7 @@ class ExploreTopics extends Component
         $desa = ComponentDesa::all()->count();
         $pura = ComponentPura::all()->count();
         $makanan = ComponentFood::all()->count();
+        $pembangunan = ComponentPembangunan::all()->count();
         // dd($sejarah);
         return view('livewire.explore-topics', compact(
             'sejarah',
@@ -27,7 +29,8 @@ class ExploreTopics extends Component
             'pantai',
             'desa',
             'pura',
-            'makanan'
+            'makanan',
+            'pembangunan'
         ));
     }
 }

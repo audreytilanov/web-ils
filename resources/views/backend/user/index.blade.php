@@ -31,6 +31,7 @@
                                         <th>#</th>
                                         <th>Name</th>
                                         <th>Email</th>
+                                        <th>Status Aktif</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -40,6 +41,14 @@
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->email }}</td>
+                                            <@if ($item->status_aktif == 0)
+                                            <td class="text-warning">Nonaktif</td>
+                                            @elseif ($item->status_aktif == 1)
+                                            <td class="text-success">Aktif</td>
+                                            @else 
+                                            <td class="text-primary">Undefined (!0/1)</td>
+                                            @endif
+                                            
                                             <td>
                                                 <div class="d-flex">
                                                     <a href="{{ route('user.edit', $item->id) }}"
