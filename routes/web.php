@@ -163,18 +163,18 @@ Route::group(['middleware' => 'auth'], function () {
 
     //--------------------- Wisata Hiburan ----------------------
     // list content wisata
-    Route::get('/contentAdmin/list-content-wisataHiburan', [WisataHiburanController::class, 'index'])->middleware('component:wisata')->name('wisata.index');
+    Route::get('/contentAdmin/list-content-wisataHiburan', [WisataHiburanController::class, 'index'])->middleware('component:wisata_hiburan')->name('wisata.index');
 
     //create / add wisata 
-    Route::get('/contentAdmin/add-content-wisataHiburan', [WisataHiburanController::class, 'add'])->middleware('component:wisata,add')->name('wisata.add');
-    Route::post('/contentAdmin/add-content-wisataHiburan/save', [WisataHiburanController::class, 'addSave'])->middleware('component:wisata,add')->name('wisata.add.save');
+    Route::get('/contentAdmin/add-content-wisataHiburan', [WisataHiburanController::class, 'add'])->middleware('component:wisata_hiburan,add')->name('wisata.add');
+    Route::post('/contentAdmin/add-content-wisataHiburan/save', [WisataHiburanController::class, 'addSave'])->middleware('component:wisata_hiburan,add')->name('wisata.add.save');
 
     // edit list wisata
-    Route::get('contentAdmin/edit-content-wisataHiburan/{id}', [WisataHiburanController::class, 'edit'])->middleware('component:wisata,edit')->name('wisata.edit');
-    Route::post('/contentAdmin/edit-content-wisataHiburan-save-{id}', [WisataHiburanController::class, 'editSave'])->middleware('component:wisata,edit')->name('wisata.edit.save');
+    Route::get('contentAdmin/edit-content-wisataHiburan/{id}', [WisataHiburanController::class, 'edit'])->middleware('component:wisata_hiburan,edit')->name('wisata.edit');
+    Route::post('/contentAdmin/edit-content-wisataHiburan-save-{id}', [WisataHiburanController::class, 'editSave'])->middleware('component:wisata_hiburan,edit')->name('wisata.edit.save');
 
     //delete wisata
-    Route::post('/contentAdmin/delete-content-wisataHiburan/{id}', [WisataHiburanController::class, 'delete'])->middleware('component:wisata,delete')->name('wisata.delete');
+    Route::post('/contentAdmin/delete-content-wisataHiburan/{id}', [WisataHiburanController::class, 'delete'])->middleware('component:wisata_hiburan,delete')->name('wisata.delete');
 
 
 
