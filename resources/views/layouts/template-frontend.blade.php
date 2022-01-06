@@ -135,18 +135,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.0/venobox.min.js"></script>
     <!-- <script src="js/scrollspy.min.js"></script> -->
-    
-    <script>
-      $(document).ready(function(){
-        $('.venobox').venobox({
-          closeColor:'#f4f4f4',
-          spinColor: '#f4f4f4',
-          arowsColor: 'f4f4f4',
-          closeBackground: '#17191D',
-          overlayColor: 'rgba(23,25,29,0.8)'
-        });
-      });
-    </script>
+      
     <script>
       const element1 = document.getElementById("text-desc-left");
       const element2 = document.getElementById("text-desc-right");
@@ -200,6 +189,7 @@
         titletemp.innerHTML= titlechange;
       });
     </script>
+    
     <!-- <script src="../js/js/waypoints.min.js"></script>
     <script src="../js/js/jquery.easing.min.js"></script>
     <script src="../js/js/jquery.counterup.min.js"></script>

@@ -16,6 +16,7 @@ class ComponentDesaSeeder extends Seeder
     {
         DB::table('component_desas')->insert([
             [
+                'slug'=> 'desa-pelingpuran',
                 'title'=>'Desa Penglipuran',
                 'sub_title'=>'Desa adat ini terletak di Kelurahan Kubu, Kabupaten Bangli. (dataran tinggi sekitar kaki Gunung Batur).
                 <br>Untuk memasuki desa ini, wisatawan harus memarkirkan kendaraan roda dua atau roda empat di lahan parkir yang telah disediakan.',
@@ -28,6 +29,7 @@ class ComponentDesaSeeder extends Seeder
             ],
 
             [
+                'slug' => 'desa-tigawasa',
                 'title'=>'Desa Tigawasa',
                 'sub_title'=>'Desa adat ini terletak di Kecamatan Banjar, Kabupaten Buleleng. (berada di ketinggian sekitar 500-700m).
                 <br>Wisatawan akan melihat banyak perkebunan dan sawah asri sambil menikmati sejuknya udara di Kubu Alam (tempat bersinggah masyarakat yang melintasi jalur Desa Tigawasa dari arah Denpasar-Singaraja dan sebaliknya).',
@@ -40,6 +42,7 @@ class ComponentDesaSeeder extends Seeder
             ],
 
             [
+                'slug' => 'desa-tenganan',
                 'title'=>'Rekomendasi Desa di Bali, Desa Tenganan',
                 'sub_title'=>'Desa adat ini terletak di Kecamatan Manggis, Kabupaten Karangasem.
                 <br>Untuk memasuki area desa ini, wisatawan bukan membeli karcis namun memberi sumbangan seikhlasnya.',
