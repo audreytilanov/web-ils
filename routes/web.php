@@ -41,6 +41,7 @@ Route::get('/list-blog/pantai', [UserController::class, 'pantai'])->name('pantai
 Route::get('/list-blog/desa', [UserController::class, 'desa'])->name('desa.view');
 Route::get('/list-blog/pura', [UserController::class, 'pura'])->name('pura.view');
 Route::get('/list-blog/makanan', [UserController::class, 'makanan'])->name('makanan.view');
+Route::get('/list-blog/pembangunan', [UserController::class, 'pembangunan'])->name('pembangunan.view');
 
 // DETAIL CONTENT
 Route::get('/detail-blog/sejarah/{slug}', [UserController::class, 'sejarahDetail'])->name('sejarah.detail');
@@ -49,6 +50,7 @@ Route::get('/detail-blog/desa/{slug}', [UserController::class, 'desaDetail'])->n
 Route::get('/detail-blog/pura/{slug}', [UserController::class, 'puraDetail'])->name('pura.detail');
 Route::get('/detail-blog/makanan/{slug}', [UserController::class, 'makananDetail'])->name('makanan.detail');
 Route::get('/detail-blog/pantai/{slug}', [UserController::class, 'pantaiDetail'])->name('pantai.detail');
+Route::get('/detail-blog/pembangunan/{slug}', [UserController::class, 'pembangunanDetail'])->name('pembangunan.detail');
 
 
 Route::group(['middleware' => 'auth'], function () {

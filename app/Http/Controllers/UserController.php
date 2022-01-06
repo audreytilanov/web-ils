@@ -6,6 +6,7 @@ use App\Models\ChildComponentPantai;
 use App\Models\ComponentDesa;
 use App\Models\ComponentFood;
 use App\Models\ComponentPantai;
+use App\Models\ComponentPembangunan;
 use App\Models\ComponentPura;
 use App\Models\ComponentSejarah;
 use App\Models\ComponentWisataHiburan;
@@ -71,22 +72,41 @@ class UserController extends Controller
         return view('pages.list.makanan', compact('judul','content'));
     }
 
+    public function pembangunan(){
+        $content = ComponentPembangunan::where('status_aktif','=','1')->get();
+        // $contentImage = ChildComponentPantai::where('parent_id','=',$content->id)->get()->first();
+        $judul = "Pembangunan";
+        return view('pages.list.pembangunan', compact('judul','content'));
+    }
+
 
     // DETAIL CONTENT
 
     public function sejarahDetail($slug){
         // dd
         $sejarah = ComponentSejarah::where('slug','=', $slug)->get()->first();
-        $sejarahLimit = ComponentSejarah::orderBy('created_at', 'DESC')->limit(3)->get();
+        
+        $checkTotal = ComponentSejarah::all()->count();
+        if($checkTotal < 3){
+            $contentLimit = ComponentSejarah::all();
+        }else{
+            $contentLimit = ComponentSejarah::orderBy('created_at', 'DESC')->limit(3)->get();
+        }
+
         $judul = "Sejarah";
-        return view('pages.detail.sejarah', compact('sejarah','judul', 'sejarahLimit'));
+        return view('pages.detail.sejarah', compact('sejarah','judul', 'contentLimit'));
     }
 
     public function wisataDetail($slug){
         // dd
         $content = ComponentWisataHiburan::where('slug','=', $slug)->get()->first();
         // dd($slug);
-        $contentLimit = ComponentWisataHiburan::orderBy('created_at', 'DESC')->limit(3)->get();
+        $checkTotal = ComponentWisataHiburan::all()->count();
+        if($checkTotal < 3){
+            $contentLimit = ComponentWisataHiburan::all();
+        }else{
+            $contentLimit = ComponentWisataHiburan::orderBy('created_at', 'DESC')->limit(3)->get();
+        }
 
         // dd($sejarahLimit);
         $judul = "Wisata Hiburan";
@@ -97,7 +117,12 @@ class UserController extends Controller
         // dd
         $content = ComponentDesa::where('slug','=', $slug)->get()->first();
         // dd($slug);
-        $contentLimit = ComponentDesa::orderBy('created_at', 'DESC')->limit(3)->get();
+        $checkTotal = ComponentDesa::all()->count();
+        if($checkTotal < 3){
+            $contentLimit = ComponentDesa::all();
+        }else{
+            $contentLimit = ComponentDesa::orderBy('created_at', 'DESC')->limit(3)->get();
+        }
 
         // dd($sejarahLimit);
         $judul = "Desa";
@@ -108,7 +133,12 @@ class UserController extends Controller
         // dd
         $content = ComponentPura::where('slug','=', $slug)->get()->first();
         // dd($slug);
-        $contentLimit = ComponentPura::orderBy('created_at', 'DESC')->limit(3)->get();
+        $checkTotal = ComponentPura::all()->count();
+        if($checkTotal < 3){
+            $contentLimit = ComponentPura::all();
+        }else{
+            $contentLimit = ComponentPura::orderBy('created_at', 'DESC')->limit(3)->get();
+        }
 
         // dd($sejarahLimit);
         $judul = "Pura";
@@ -120,6 +150,12 @@ class UserController extends Controller
         $content = ComponentFood::where('slug','=', $slug)->get()->first();
         // dd($slug);
         $contentLimit = ComponentFood::orderBy('created_at', 'DESC')->limit(3)->get();
+        $checkTotal = ComponentFood::all()->count();
+        if($checkTotal < 3){
+            $contentLimit = ComponentFood::all();
+        }else{
+            $contentLimit = ComponentFood::orderBy('created_at', 'DESC')->limit(3)->get();
+        }
 
         // dd($sejarahLimit);
         $judul = "Pura";
@@ -130,10 +166,32 @@ class UserController extends Controller
         // dd
         $content = ComponentPantai::where('slug','=', $slug)->get()->first();
         // dd($slug);
-        $contentLimit = ComponentPantai::orderBy('created_at', 'DESC')->limit(3)->get();
+        
+        $checkTotal = ComponentPantai::all()->count();
+        if($checkTotal < 3){
+            $contentLimit = ComponentPantai::all();
+        }else{
+            $contentLimit = ComponentPantai::orderBy('created_at', 'DESC')->limit(3)->get();
+        }
 
         // dd($sejarahLimit);
         $judul = "Pura";
         return view('pages.detail.pantai', compact('content','judul', 'contentLimit'));
+    }
+
+    public function pembangunanDetail($slug){
+        // dd
+        $content = ComponentPembangunan::where('slug','=', $slug)->get()->first();
+        // dd($slug);
+        $checkTotal = ComponentPembangunan::all()->count();
+        if($checkTotal < 3){
+            $contentLimit = ComponentPembangunan::all();
+        }else{
+            $contentLimit = ComponentPembangunan::orderBy('created_at', 'DESC')->limit(3)->get();
+        }
+
+        // dd($sejarahLimit);
+        $judul = "Pembangunan";
+        return view('pages.detail.pembangunan', compact('content','judul', 'contentLimit'));
     }
 }

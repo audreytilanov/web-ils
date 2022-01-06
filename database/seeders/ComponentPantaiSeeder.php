@@ -16,6 +16,7 @@ class ComponentPantaiSeeder extends Seeder
     {
         DB::table('component_pantais')->insert([
             [
+                'slug' => 'general',
                 'title'=>'Banyak Sekali Pantai di Bali, <br>Pantai Mana  yang kaliang ingin kunjungi?',
                 'sub_title'=>'General',
                 'desc_left'=>'Benar Sekali! Memang terdapat banyak pantai di Bali.
@@ -31,6 +32,7 @@ class ComponentPantaiSeeder extends Seeder
             ],
 
             [
+                'slug' => 'pantai-kuta',
                 'title'=>'',
                 'sub_title'=>'Pantai Kuta',
                 'desc_left'=>'Pantai Kuta terkenal memiliki ombak bagus untuk olahraga berselancar yang cocok bagi peselancar pemula. Pantai Kuta sering pula disebut sebagai pantai matahari terbenam (sunset beach).<br/><br/>
@@ -43,6 +45,7 @@ class ComponentPantaiSeeder extends Seeder
             ],
 
             [
+                'slug' => 'pantai-pandawa',
                 'title'=>'',
                 'sub_title'=>'Pantai Pandawa',
                 'desc_left'=>'Pantai Pandawa terdapat dua tebing besar yang dipahat dengan enam patung (dari posisi tertinggi) yang diberi nama Dewi Kunti, Dharma Wangsa, Bima, Arjuna, Nakula, dan Sadewa. <br/><br/>
@@ -55,6 +58,7 @@ class ComponentPantaiSeeder extends Seeder
             ],
 
             [
+                'slug' => 'pantai-sanur',
                 'title'=>'',
                 'sub_title'=>'Pantai Sanur',
                 'desc_left'=>'Pantai Sanur memiliki ombak yang cukup tenang, sehingga kurang cocok untuk berselancar, namun Pantai Sanur menyediakan fasilitas wisata Selam dan Snorkeling. Lokasi selam ini dapat digunakan oleh para penyelam dari semua tingkatan keahlian.
