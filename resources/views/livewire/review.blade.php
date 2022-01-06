@@ -3,54 +3,28 @@
     <div class="col-rt-12">
       <div class="Scriptcontent">
         <div class="carrousel bordered">
-          <h2>Apa yang mereka katakan tentang Bali?</h2>						
-          <input type="radio" name="slides" id="radio-1" checked>
-          <input type="radio" name="slides" id="radio-2">
-          <input type="radio" name="slides" id="radio-3">
-          <input type="radio" name="slides" id="radio-4">
+          <h2>Apa yang mereka katakan tentang Bali?</h2>			
+          @foreach ($contents as $content)
+          <input type="radio" name="slides" id="radio-{{ $loop->iteration }}" checked>
+          @endforeach
           <ul class="slides">
+              @foreach ($contents as $content)
               <li class="slide">
                 <p>
-                    <q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore beatae dignissimos incidunt reprehenderit iure rerum similique, quidem, voluptate eveniet debitis harum vel, nam asperiores est alias aspernatur. Fugit, illo et?</q> 
+                    <q>{{ $content->quote }}</q> 
                   <span class="author">
-                  <img src="../asset/img/dp1.jpg">
-                  JR Tolkien
+                  <img src="{{ URL::asset('asset/review/'.$content->foto) }}">
+                  {{ $content->nama_orang }}
                   </span>
                 </p>
                 </li>        
-                <li class="slide">
-                  <p>
-                    <q>Codeconvey provide useful code snippets for web design.</q> 
-                    <span class="author">
-                      <img src="../asset/img/dp2.jpg">
-                      Sinatra
-                    </span>
-                  </p>
-                </li>
-              <li class="slide">
-                  <p>
-                    <q>This is pretty cool</q> 
-                    <span class="author">
-                    <img src="../asset/img/dp3.jpg">
-                    Alf
-                    </span>
-                  </p>
-              </li>
-              <li class="slide">
-                <p>
-                  <q>This is awesome. Only Css you say?</q> 
-                  <span class="author">
-                    <img src="../asset/img/dp4.jpg">
-                    The octocat
-                  </span>
-                </p>
-                </li>
+                @endforeach
           </ul>
           <div class="slidesNavigation">
-            <label for="radio-1" id="dotForRadio-1"></label>
-            <label for="radio-2" id="dotForRadio-2"></label>
-            <label for="radio-3" id="dotForRadio-3"></label>
-            <label for="radio-4" id="dotForRadio-4"></label>
+          @foreach ($contents as $content)
+
+            <label for="radio-{{ $loop->iteration }}" id="dotForRadio-{{ $loop->iteration }}"></label>
+          @endforeach
           </div>
         </div>
       </div>

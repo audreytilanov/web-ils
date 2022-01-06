@@ -6,8 +6,8 @@ $title = 'ILS 2021 | Admin';
 @section('content')
 
     <!--**********************************
-                                                                                                                                                                                                                                                        Content body start
-                                                                                                                                                                                                                                                    ***********************************-->
+                                                                                                                                                                                                                                                                                                        Content body start
+                                                                                                                                                                                                                                                                                                    ***********************************-->
     <div class="content-body">
         <div class="container-fluid">
             <div class="page-titles">
@@ -44,6 +44,28 @@ $title = 'ILS 2021 | Admin';
                                                     <input type="email" class="form-control" id="email" name="email"
                                                         aria-describedby="inputGroupPrepend2" required
                                                         value="{{ old('email', $user->email) }}">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 mb-2">
+                                                <div class="form-group">
+                                                    <label class="text-label">Apakah Admin*</label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" value="true"
+                                                            id="isAdmin-1" name="isAdmin"
+                                                            {{ $user->userHasPermissions->where('component_name', 'user')->where('permissions', 'admin')->isNotEmpty()
+                                                                ? 'checked'
+                                                                : '' }}>
+                                                        <label class="form-check-label" for="isAdmin-1">
+                                                            Iya
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" value="false"
+                                                            id="isAdmin-2" name="isAdmin">
+                                                        <label class="form-check-label" for="isAdmin-2">
+                                                            Tidak
+                                                        </label>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
@@ -378,8 +400,8 @@ $title = 'ILS 2021 | Admin';
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-lg-12 mb-2">
+                                                <div class="row justify-content-between">
+                                                    <div class="col-lg-3 mb-2">
                                                         <div class="form-group">
                                                             <label class="text-label">Akses Component Gallery
                                                                 Video*</label>
@@ -418,6 +440,32 @@ $title = 'ILS 2021 | Admin';
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div class="col-lg-3 mb-2">
+                                                        <div class="form-group">
+                                                            <label class="text-label">Akses Component Review</label>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    value="can edit" id="review-1" name="review[]">
+                                                                <label class="form-check-label" for="review-1">
+                                                                    Dapat mengedit
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    value="can add" id="review-2" name="review[]">
+                                                                <label class="form-check-label" for="review-2">
+                                                                    Dapat menambahkan
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    value="can delete" id="review-3" name="review[]">
+                                                                <label class="form-check-label" for="review-3">
+                                                                    Dapat menghapus
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -433,6 +481,6 @@ $title = 'ILS 2021 | Admin';
     </div>
 
     <!--**********************************
-                                                                                                                                                                                                                                                        Content body end
-                                                                                                                                                                                                                                                    ***********************************-->
+                                                                                                                                                                                                                                                                                                        Content body end
+                                                                                                                                                                                                                                                                                                    ***********************************-->
 @endsection

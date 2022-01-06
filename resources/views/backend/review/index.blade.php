@@ -12,7 +12,7 @@ $title = 'ILS 2021 | Admin';
             <div class="page-titles">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:void(0)">Table</a></li>
-                    <li class="breadcrumb-item active"><a href="#">Content Pantai</a></li>
+                    <li class="breadcrumb-item active"><a href="#">Content Review</a></li>
                 </ol>
             </div>
             @if (session()->has('success'))
@@ -24,10 +24,10 @@ $title = 'ILS 2021 | Admin';
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Table Content Pantai</h4>
-                        @if (auth()->user()->userHasPermissions->where('component_name', 'pantai')->where('permissions', 'can add')->isNotEmpty())
-                            <a href="{{ Route('pantai.add') }}">
-                                <div class="btn btn-primary">Add Content Pantai</div>
+                        <h4 class="card-title">Table Content Review</h4>
+                        @if (auth()->user()->userHasPermissions->where('component_name', 'review')->where('permissions', 'can add')->isNotEmpty())
+                            <a href="{{ Route('review.add') }}">
+                                <div class="btn btn-primary">Add Content Review</div>
                             </a>
                         @endif
                     </div>
@@ -37,14 +37,9 @@ $title = 'ILS 2021 | Admin';
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Slug</th>
-                                        <th>Title</th>
-                                        <th>Sub Title</th>
-                                        <th>Deskripsi Kiri</th>
-                                        <th>Deskripsi Kanan</th>
-                                        {{-- <th>List Image</th> --}}
-                                        <th>Filter</th>
-                                        <th>Status Tingkatan</th>
+                                        <th>Quote</th>
+                                        <th>Nama Orang</th>
+                                        <th>Foto</th>
                                         <th>Status Aktif</th>
                                     </tr>
                                 </thead>
@@ -52,16 +47,10 @@ $title = 'ILS 2021 | Admin';
                                     @foreach ($contents as $content)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $content->slug }}</td>
-                                            <td>{{ $content->title }}</td>
-                                            <td>{{ $content->sub_title }}</td>
-                                            <td>{{ Str::words($content->desc_left, $words = 20, $end = '...') }}</td>
-                                            <td>{{ Str::words($content->desc_right, $words = 20, $end = '...') }}</td>
-                                            {{-- <td>
-                    <img src="{{URL::asset('asset/pantai/'.$content->image)}}" alt="{{ $content->image }}" width="100px" height="auto">
-                </td> --}}
-                                            <td>{{ $content->filter }}</td>
-                                            <td>{{ $content->status_tingkatan }}</td>
+                                            <td>{{ $content->quote }}</td>
+                                            <td>{{ $content->nama_orang }}</td>
+                                            <td><img src="{{ URL::asset('asset/review/' . $content->foto) }}"
+                                                    alt="{{ $content->foto }}" width="100px" height="auto"></td>
                                             @if ($content->status_aktif == 0)
                                                 <td class="text-warning">Nonaktif</td>
                                             @elseif ($content->status_aktif == 1)
@@ -71,17 +60,14 @@ $title = 'ILS 2021 | Admin';
                                             @endif
                                             <td>
                                                 <div class="d-flex">
-                                                    <a href="{{ Route('pantai.child.index', $content->id) }}"
-                                                        class="btn btn-info shadow btn-xs sharp mr-1"><i
-                                                            class="fa fa-image"></i></a>
-                                                    @if (auth()->user()->userHasPermissions->where('component_name', 'pantai')->where('permissions', 'can edit')->isNotEmpty())
-                                                        <a href="{{ Route('pantai.edit', $content->id) }}"
+                                                    @if (auth()->user()->userHasPermissions->where('component_name', 'review')->where('permissions', 'can edit')->isNotEmpty())
+                                                        <a href="{{ Route('review.edit', $content->id) }}"
                                                             class="btn btn-primary shadow btn-xs sharp mr-1"><i
                                                                 class="fa fa-pencil"></i></a>
                                                     @endif
-                                                    @if (auth()->user()->userHasPermissions->where('component_name', 'pantai')->where('permissions', 'can delete')->isNotEmpty())
+                                                    @if (auth()->user()->userHasPermissions->where('component_name', 'review')->where('permissions', 'can delete')->isNotEmpty())
                                                         <div class="sweetalert">
-                                                            <form action="{{ Route('pantai.delete', $content->id) }}"
+                                                            <form action="{{ Route('review.delete', $content->id) }}"
                                                                 method="POST">
                                                                 @csrf
                                                                 <button type="submit"

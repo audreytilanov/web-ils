@@ -41,7 +41,7 @@
   <div class="container drag-this-up">
     <div id="portfolio-widget-tab-content">
       @foreach($pantais as $pantai)
-      @foreach($childpantais as $childpantai)
+      @foreach($childpantais->slice(0, 4)  as $childpantai)
       @if($pantai->id == $childpantai->parent_id)
         <div class="portfolio-item portfolio-{{$pantai->filter}}">
           <a href="#"><img src="../asset/pantai/{{$childpantai->image}}" width="580px" height="300px" class="img-fluid" alt="{{$childpantai->image}}" style="height:300px;"></a>
