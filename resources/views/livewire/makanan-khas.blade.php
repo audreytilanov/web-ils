@@ -6,38 +6,7 @@
   <!-- <img src="images/map-1-1.png" alt="Awesome Image" class="map-img" /> -->
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 d-flex">
-        <div class="my-auto mx-auto">
-          <!-- <img src="images/testi-1-1.png" alt="Awesome Image" class="testi-img" /> -->
-          <div id="testimonials-slider-pager">
-            <div class="testimonials-slider-pager-one">
-              @foreach($foods as $food)
-              @if($food->status == "sub")
-              @if($food->id ==1)
-              <a href="#" class="pager-item active" data-slide-index="{{$count1}}"><img src="../asset/food/{{$food->image}}}}" alt="Awesome Image" /></a>
-              @else
-              <a href="#" class="pager-item" data-slide-index="{{$count1}}"><img src="../asset/food/{{$food->image}}" alt="Awesome Image" /></a>
-              @endif
-              <?php $count1++; ?>
-              @endif
-              @endforeach
-            </div><!-- /.testimonials-slider-pager-one -->
-            <div class="testimonials-slider-pager-two">
-              @foreach($foods as $food)
-              @if($food->status == "sub")
-              @if($food->id ==1)
-              <a href="#" class="pager-item active" data-slide-index="{{$count2}}"><img src="../asset/food/{{$food->image}}}}" alt="Awesome Image" /></a>
-              @else
-              <a href="#" class="pager-item" data-slide-index="{{$count2}}"><img src="../asset/food/{{$food->image}}" alt="Awesome Image" /></a>
-              @endif
-              <?php $count1++; ?>
-              @endif
-              @endforeach
-            </div><!-- /.testimonials-slider-pager-two -->
-          </div><!-- /#testimonials-slider-pager -->
-        </div><!-- /.my-auto -->
-      </div><!-- /.col-lg-6 -->
-      <div class="col-lg-6 testimonial-content" style="margin-top:50px;">
+      <div class="col-lg-12 testimonial-content" style="margin-top:50px;">
         <div class="block-title ">
           @foreach($foods_header as $food)
           <h2><?php echo $food->title ?></h2>
@@ -46,11 +15,20 @@
           <ul class="slider testimonials-slider">
             @foreach($foods as $food)
             @if($food->status == "sub")
+            
             <li class="slide-item">
-              <div class="single-testi-one">
-                <p><?php echo $food->desc ?></p>
-                <h3><strong>{{$food->title}}</strong></h3>
-              </div><!-- /.single-testi-one -->
+              <div class="row">
+                <div class="col-lg-6">
+                  <img class="shadow-small" src="../asset/food/{{$food->image}}" alt="" style="width:100%; border-radius:15px; margin-bottom:10px; height:300px;">
+                </div>
+                <div class="col-lg-6">
+                  <div class="single-testi-one">
+                    <p><?php echo $food->desc ?></p>
+                    <h3><strong>{{$food->title}}</strong></h3>
+                  </div>
+                </div><!-- /.single-testi-one -->
+              </div>
+              
             </li>
             @endif
             @endforeach

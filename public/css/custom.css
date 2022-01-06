@@ -139,7 +139,7 @@ a {
 }
 
 a:hover {
-  color: var(--primary-color);
+  color: #091426;
 }
 
 ::selection {
@@ -668,7 +668,7 @@ strong {
 
 
 .site-footer .explanation{
-  font-size: 15px!important;
+  font-size: 18px!important;
   line-height: 18px!important;
   margin-bottom: 0;
   color: white;

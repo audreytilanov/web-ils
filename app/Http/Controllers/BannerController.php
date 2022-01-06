@@ -38,15 +38,13 @@ class BannerController extends Controller
 
     public function save_editcontent($id, Request $request)
     {
-        $temp= ComponentIntro1::where('id','=',$id)->get()->first();
+        $temp= ComponentBanner::where('id','=',$id)->get()->first();
         // dd($request);
         $temp->update([
             'title'=>$request->title,
-            'desc_left'=>$request->desc_left,
-            'desc_right'=>$request->desc_right,
-            'status_aktif'=>$request->status_aktif
+            'sub_title'=>$request->desc_left,
         ]);
-        return redirect()->route('list_intro1')->with('success', 'Berhasil Mengubah Konten Intro 1');;
+        return redirect()->route('list_banner')->with('success', 'Berhasil Mengubah Konten Banner');;
     }
 
     public function delete_content($id){

@@ -16,7 +16,7 @@ $page="Detail Blog"
                 <!-- post header -->
                 <div class="post-header">
                   <h1 class="title mt-0">{!! $content->title !!}</h1> 
-                  <h5 style="font-size: 15px">{!! $content->sub_title !!}</h5>
+                  
                   <ul class="meta list-inline mb-0">
                     <li class="list-inline-item"><a href="#"><img src="{{ URL::asset('asset/images/other/author-sm.png') }}" class="author" alt="author"/>ILS TI</a></li>
                     <li class="list-inline-item"><a href="{{ route('pura.view') }}">{{ $judul }}</a></li>
@@ -29,6 +29,7 @@ $page="Detail Blog"
                 </div>
                 <!-- post content -->
                 <div class="post-content clearfix">
+                  <p style="text-align: justify;">&emsp;&emsp;&emsp;{!! $content->sub_title !!}</p>
                   <p style="text-align: justify;">&emsp;&emsp;&emsp;{!! $content->desc_left !!}</p>
 
                 </div>

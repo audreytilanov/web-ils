@@ -25,7 +25,7 @@
             <h4 class="card-title">Edit List Content Intro I</h4>
           </div>
           <div class="card-body">
-            <form action="{{Route('save_editcontentIntro1',['id' => $content->id])}}" method="POST" id="step-form-horizontal" class="step-form-horizontal" >
+            <form action="{{Route('save_editBanner',['id' => $content->id])}}" method="POST" id="step-form-horizontal" class="step-form-horizontal" >
               @csrf
               <div>
                 <section>
@@ -39,31 +39,12 @@
                     <div class="col-lg-12 mb-2">
                       <div class="form-group">
                         <label class="text-label">Deskripsi Paragraf Kiri*</label>
-                        <textarea class="form-control" rows="5" id="desc_left" name="desc_left" >{{$content->desc_left}}</textarea>
+                        <textarea class="form-control" rows="2" id="sub_title" name="sub_title" >{{$content->sub_title}}</textarea>
                       </div>
-                    </div>
-                    <div class="col-lg-12 mb-2">
-                      <div class="form-group">
-                        <label class="text-label">Deskripsi Paragraf Kanan*</label>
-                        <textarea class="form-control" rows="5" id="desc_right" name="desc_right" >{{$content->desc_right}}</textarea>
-                      </div>
-                    </div>
-                    <div class="col-lg-12 mb-2">
-                      <div class="form-group">
-                        <label class="text-label">Status Aktif*</label>
-                        <div class="dropdown bootstrap-select form-control dropup">
-                          <select name="status_aktif" id="status_aktif" class="form-control" tabindex="-98">
-                              <option selected value="" disabled>Pilih Status Aktif</option>
-                              <option value="1" @if ($content->status_aktif == 1) {{'selected="selected"'}} @endif >Aktif</option>
-                              <option value="0" @if ($content->status_aktif == 0) {{'selected="selected"'}} @endif >Nonaktif</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
                     </div>
                     <div class="col-lg-12 mb-3">
                       <button type="submit" class="btn btn-primary" style="float:right;">Submit</button>
-                      <a href="{{Route('list_intro1')}}" class="btn btn-info" style="float:left;">Back</a>   
+                      <a href="{{Route('list_banner')}}" class="btn btn-info" style="float:left;">Back</a>   
                     </div>
                   </div>
                 </section>

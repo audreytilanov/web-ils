@@ -16,6 +16,7 @@ class ComponentSejarahSeeder extends Seeder
     {
         DB::table('component_sejarahs')->insert([
             [
+                'slug'=> 'perkembangan-bali-sebelum-indonesia-merdeka-hingga-sekarang',
                 'header'=>'Sejarah Seputar Bali',
                 'title'=>'Perkembangan Bali sebelum Indonesia Merdeka hingga Sekarang',
                 'sub_title'=>'Banyak sekali hal yang telah berkembang di Bali. Berikut adalah pembahasannya.',

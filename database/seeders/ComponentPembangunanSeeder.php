@@ -16,6 +16,7 @@ class ComponentPembangunanSeeder extends Seeder
     {
         DB::table('component_pembangunans')->insert([
             [
+                'slug'=> 'pembangunan-jalan-shortcut-singaraja',
                 'title'=>'Pembangunan di Bali - Pembangunan Jalan Shortcut Singaraja-Mengwitani tetap Lanjut meski di Tengah Pandemi',
                 'desc_left'=>'Bapak Gubernur, I Wayan Koster, berkomitmen menyelesaikan shortcut Singaraja-Mengwitani meskipun di tengah pandemi. Pembangunan infrastruktur yang dibiayai dari APBN sesuai rencana dan tidak ada dana yang dipotong. Menurutnya, pembangunan shortcut (SC) pada ruas batas Kota Singaraja-Mengwitani ini penting untuk menciptakan pemerataan pembangunan antara Bali Utara dan Selatan. <br><br>
                 Latar belakang dibangunnya shortcut pada titik 7A, 7B dan 7C disebabkan karena kondisi jalan sebelumnya memiliki tikungan pendek dengan kelandaian lebih dari 10%, sehingga kecepatan kendaraan hanya mampu 20 km/jam. ',

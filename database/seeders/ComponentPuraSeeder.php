@@ -16,6 +16,7 @@ class ComponentPuraSeeder extends Seeder
     {
         DB::table('component_puras')->insert([
             [
+                'slug' => 'pura-tanah-lot',
                 'title'=>'Pura Terkenal di Bali - Pura Tanah Lot',
                 'sub_title'=>'Salah satu pura paling suci di Bali. Terdapat dua candi di atas batu besar, yang pertama berada di atas batu dan yang kedua berada di tebing. Pura Tanah Lot adalah pura tempat pemujaan dewa penjaga laut dan terkenal dengan pemandangan matahari terbenamnya yang indah.',
                 'desc_left'=>'Lokasi: Desa Beraban, Kecamatan Kediri, Kabupaten Tabanan (13 kilometer di sebelah selatan Kota Tabanan). Di pura ini, Pujawali (Odalan) diperingati setiap 210 hari sekali. Jatuhnya dekat dengan perayaan Galungan dan Kuningan, tepatnya pada Hari Suci Buda Wage (Buda Cemeng) Langkir.
