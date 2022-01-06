@@ -23,6 +23,7 @@
         <img class="shadow-small" src="../asset/pembangunan/{{$pembangunan->image2}}" alt="" style="width:100%;border-radius:15px; height:300px;">
       </div>
     </div>
+    <a href="{{ route('pembangunan.view') }}" class="btn btn-warning text-white hover-more" style="float: right;border-radius:50px;">Load More</a>
   </div>
   @endforeach
 </section>

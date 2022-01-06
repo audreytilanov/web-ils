@@ -5,6 +5,7 @@
     <div class="widget-content">
       <ul class="list">
         <li><a href="/">All<span class="text-warning">Visit</span></a></li>
+        <li><a href="{{ route('pembangunan.view') }}">Pembangunan<span class="text-warning">( {{ $pembangunan }} )</span></a></li>
         <li><a href="{{ route('sejarah.view') }}">Sejarah<span class="text-warning">( {{ $sejarah }} )</span></a></li>
         <li><a href="{{ route('wisata.view') }}">Wisata Hiburan<span class="text-warning">( {{ $wisata }} )</span></a></li>
         <li><a href="{{ route('pantai.view') }}">Pantai<span class="text-warning">( {{ $pantai }} )</span></a></li>
