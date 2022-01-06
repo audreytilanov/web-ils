@@ -48,7 +48,7 @@ $title = 'ILS 2021 | Admin';
                                             <td>{{ $content->sub_title }}</td>
                                             <td>
                                                 <div class="d-flex">
-                                                    <a href="{{ Route('edit_contentIntro1', $content->id) }}"
+                                                    <a href="{{ Route('edit_banner', $content->id) }}"
                                                         class="btn btn-primary shadow btn-xs sharp mr-1"><i
                                                             class="fa fa-pencil"></i></a>
                                                     <div class="sweetalert">

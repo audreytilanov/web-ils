@@ -31,7 +31,6 @@
                                         <th>#</th>
                                         <th>Name</th>
                                         <th>Email</th>
-                                        <th>Role</th>
                                         <th>Status Aktif</th>
                                         <th>Action</th>
                                     </tr>
@@ -42,7 +41,6 @@
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->email }}</td>
-                                            <td>{{ $item->roles->first()->name }}</td>
                                             <@if ($item->status_aktif == 0)
                                             <td class="text-warning">Nonaktif</td>
                                             @elseif ($item->status_aktif == 1)

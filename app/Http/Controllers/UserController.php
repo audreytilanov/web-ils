@@ -94,7 +94,7 @@ class UserController extends Controller
         }
 
         $judul = "Sejarah";
-        return view('pages.detail.sejarah', compact('sejarah','judul', 'sejarahLimit'));
+        return view('pages.detail.sejarah', compact('sejarah','judul', 'contentLimit'));
     }
 
     public function wisataDetail($slug){
