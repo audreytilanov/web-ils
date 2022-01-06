@@ -85,12 +85,12 @@ class UserController extends Controller
     public function sejarahDetail($slug){
         // dd
         $sejarah = ComponentSejarah::where('slug','=', $slug)->get()->first();
-        
+
         $checkTotal = ComponentSejarah::all()->count();
         if($checkTotal < 3){
-            $contentLimit = ComponentSejarah::all();
+            $sejarahLimit = ComponentSejarah::all();
         }else{
-            $contentLimit = ComponentSejarah::orderBy('created_at', 'DESC')->limit(3)->get();
+            $sejarahLimit = ComponentSejarah::orderBy('created_at', 'DESC')->limit(3)->get();
         }
 
         $judul = "Sejarah";
