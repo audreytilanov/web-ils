@@ -19,20 +19,16 @@ class SejarahController extends Controller
     }
 
     public function addSave(Request $request){
-        $fileName = $request->image->getClientOriginalName();
-        $file = $request->file('image');
-        // dd($request->file('image'));
-        Storage::disk('asset')->put('asset/sejarah/'.$fileName, file_get_contents($file));
         ComponentSejarah::create([
-            'slug'=>$request->slug,
-            'header'=>$request->header,
-            'title'=>$request->title,
-            'sub_title'=>$request->sub_title,
-            'desc_left'=>$request->desc_left,
-            'desc_right'=>$request->desc_right,
-            'image'=>$request->image->getClientOriginalName(),
+            'slug'=>$request->name,
+            'header'=>$request->email,
+            'title'=>$request->phone,
+            'sub_title'=>$request->paket,
+            'desc_left'=>$request->start,
+            'desc_right'=>$request->message,
+            'image'=>$request->mobil
         ]);
-        return redirect()->route('sejarah.index')->with('success', 'Berhasil Menambahkan Konten Sejarah');
+        return redirect()->route('home.book')->with('success', 'Berhasil Menambahkan Konten Mobil');
     }
 
     public function edit($id){
@@ -75,7 +71,7 @@ class SejarahController extends Controller
             ]);
         }
         
-        return redirect()->route('sejarah.index')->with('success', 'Berhasil Mengubah Konten Sejarah');;
+        return redirect()->route('sejarah.index')->with('success', 'Berhasil Mengubah Konten Mobil');;
     }
 
     public function delete($id){
@@ -85,6 +81,6 @@ class SejarahController extends Controller
 
         // dd($data);
         $data->delete();
-        return redirect()->route('sejarah.index')->with('success', 'Berhasil Menghapus Konten Sejarah');
+        return redirect()->route('sejarah.index')->with('success', 'Berhasil Menghapus Konten Mobil');
     }
 }

@@ -32,6 +32,15 @@ use App\Models\Review;
 */
 
 Route::get('/', [UserController::class, 'index'])->name('home');
+Route::get('/tentang-kami', [UserController::class, 'indexAbout'])->name('home.about');
+Route::get('/paket', [UserController::class, 'indexPaket'])->name('home.paket');
+Route::get('/hubungi-kami', [UserController::class, 'indexHubungi'])->name('home.hubungi');
+Route::post('/save_addcontentPembangunan', [PembangunanController::class, 'save_addcontent'])->name('save_addcontentPembangunan');
+
+Route::get('/book', [UserController::class, 'indexBook'])->name('home.book');
+Route::post('/contentAdmin/add-content-sejarah/save', [SejarahController::class, 'addSave'])->name('sejarah.add.save');
+
+
 Route::get('/detail-blog', [UserController::class, 'view_detailBlog'])->name('detail-blog');
 
 // LIST CONTENT
@@ -48,7 +57,7 @@ Route::get('/detail-blog/sejarah/{slug}', [UserController::class, 'sejarahDetail
 Route::get('/detail-blog/wisata/{slug}', [UserController::class, 'wisataDetail'])->name('wisata.detail');
 Route::get('/detail-blog/desa/{slug}', [UserController::class, 'desaDetail'])->name('desa.detail');
 Route::get('/detail-blog/pura/{slug}', [UserController::class, 'puraDetail'])->name('pura.detail');
-Route::get('/detail-blog/makanan/{slug}', [UserController::class, 'makananDetail'])->name('makanan.detail');
+Route::get('/detail-blog/paket/{slug}', [UserController::class, 'makananDetail'])->name('makanan.detail');
 Route::get('/detail-blog/pantai/{slug}', [UserController::class, 'pantaiDetail'])->name('pantai.detail');
 Route::get('/detail-blog/pembangunan/{slug}', [UserController::class, 'pembangunanDetail'])->name('pembangunan.detail');
 
@@ -131,7 +140,6 @@ Route::group(['middleware' => 'auth'], function () {
 
     //create / add pembangunan 
     Route::get('/contentAdmin/add-contentPembangunan', [PembangunanController::class, 'add_content'])->middleware('component:pembangunan,add')->name('add_contentPembangunan');
-    Route::post('/save_addcontentPembangunan', [PembangunanController::class, 'save_addcontent'])->middleware('component:pembangunan,add')->name('save_addcontentPembangunan');
 
     // edit list pembangunan
     Route::get('/contentAdmin/edit-contentPembangunan-{id}', [PembangunanController::class, 'edit_content'])->middleware('component:pembangunan,edit')->name('edit_contentPembangunan');
@@ -149,7 +157,6 @@ Route::group(['middleware' => 'auth'], function () {
 
     //create / add Sejarah 
     Route::get('/contentAdmin/add-content-sejarah', [SejarahController::class, 'add'])->middleware('component:sejarah,add')->name('sejarah.add');
-    Route::post('/contentAdmin/add-content-sejarah/save', [SejarahController::class, 'addSave'])->middleware('component:sejarah,add')->name('sejarah.add.save');
 
     // edit list Sejarah
     Route::get('contentAdmin/edit-content-sejarah/{id}', [SejarahController::class, 'edit'])->middleware('component:sejarah,edit')->name('sejarah.edit');

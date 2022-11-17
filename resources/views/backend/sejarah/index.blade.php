@@ -12,7 +12,7 @@ $title = 'ILS 2021 | Admin';
             <div class="page-titles">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:void(0)">Table</a></li>
-                    <li class="breadcrumb-item active"><a href="#">Content Sejarah</a></li>
+                    <li class="breadcrumb-item active"><a href="#">Data Booking</a></li>
                 </ol>
             </div>
             @if (session()->has('success'))
@@ -24,12 +24,7 @@ $title = 'ILS 2021 | Admin';
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Table Content Sejarah</h4>
-                        @if (auth()->user()->userHasPermissions->where('component_name', 'sejarah')->where('permissions', 'can add')->isNotEmpty())
-                            <a href="{{ Route('sejarah.add') }}">
-                                <div class="btn btn-primary">Add Content Sejarah</div>
-                            </a>
-                        @endif
+                        <h4 class="card-title">Table Data Booking</h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -37,14 +32,12 @@ $title = 'ILS 2021 | Admin';
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Slug</th>
-                                        <th>Header</th>
-                                        <th>Title</th>
-                                        <th>Sub Title</th>
-                                        <th>Deskripsi Kiri</th>
-                                        <th>Deskripsi Kanan</th>
-                                        <th>Image</th>
-                                        <th>Status Aktif</th>
+                                        <th>Nama</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Paket</th>
+                                        <th>Start</th>
+                                        <th>Special Request</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -57,36 +50,6 @@ $title = 'ILS 2021 | Admin';
                                             <td>{{ $content->sub_title }}</td>
                                             <td>{{ Str::words($content->desc_left, $words = 20, $end = '...') }}</td>
                                             <td>{{ Str::words($content->desc_right, $words = 20, $end = '...') }}</td>
-                                            <td><img src="{{ URL::asset('asset/sejarah/' . $content->image) }}"
-                                                    alt="{{ $content->image }}" width="100px" height="auto"></td>
-                                            @if ($content->status_aktif == 0)
-                                                <td class="text-warning">Nonaktif</td>
-                                            @elseif ($content->status_aktif == 1)
-                                                <td class="text-success">Aktif</td>
-                                            @else
-                                                <td class="text-primary">Undefined (!0/1)</td>
-                                            @endif
-                                            <td>
-                                                <div class="d-flex">
-                                                    @if (auth()->user()->userHasPermissions->where('component_name', 'sejarah')->where('permissions', 'can edit')->isNotEmpty())
-                                                        <a href="{{ Route('sejarah.edit', $content->id) }}"
-                                                            class="btn btn-primary shadow btn-xs sharp mr-1"><i
-                                                                class="fa fa-pencil"></i></a>
-                                                    @endif
-                                                    @if (auth()->user()->userHasPermissions->where('component_name', 'sejarah')->where('permissions', 'can delete')->isNotEmpty())
-                                                        <div class="sweetalert">
-                                                            <form action="{{ Route('sejarah.delete', $content->id) }}"
-                                                                method="POST">
-                                                                @csrf
-                                                                <button type="submit"
-                                                                    onclick="return confirm('Yakin Ingin Mengapus Data?')"
-                                                                    class="btn btn-danger shadow btn-xs sharp sweet-success-cancel"><i
-                                                                        class="fa fa-trash"></i></button>
-                                                            </form>
-                                                        </div>
-                                                    @endif
-                                                </div>
-                                            </td>
                                         </tr>
                                     @endforeach
                                 </tbody>

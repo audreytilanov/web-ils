@@ -7,6 +7,17 @@ $page="Detail Blog"
 
     
       <!-- section main content -->
+      <section class="main-banner" id="hero">
+        <div class="heroText">
+          <h1 class="text-white mt-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="800">List Paket</h1>
+        </div>
+        <div class="videoWrapper">
+          <video autoplay="" loop="" muted="" class="custom-video" poster="banner/banner.png">
+            <source src="{{  URL::asset('asset/banner/banner.mp4')}}" type="video/mp4">Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="overlay"></div>
+      </section>
       <section class="main-content section-switch" style="margin-bottom:100px;">
         <div class="container">
           <div class="row gy-4">
@@ -18,9 +29,8 @@ $page="Detail Blog"
                   <h1 class="title mt-0">{!! $content->title !!}</h1> 
                   <h5 style="font-size: 15px">{!! $content->sub_title !!}</h5>
                   <ul class="meta list-inline mb-0">
-                    <li class="list-inline-item"><a href="#"><img src="{{ URL::asset('asset/images/other/author-sm.png') }}" class="author" alt="author"/>ILS TI</a></li>
-                    <li class="list-inline-item"><a href="{{ route('wisata.view') }}">{{ $judul }}</a></li>
                     <li class="list-inline-item">{{ date('d-m-Y', strtotime($content->created_at)); }}</li>
+                    <li class="list-inline-item">{{ $content->status }}</li>
                   </ul>
                 </div>
                 <!-- featured image -->
@@ -87,7 +97,7 @@ $page="Detail Blog"
                   </div>		
                 </div>
                 <!-- widget categories -->
-                @livewire('explore-topics');
+                @livewire('explore-topics')
               </div>
             </div>
           </div>

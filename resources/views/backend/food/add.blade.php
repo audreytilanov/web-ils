@@ -13,7 +13,7 @@
     <div class="page-titles">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{Route('home_admin')}}">Dashboard</a></li>
-        <li class="breadcrumb-item"><a href="javascript:void(0)">Content Food</a></li>
+        <li class="breadcrumb-item"><a href="javascript:void(0)">Content Paket</a></li>
       </ol>
     </div>
     <!-- row -->
@@ -21,7 +21,7 @@
       <div class="col-xl-12 col-xxl-12">
         <div class="card">
           <div class="card-header">
-            <h4 class="card-title">Add Food</h4>
+            <h4 class="card-title">Add Paket</h4>
           </div>
           <div class="card-body">
             <form action="{{Route('food.add.save')}}" method="POST"  enctype="multipart/form-data" id="step-form-horizontal" class="step-form-horizontal">
@@ -31,13 +31,13 @@
                   <div class="row">
                     <div class="col-lg-12 mb-2">
                       <div class="form-group">
-                        <label class="text-label">slug*</label>
+                        <label class="text-label">slug* (harus nyambung)</label>
                         <input type="text" class="form-control" id="slug" name="slug" placeholder="Ex. pantai-sanur" aria-describedby="inputGroupPrepend2" required>
                       </div>
                     </div>
                     <div class="col-lg-12 mb-2">
                       <div class="form-group">
-                        <label class="text-label">title*</label>
+                        <label class="text-label">Judul Paket*</label>
                         <input type="text" class="form-control" id="title" name="title" aria-describedby="inputGroupPrepend2" required>
                       </div>
                     </div>
@@ -52,6 +52,12 @@
                             <label for="image">Image</label>
                             <input type="file" class="form-control-file" id="image" name="image" required>
                         </div>
+                    </div>
+                    <div class="col-lg-12 mb-2">
+                      <div class="form-group">
+                        <label class="text-label">Lama Paket* (Ex, 4 Days 3 Nights)</label>
+                        <input type="text" class="form-control" id="title" name="lama" aria-describedby="inputGroupPrepend2" required>
+                      </div>
                     </div>
                     <div class="col-lg-12 mb-3">
                       <button type="submit" class="btn btn-primary" style="float:right;">Submit</button>

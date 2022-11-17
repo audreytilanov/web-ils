@@ -551,11 +551,11 @@ strong {
 .heroText {
   position: absolute;
   z-index: 9;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 10%;
+  /* transform: translate(-50%, -50%); */
   width: 85%;
-  text-align: center;
+  text-align: left;
 }
 
 /*---------------------------------------
@@ -1972,15 +1972,21 @@ article{
   font-size: 16px;
   font-weight: 700;
   color: #9faabb;
+  z-index: 10;
+
 }
 .post .post-bottom .more-button a i {
   color: #9faabb;
   font-size: 12px;
   margin-left: 10px;
+  background-color: #fff;
   vertical-align: middle;
+  z-index: 10;
 }
 .post .post-bottom .more-button a:hover {
   color: #FE4F70;
+  z-index: 10;
+
 }
 .post .post-bottom .more-link {
   color: #203656;
@@ -2086,6 +2092,7 @@ article{
 .post.post-list .details {
   margin-left: 295px;
 }
+
 .post.post-list .post-title {
   margin: 9px 0;
 }

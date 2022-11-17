@@ -16,8 +16,35 @@ use App\Models\TableContent;
 class UserController extends Controller
 {
     public function index(){
-        $contents = TableContent::all();
-        return view('pages.home')->with(compact('contents'));
+        $contentMobil = ComponentDesa::where('status_aktif','=','1')->get();
+        $content = ComponentFood::where('status_aktif','=','1')->get();
+        // $contentImage = ChildComponentPantai::where('parent_id','=',$content->id)->get()->first();
+        $judul = "Paket Wisata Medan Tour";
+        return view('pages.home', compact('judul','content', 'contentMobil'));
+    }
+
+    public function indexAbout(){
+        $content = ComponentFood::where('status','=','sub')->where('status_aktif','=','1')->get();
+        // $contentImage = ChildComponentPantai::where('parent_id','=',$content->id)->get()->first();
+        $judul = "Paket Wisata Medan Tour";
+        return view('pages.list.about', compact('judul','content'));
+    }
+
+    public function indexPaket(){
+        $content = ComponentFood::where('status','=','sub')->where('status_aktif','=','1')->get();
+        // $contentImage = ChildComponentPantai::where('parent_id','=',$content->id)->get()->first();
+        $judul = "Paket Wisata Medan Tour";
+        return view('pages.list.paket', compact('judul','content'));
+    }
+
+    public function indexHubungi(){
+        $judul = "Paket Wisata Medan Tour";
+        return view('pages.list.hubungi', compact('judul'));
+    }
+
+    public function indexBook(){
+        $judul = "Paket Wisata Medan Tour";
+        return view('pages.list.book', compact('judul'));
     }
 
     public function view_detailBlog(){

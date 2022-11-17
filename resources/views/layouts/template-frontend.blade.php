@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ILS 2021 | <?php echo $page ?> </title>
+    <title>BaliDriveTour | <?php echo $page ?> </title>
 
 
     <!-- Favicon -->
@@ -45,14 +45,12 @@
   
   <body>
     <main>
-      @livewire('banner')
 
       @include('components.navbar-home')
 
       
       @yield('content')
 
-      @livewire('gallery-image')
 
       <!-- <section class="other-sites">
         <div class="container">

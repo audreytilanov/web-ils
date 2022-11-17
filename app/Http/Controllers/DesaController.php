@@ -28,7 +28,6 @@ class DesaController extends Controller
             'title'=>$request->title,
             'sub_title'=>$request->sub_title,
             'desc_left'=>$request->desc_left,
-            'desc_right'=>$request->desc_right,
             'image'=>$request->image->getClientOriginalName(),
         ]);
         return redirect()->route('desa.index')->with('success', 'Berhasil Menambahkan Konten Desa');
@@ -55,10 +54,8 @@ class DesaController extends Controller
                 'title'=>$request->title,
                 'sub_title'=>$request->sub_title,
                 'desc_left'=>$request->desc_left,
-                'desc_right'=>$request->desc_right,
                 'image'=>$request->image->getClientOriginalName(),
                 'status_aktif' => $request->status_aktif
-
             ]);
         }else{
             $temp->update([
@@ -66,7 +63,6 @@ class DesaController extends Controller
                 'title'=>$request->title,
                 'sub_title'=>$request->sub_title,
                 'desc_left'=>$request->desc_left,
-                'desc_right'=>$request->desc_right,
                 'status_aktif' => $request->status_aktif
             ]);
         }

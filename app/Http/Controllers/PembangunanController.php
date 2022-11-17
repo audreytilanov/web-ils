@@ -24,26 +24,15 @@ class PembangunanController extends Controller
     public function save_addcontent(Request $request)
     {
         $tanggal = Carbon::now();
-        // gambar 1
-        $fileName1 = $request->image1->getClientOriginalName();
-        $file1 = $request->file('image1');
-        Storage::disk('asset')->put('asset/pembangunan/'.$fileName1, file_get_contents($file1));
-        // gambar 2
-        $fileName2 = $request->image2->getClientOriginalName();
-        $file2 = $request->file('image2');
-        // dd($file2);
-        Storage::disk('asset')->put('asset/pembangunan/'.$fileName2, file_get_contents($file2));
         ComponentPembangunan::create([
-            'slug' => $request->slug,
-            'title' => $request->title,
-            'desc_left' => $request->desc_left,
-            'desc_right' => $request->desc_right,
+            'slug' => $request->name,
+            'title' => $request->email,
+            'desc_left' => $request->subject,
+            'desc_right' => $request->message,
             'tanggal' => $tanggal->format('l \\, jS F Y'),
-            'sumber'=>$request->sumber,
-            'image1'=>$request->image1->getClientOriginalName(),
-            'image2'=>$request->image2->getClientOriginalName()
+            'sumber'=>$request->phone,
         ]);
-        return redirect()->route('list_pembangunan')->with('success', 'Berhasil Menambahkan Konten Pembangunan');
+        return redirect()->route('home.paket')->with('success', 'Berhasil menginput data');
     }
 
     public function edit_content($id)

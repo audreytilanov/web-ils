@@ -13,7 +13,7 @@
     <div class="page-titles">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{Route('home_admin')}}">Dashboard</a></li>
-        <li class="breadcrumb-item"><a href="javascript:void(0)">Content Food</a></li>
+        <li class="breadcrumb-item"><a href="javascript:void(0)">Content Paket</a></li>
       </ol>
     </div>
     <!-- row -->
@@ -22,7 +22,7 @@
       <div class="col-xl-12 col-xxl-12">
         <div class="card">
           <div class="card-header">
-            <h4 class="card-title">Edit List Content Food</h4>
+            <h4 class="card-title">Edit List Content Paket</h4>
           </div>
           <div class="card-body">
             <form action="{{Route('food.edit.save',['id' => $content->id])}}" method="POST" enctype="multipart/form-data" id="step-form-horizontal" class="step-form-horizontal" >
@@ -38,13 +38,13 @@
                     </div>
                     <div class="col-lg-12 mb-2">
                       <div class="form-group">
-                        <label class="text-label">title*</label>
+                        <label class="text-label">Judul Paket*</label>
                         <input type="text" class="form-control" id="title" name="title" aria-describedby="inputGroupPrepend2" value="{{$content->title}}" required>
                       </div>
                     </div>
                     <div class="col-lg-12 mb-2">
                       <div class="form-group">
-                        <label class="text-label">Deskripsi Paragraf*</label>
+                        <label class="text-label">Deskripsi*</label>
                         <textarea class="form-control" rows="5" id="desc" name="desc" >{{$content->desc}}</textarea>
                       </div>
                     </div>
@@ -56,22 +56,11 @@
                         </div>
                     </div>
                     <div class="col-lg-12 mb-2">
-                        <div class="form-group">
-                          <label class="text-label">Status*</label>
-                          <div class="dropdown bootstrap-select form-control dropup">
-                                @if ($count == 1)
-                                    <h5 class="text-danger">Status Header Hanya Untuk 1 Data</h5>
-                                    <input type="hidden" class="form-control" id="title" name="status" aria-describedby="inputGroupPrepend2" value="sub" required>
-                                @else
-                                    <select name="status" id="status" class="form-control" tabindex="-98">
-                                        <option selected value="" disabled>Pilih Status</option>
-                                        <option value="sub" @if ($content->status == "sub") {{'selected="selected"'}} @endif >Sub</option>
-                                        <option value="header" @if ($content->status == "header") {{'selected="selected"'}} @endif >Primary</option>
-                                    </select>
-                                @endif
-                          </div>
-                        </div>
+                      <div class="form-group">
+                        <label class="text-label">Status*</label>
+                        <textarea class="form-control" rows="5" id="desc" name="status" >{{$content->status}}</textarea>
                       </div>
+                    </div>
                     <div class="col-lg-12 mb-2">
                       <div class="form-group">
                         <label class="text-label">Status Aktif*</label>

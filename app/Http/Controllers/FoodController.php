@@ -27,9 +27,9 @@ class FoodController extends Controller
             'title'=>$request->title,
             'desc'=>$request->desc,
             'image'=>$request->image->getClientOriginalName(),
-            'status'=> "sub",
+            'status'=> $request->lama,
         ]);
-        return redirect()->route('food.index')->with('success', 'Berhasil Menambahkan Konten Food');
+        return redirect()->route('food.index')->with('success', 'Berhasil Menambahkan Konten Paket');
     }
 
     public function edit($id){

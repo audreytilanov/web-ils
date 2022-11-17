@@ -12,7 +12,7 @@ $title = 'ILS 2021 | Admin';
             <div class="page-titles">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:void(0)">Table</a></li>
-                    <li class="breadcrumb-item active"><a href="#">Content Food</a></li>
+                    <li class="breadcrumb-item active"><a href="#">Data Paket</a></li>
                 </ol>
             </div>
             @if (session()->has('success'))
@@ -24,10 +24,10 @@ $title = 'ILS 2021 | Admin';
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Table Content Food</h4>
+                        <h4 class="card-title">Table Data Paket</h4>
                         @if (auth()->user()->userHasPermissions->where('component_name', 'makanan_khas')->where('permissions', 'can add')->isNotEmpty())
                             <a href="{{ Route('food.add') }}">
-                                <div class="btn btn-primary">Add Content Food</div>
+                                <div class="btn btn-primary">Add Paket</div>
                             </a>
                         @endif
                     </div>
@@ -37,11 +37,11 @@ $title = 'ILS 2021 | Admin';
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Slug</th>
-                                        <th>Title</th>
+                                        <th>Slug(kata-kata harus nyambung)</th>
+                                        <th>Judul Paket</th>
                                         <th>Deskripsi</th>
                                         <th>Image</th>
-                                        <th>Level Post</th>
+                                        <th>Lama Paket (ex. 4 Days 3 Nights)</th>
                                         <th>Status Aktif</th>
                                     </tr>
                                 </thead>

@@ -12,7 +12,7 @@ $title = 'ILS 2021 | Admin';
             <div class="page-titles">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:void(0)">Table</a></li>
-                    <li class="breadcrumb-item active"><a href="#">Content Desa</a></li>
+                    <li class="breadcrumb-item active"><a href="#">Data Mobil</a></li>
                 </ol>
             </div>
             @if (session()->has('success'))
@@ -24,10 +24,10 @@ $title = 'ILS 2021 | Admin';
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Table Content Desa</h4>
+                        <h4 class="card-title">Table Data Mobil</h4>
                         @if (auth()->user()->userHasPermissions->where('component_name', 'desa')->where('permissions', 'can add')->isNotEmpty())
                             <a href="{{ Route('desa.add') }}">
-                                <div class="btn btn-primary">Add Content Desa</div>
+                                <div class="btn btn-primary">Add Mobil</div>
                             </a>
                         @endif
                     </div>
@@ -37,11 +37,10 @@ $title = 'ILS 2021 | Admin';
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Slug</th>
-                                        <th>Title</th>
-                                        <th>Sub Title</th>
-                                        <th>Deskripsi Kiri</th>
-                                        <th>Deskripsi Kanan</th>
+                                        <th>Nama Mobil</th>
+                                        <th>Total Seat</th>
+                                        <th>Harga</th>
+                                        <th>Deskripsi</th>
                                         <th>Image</th>
                                         <th>Status Aktif</th>
                                     </tr>
@@ -54,7 +53,6 @@ $title = 'ILS 2021 | Admin';
                                             <td>{{ $content->title }}</td>
                                             <td>{{ $content->sub_title }}</td>
                                             <td>{{ Str::words($content->desc_left, $words = 20, $end = '...') }}</td>
-                                            <td>{{ Str::words($content->desc_right, $words = 20, $end = '...') }}</td>
                                             <td><img src="{{ URL::asset('asset/desa/' . $content->image) }}"
                                                     alt="{{ $content->image }}" width="100px" height="auto"></td>
                                             @if ($content->status_aktif == 0)

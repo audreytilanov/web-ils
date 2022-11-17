@@ -7,7 +7,7 @@ $title = 'ILS 2021 | Admin';
     <!--**********************************
                 Content body start
             ***********************************-->
-    <div class="content-body">
+    {{-- <div class="content-body">
         <div class="container-fluid">
             <div class="page-titles">
                 <ol class="breadcrumb">
@@ -76,7 +76,7 @@ $title = 'ILS 2021 | Admin';
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!--**********************************
                 Content body end
             ***********************************-->
