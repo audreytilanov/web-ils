@@ -8,8 +8,8 @@ $a = 'layouts.template';
 <script src="https://use.fontawesome.com/c54c4e7234.js"></script>
 <section class="main-banner" id="hero">
   <div class="heroText">
-    <h1 class="text-white mt-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="800">Medan Vista Tour<br>We Are Medan Tour Organizer</h1>
-    <p class="text-secondary-white-color" style="font-size: 17px!important;font-weight:400!important;" data-aos="fade-up" data-aos-delay="1000">Anda butuh perjalanan wisata yang menyenangkan ? anda butuh tiket murah ?<br>anda butuh car rental yang bisa dipercaya ? anda butuh guide yang handal ?<br>temukan semuanya hanya di medan vista tour, medan tour oraganiser andalan anda !<br>kami memberikan pelayanan berkualitas dengan cara yang bersahabat dan profesional.</p>
+    <h1 class="text-white mt-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="800">Bali Drive Tour<br>We Are Bali Tour Organizer</h1>
+    <p class="text-secondary-white-color" style="font-size: 17px!important;font-weight:400!important;" data-aos="fade-up" data-aos-delay="1000">Anda butuh perjalanan wisata yang menyenangkan ? anda butuh tiket murah ?<br>anda butuh car rental yang bisa dipercaya ? anda butuh guide yang handal ?<br>temukan semuanya hanya di Bali Drive Tour, medan tour oraganiser andalan anda !<br>kami memberikan pelayanan berkualitas dengan cara yang bersahabat dan profesional.</p>
 
     <br>
     <a href="{{ route('makanan.view') }}" class="btn btn-warning text-white hover-more" style="border-radius:50px;padding-left:10px!important;padding-right:10px!important;">&nbsp;&nbsp;&nbsp;Cek Paket&nbsp;&nbsp;&nbsp;</a>
@@ -91,9 +91,9 @@ $a = 'layouts.template';
   <div class="container-xl">
       <div class="text-center">
           <h1 class="mt-0 mb-2">Medan Tour Special Promo</h1>
-          <p>Medan Tour spesial promo, hi kawan saat ini Medan Vista Tour memberikan Promo Spesial lebaran buat kawan kawan yang ingin berlibur bersama medan vista tour, buat anda yang ingin mendapatkan perjalanan medan tour atau bali tour untuk liburan lebaran anda, kami medan vista tour memberikan discount habis habisan <span style="font-size: 30px;font-weight:bold;">Up to 20 %</span> buat anda yang ingin mendapatkan pengalaman medan tour dan bali tour terbaik.<br>
+          <p>Medan Tour spesial promo, hi kawan saat ini Bali Drive Tour memberikan Promo Spesial lebaran buat kawan kawan yang ingin berlibur bersama Bali Drive Tour, buat anda yang ingin mendapatkan perjalanan medan tour atau bali tour untuk liburan lebaran anda, kami Bali Drive Tour memberikan discount habis habisan <span style="font-size: 30px;font-weight:bold;">Up to 20 %</span> buat anda yang ingin mendapatkan pengalaman medan tour dan bali tour terbaik.<br>
 
-          silahkan hubungi kami untuk pemesanan medan tour & bali tour dan sampaikan kepada customer service kami bahwa anda pengunjung website medan vista tour yang berhak mendapatkan discount spesial lebaran untuk medan tour & bali tour.
+          silahkan hubungi kami untuk pemesanan medan tour & bali tour dan sampaikan kepada customer service kami bahwa anda pengunjung website Bali Drive Tour yang berhak mendapatkan discount spesial lebaran untuk medan tour & bali tour.
           </p>
           <nav aria-label="breadcrumb">
               <ol class="breadcrumb justify-content-center mb-0">
@@ -209,7 +209,7 @@ $a = 'layouts.template';
         <div class="text-center">
             <h1 class="mt-0 mb-2" id="">Tentang Kami</h1>
             <p>
-              Medan Vista Tour adalah salah satu penyedia jasa pelayanan pariwisata di medan yang menjadi salah satu penyedia paket dan jasa medan tour, kami beroperasi mulai dari tahun 2014 silam, tidak terasa sudah hampir 3 tahun kami malakukan kegiatan ini. ada banyak paket medan tour yang kami sediakan untuk anda semua. tentu saja dengan harga yang bersahabat dan rasional kami akan menemani perjalanan wisata anda.<br>
+              Bali Drive Tour adalah salah satu penyedia jasa pelayanan pariwisata di medan yang menjadi salah satu penyedia paket dan jasa medan tour, kami beroperasi mulai dari tahun 2014 silam, tidak terasa sudah hampir 3 tahun kami malakukan kegiatan ini. ada banyak paket medan tour yang kami sediakan untuk anda semua. tentu saja dengan harga yang bersahabat dan rasional kami akan menemani perjalanan wisata anda.<br>
               
               selain itu kami juga melayani pemesanan hotel, tiket pesawat, dan transport di medan, anda tidak ingin melakukan medan tour ? hanya mau menyewa mobil untuk menjemput anda di bandara dan mengantar anda ke tempat tujuan ? serahkan pada kami ! karena kami menyediakan 3 jenis mobil seperti avansa, innova, isuzu ELF.
             </p>
@@ -224,9 +224,9 @@ $a = 'layouts.template';
     <div class="container-xl">
       <div class="text-center">
           <h1 class="mt-0 mb-2">Pelayanan Medan Tour</h1>
-          <p style="font-size: 17px">Medan vista tour sebagai jasa medan tour memberikan beberapa pelayanan yang akan sangat membantu anda dalam perjalanan wisata anda. kami memberikan pelayanan satu atap mulai dari jasa medan tour, ticketing, transport, dan beberapa aktivitas pariwisata lainnya. kami menyediakan pelayanan pelayanan tersebut dalam satu atap atau perusahaan yang bernama medan vista tour, jadi apabila anda ingin berlibur kemanapun jangan takut untuk bertanya karena medan vista tour sebagai jasa medan tour atau tour & travel di medan akan selalu siap membantu anda semua.<br>
+          <p style="font-size: 17px">Bali Drive Tour sebagai jasa medan tour memberikan beberapa pelayanan yang akan sangat membantu anda dalam perjalanan wisata anda. kami memberikan pelayanan satu atap mulai dari jasa medan tour, ticketing, transport, dan beberapa aktivitas pariwisata lainnya. kami menyediakan pelayanan pelayanan tersebut dalam satu atap atau perusahaan yang bernama Bali Drive Tour, jadi apabila anda ingin berlibur kemanapun jangan takut untuk bertanya karena Bali Drive Tour sebagai jasa medan tour atau tour & travel di medan akan selalu siap membantu anda semua.<br>
 
-            beberapa hal yang harus anda ketahui tentang medan vista tour dalam melakukan 4 pelayanan ini adalah, kami medan vista tour sebagai jasa medan tour melakukan dan menjalankan pelayanan ini dalam sebuah perusahaan tour & travel resmi jadi anda tidak perlu kuatir akan kemanan dan kenyamanan anda semua.
+            beberapa hal yang harus anda ketahui tentang Bali Drive Tour dalam melakukan 4 pelayanan ini adalah, kami Bali Drive Tour sebagai jasa medan tour melakukan dan menjalankan pelayanan ini dalam sebuah perusahaan tour & travel resmi jadi anda tidak perlu kuatir akan kemanan dan kenyamanan anda semua.
           </p>
       </div>
     </div>
@@ -244,7 +244,7 @@ $a = 'layouts.template';
               <div class="details">
                 <ul class="meta list-inline mb-3">
                   <li class="list-inline-item"><a style="cursor:default;font-size:30px;">Ticketing</a></li>
-                  <li class="list-inline-item"><a style="cursor:default;">kami tawarkan tiket pesawat dengan harga terbaik hanya untuk anda semua bersama medan vista tour anda akan dapatkan itu semua. Pemesanan tiket & Hotel silahkan hubungi 081284453949.</a></li>
+                  <li class="list-inline-item"><a style="cursor:default;">kami tawarkan tiket pesawat dengan harga terbaik hanya untuk anda semua bersama Bali Drive Tour anda akan dapatkan itu semua. Pemesanan tiket & Hotel silahkan hubungi 081284453949.</a></li>
                   {{-- <li class="list-inline-item">{{ date('d-m-Y', strtotime($content->created_at)); }}</li> --}}
                 </ul>
                 {{-- <h5 class="post-title"><a href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}">{{ strip_tags($content->title) }}</a></h5> --}}
@@ -286,7 +286,7 @@ $a = 'layouts.template';
               <div class="details">
                 <ul class="meta list-inline mb-3">
                   <li class="list-inline-item"><a style="cursor:default;font-size:30px;">Transport</a></li>
-                  <li class="list-inline-item"><a style="cursor:default;">Dapatkan kenyamanan berkendara bersama medan vista tour. Dengan kendaraan terbaik dan bersih kami pastikan perjalanan medan tour anda aman & nyaman. Pilih jenis kendaraan</a></li>
+                  <li class="list-inline-item"><a style="cursor:default;">Dapatkan kenyamanan berkendara bersama Bali Drive Tour. Dengan kendaraan terbaik dan bersih kami pastikan perjalanan medan tour anda aman & nyaman. Pilih jenis kendaraan</a></li>
                   {{-- <li class="list-inline-item">{{ date('d-m-Y', strtotime($content->created_at)); }}</li> --}}
                 </ul>
                 {{-- <h5 class="post-title"><a href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}">{{ strip_tags($content->title) }}</a></h5> --}}
@@ -307,7 +307,7 @@ $a = 'layouts.template';
               <div class="details">
                 <ul class="meta list-inline mb-3">
                   <li class="list-inline-item"><a style="cursor:default;font-size:30px;">Aktivitas Lain</a></li>
-                  <li class="list-inline-item"><a style="cursor:default;">Anda suka Hiking ? atau aktivitas lainnya ? bersama kami semua akan menjadi mungkin. medan vista tour menyediakan pelayanan yang membuat anda terpukau. cek aktivitas</a></li>
+                  <li class="list-inline-item"><a style="cursor:default;">Anda suka Hiking ? atau aktivitas lainnya ? bersama kami semua akan menjadi mungkin. Bali Drive Tour menyediakan pelayanan yang membuat anda terpukau. cek aktivitas</a></li>
                   {{-- <li class="list-inline-item">{{ date('d-m-Y', strtotime($content->created_at)); }}</li> --}}
                 </ul>
                 {{-- <h5 class="post-title"><a href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}">{{ strip_tags($content->title) }}</a></h5> --}}
@@ -356,7 +356,7 @@ $a = 'layouts.template';
           <div class="text-center">
               <h1 class="mt-0 mb-2">Pilihan Mobil Medan Tour</h1>
               <p>
-                Medan Vista Tour sebagai salah satu penyedia layanan wisata di medan yang menjual paket paket medan  tour, wisata danau toba dan juga beberapa tempat wisata lain memberikan beberapa pilihan kendaraan yang tentu saja kami pastikan membuat anda nyaman sepanjang perjalanan anda.
+                Bali Drive Tour sebagai salah satu penyedia layanan wisata di medan yang menjual paket paket medan  tour, wisata danau toba dan juga beberapa tempat wisata lain memberikan beberapa pilihan kendaraan yang tentu saja kami pastikan membuat anda nyaman sepanjang perjalanan anda.
               </p>
               <nav aria-label="breadcrumb">
                   <ol class="breadcrumb justify-content-center mb-0">
