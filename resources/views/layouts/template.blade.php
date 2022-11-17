@@ -154,9 +154,10 @@
                             {{-- @if (auth()->user()->userHasPermissions->where('component_name', 'gallery_video')->isNotEmpty())
                                 <li><a href="{{ Route('video.index') }}">Gallery Video</a></li>
                             @endif
+                            --}}
                             @if (auth()->user()->userHasPermissions->where('component_name', 'review')->isNotEmpty())
                                 <li><a href="{{ Route('review.index') }}">Review</a></li>
-                            @endif --}}
+                            @endif 
                         </ul>
                     {{-- </li>
                     <li class="#">
