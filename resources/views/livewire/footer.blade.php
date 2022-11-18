@@ -1,22 +1,18 @@
 <footer class="site-footer">
       <div class="container">
         <div class="row">
-          <div class="col-12">
+          <div class="col-4">
             <h5 class="text-white">
               <!-- <i class="bi-geo-alt-fill me-2"></i> -->
               BaliDriveTour.com</h5>
-              <h6 class="text-white">Jl. By Pass i Gusti Ngurah Ray Mumbul Nusa Dua</h6>
+              
+          </div>
+          <div class="col-4">
+            <h6 class="text-white">Jl. By Pass i Gusti Ngurah Ray Mumbul Nusa Dua</h6>
               <h6 class="text-white">Whatsapp : 081237530038 | 081375042155</h6>
           </div>
-          <div class="col-lg-6 ms-auto" style="margin-top:auto">
-            <ul class="social-icons list-unstyled list-inline mb-0 float-md-end" style="color:#fff;">
-              <li class="list-inline-item"><a href="#"><i class="fab fa-youtube" style="color:#fff;"></i></a></li>
-              <li class="list-inline-item"><a href="#"><i class="fab fa-instagram" style="color:#fff;"></i></a></li>
-              <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f" style="color:#fff;"></i></a></li>
-              <li class="list-inline-item"><a href="#"><i class="fab fa-twitter" style="color:#fff;"></i></a></li>
-              <li class="list-inline-item"><a href="#"><i class="fab fa-telegram-plane" style="color:#fff;"></i></a></li>
-              <li class="list-inline-item"><a href="#"><i class="far fa-envelope" style="color:#fff;"></i></a></li>
-            </ul>
+          <div class="col-lg-4 ms-auto" style="margin-top:auto">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.004203556583!2d115.20020521478487!3d-8.785673293689861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf95d67e8b6b0b0d5!2zOMKwNDcnMDguNCJTIDExNcKwMTInMDguNiJF!5e0!3m2!1sid!2sid!4v1668757074684!5m2!1sid!2sid" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
