@@ -11,9 +11,9 @@
           <br>
           <div class="col-lg-4 col-md-4 col-sm-12">
             <h6 class="text-white col-sm-12">Jl. By Pass i Gusti Ngurah Ray Mumbul Nusa Dua</h6>
-            <h6 class="text-white col-sm-12">Contact Person (WA) : 081237530038 | 081375042155</h6>
+            <h6 class="text-white col-sm-12">Contact Person (WA) : 08237530038</h6>
             
-            <h6 class="text-white col-sm-12">Ticketing (WA) : 081237530038</h6>
+            <h6 class="text-white col-sm-12">Ticketing : BCA 8280006549 an.Richard E P Sinaga</h6>
 
           </div>
           <div class="col-lg-4 col-lg-4 col-sm-12 ms-auto" style="margin-top:auto">
