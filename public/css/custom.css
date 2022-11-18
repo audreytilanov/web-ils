@@ -530,7 +530,7 @@ strong {
   overflow: hidden;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 992px) {
   .main-banner {
     height: 100vh;
   }
@@ -557,6 +557,35 @@ strong {
   width: 85%;
   text-align: left;
 }
+
+.heroText h1{
+  font-size: 30px!important;
+}
+
+.heroText p{
+  font-size: 17px!important;
+}
+
+@media screen and (max-width: 800px){
+  .heroText h1{
+    font-size: 25px!important;
+  }
+  
+  .heroText p{
+    font-size: 12px!important;
+  }
+
+  .heroText {
+    position: absolute;
+    z-index: 9;
+    top: 10%;
+    left: 10%;
+    /* transform: translate(-50%, -50%); */
+    width: 90%;
+    text-align: left;
+  }
+}
+
 
 /*---------------------------------------
   BREAK LINE          
