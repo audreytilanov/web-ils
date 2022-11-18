@@ -229,7 +229,7 @@ strong {
 -----------------------------------------*/
 
 .navbar {
-  z-index: 9;
+  z-index: 1000;
   right: 0;
   left: 0;
   padding-top: 15px;
