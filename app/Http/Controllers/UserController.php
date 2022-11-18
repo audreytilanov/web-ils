@@ -31,7 +31,7 @@ class UserController extends Controller
     }
 
     public function indexPaket(){
-        $content = ComponentFood::where('status','=','sub')->where('status_aktif','=','1')->get();
+        $content = ComponentFood::where('status_aktif','=','1')->get();
         // $contentImage = ChildComponentPantai::where('parent_id','=',$content->id)->get()->first();
         $judul = "Paket Wisata Medan Tour";
         return view('pages.list.paket', compact('judul','content'));
