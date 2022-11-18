@@ -26,7 +26,7 @@ $a = 'layouts.template';
       <div class="text-center">
           <h1 class="mt-0 mb-2">{{ ucfirst($judul) }}</h1>
           <p>
-            <span>"</span>Banyak sekali tempat pariwisata yang harus anda kunjungi di sumatera utara kususnya di Bali, berikut beberapa tempat terpopuler yang banyak di minati para wisatawan domestik maupun mancanegara yang kami telah rangkum menjadi paket paket Bali Drive Tour, apabila anda ingin mengetahui lebih banyak tentang paket Bali Drive Tour dan tujuan tujuan wisata silahkan baca lebih lanjut tentang tempat tempat pariwisata dan paket tour di Bali yang kami sediakan"
+            <span>"</span>Banyak sekali tempat pariwisata yang harus anda kunjungi di Bali, berikut beberapa tempat terpopuler yang banyak di minati para wisatawan domestik maupun mancanegara yang kami telah rangkum menjadi paket paket Bali Drive Tour, apabila anda ingin mengetahui lebih banyak tentang paket Bali Drive Tour dan tujuan tujuan wisata silahkan baca lebih lanjut tentang tempat tempat pariwisata dan paket tour di Bali yang kami sediakan"
           </p>
           <nav aria-label="breadcrumb">
               <ol class="breadcrumb justify-content-center mb-0">
@@ -107,7 +107,7 @@ $a = 'layouts.template';
   <div class="container-xl">
     <div class="text-center">
         <h3 class="mt-0 mb-2">Kenapa Bali Drive Tour</h3>
-        <p style="font-size: 17px">kenapa anda harus memilih kami ? kami menyediakan perjalanan Bali Drive Tour yang takkan terlupakan, dengan driver driver berpengalaman dan mengerti seluk beluk sumatera utara anda semua akan mendapatkan Bali Drive Tour yang tak terlupakan.<br>
+        <p style="font-size: 17px">kenapa anda harus memilih kami ? kami menyediakan perjalanan Bali Drive Tour yang takkan terlupakan, dengan driver driver berpengalaman dan mengerti seluk beluk Bali anda semua akan mendapatkan Bali Drive Tour yang tak terlupakan.<br>
           Bali Drive Tour menjanjikan perjalanan yang bersahabat dengan cara yang profesional. kami mengerti akan artinya kepuasan perjalanan wisata yang anda lakukan karena kami pun suka berwisata. sampai saat ini Bali Drive Tour memberikan perjalanan wisata yang tepat waktu dan disesuaikan dengan schedule schedule yang kami buat dan rancang untuk anda, atau kalau anda semua ingin menikmati perjalanan wisata dengan rancangan perjalanan anda sendiri kami siap membantu.<br>
           Bali Drive Tour memberikan beberapa destinasi pilihan untuk anda semua yang pastinya telah kami pilah agar anda semua merasa aman dan nyaman sepanjang liburan wisata anda. selain itu kami juga melayani dengan harga bersahabat, serta pelayanan yang akan membuat anda aman dan nyaman.
         </p>
