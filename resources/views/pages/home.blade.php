@@ -244,7 +244,7 @@ $a = 'layouts.template';
               <div class="details">
                 <ul class="meta list-inline mb-3">
                   <li class="list-inline-item"><a style="cursor:default;font-size:30px;">Ticketing</a></li>
-                  <li class="list-inline-item"><a style="cursor:default;">kami tawarkan tiket pesawat dengan harga terbaik hanya untuk anda semua bersama Bali Drive Tour anda akan dapatkan itu semua. Pemesanan tiket & Hotel silahkan hubungi 081284453949.</a></li>
+                  <li class="list-inline-item"><a style="cursor:default;">kami tawarkan tiket pesawat dengan harga terbaik hanya untuk anda semua bersama Bali Drive Tour anda akan dapatkan itu semua. Pemesanan tiket & Hotel silahkan hubungi 081375042155.</a></li>
                   {{-- <li class="list-inline-item">{{ date('d-m-Y', strtotime($content->created_at)); }}</li> --}}
                 </ul>
                 {{-- <h5 class="post-title"><a href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}">{{ strip_tags($content->title) }}</a></h5> --}}
