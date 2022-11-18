@@ -5,6 +5,8 @@
             <h5 class="text-white">
               <!-- <i class="bi-geo-alt-fill me-2"></i> -->
               BaliDriveTour.com</h5>
+              <h6 class="text-white">Jl. By Pass i Gusti Ngurah Ray Mumbul Nusa Dua</h6>
+              <h6 class="text-white">Whatsapp : 081237530038 | 081375042155</h6>
           </div>
           <div class="col-lg-6 ms-auto" style="margin-top:auto">
             <ul class="social-icons list-unstyled list-inline mb-0 float-md-end" style="color:#fff;">

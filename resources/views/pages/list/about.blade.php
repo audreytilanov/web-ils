@@ -32,10 +32,10 @@ $a = 'layouts.template';
           <div class="details">
             <ul class="meta list-inline mb-3">
             </ul>
-            <h5 class="post-title">Tentang Medan Vista Tour</h5>
-            <p class="excerpt mb-0">Medan Vista Tour adalah salah satu penyedia jasa pelayanan pariwisata di medan yang menjadi salah satu penyedia paket medan tour, kami beroperasi mulai dari tahun 2014 silam, tidak terasa sudah hampir 3 tahun kami malakukan kegiatan ini. ada banyak paket MEDAN TOUR yang kami sediakan untuk anda semua. tentu saja dengan harga yang bersahabat dan rasional kami akan menemani perjalanan wisata anda.
+            <h5 class="post-title">Tentang BaliBali Drive Tour</h5>
+            <p class="excerpt mb-0">Bali Drive Tour adalah salah satu penyedia jasa pelayanan pariwisata di Bali yang menjadi salah satu penyedia paket Bali tour, kami beroperasi mulai dari tahun 2014 silam, tidak terasa sudah hampir 3 tahun kami malakukan kegiatan ini. ada banyak paket Bali TOUR yang kami sediakan untuk anda semua. tentu saja dengan harga yang bersahabat dan rasional kami akan menemani perjalanan wisata anda.
 
-              selain itu kami juga melayani pemesanan hotel, tiket pesawat, dan transport di medan, anda tidak ingin melakukan medan tour ? hanya mau menyewa mobil untuk menjemput anda di bandara dan mengantar anda ke tempat tujuan ? serahkan pada kami ! karena kami menyediakan 3 jenis mobil seperti avansa, innova, isuzu ELF.</p>
+              selain itu kami juga melayani pemesanan hotel, tiket pesawat, dan transport di medan, anda tidak ingin melakukan Bali tour ? hanya mau menyewa mobil untuk menjemput anda di bandara dan mengantar anda ke tempat tujuan ? serahkan pada kami ! karena kami menyediakan 3 jenis mobil seperti avansa, innova, isuzu ELF.</p>
             <br>
           </div>
         </div>

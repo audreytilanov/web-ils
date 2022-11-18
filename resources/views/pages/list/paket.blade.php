@@ -21,7 +21,7 @@ $a = 'layouts.template';
       <div class="text-center">
           <h1 class="mt-0 mb-2">{{ ucfirst($judul) }}</h1>
           <p>
-            <span>"</span>Silahkan cek paket medan tour dan wisata danau toba yang kami sediakan di bawah ini, butuh paket yang lain atau ada permintaan khusus silahkan hubungi kami melalui kontak yang tersedia pada bagian bawah website kami. - medan Vista Tour
+            <span>"</span>Silahkan cek paket Bali tour dan wisata Bali yang kami sediakan di bawah ini, butuh paket yang lain atau ada permintaan khusus silahkan hubungi kami melalui kontak yang tersedia pada bagian bawah website kami. - Bali Drive Tour
           </p>
           <nav aria-label="breadcrumb">
               <ol class="breadcrumb justify-content-center mb-0">
