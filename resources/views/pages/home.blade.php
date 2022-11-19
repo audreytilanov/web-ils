@@ -230,7 +230,7 @@ $a = 'layouts.template';
         </div>
     </div>
   </section>
-  <section class="main-content" style="margin-top:50px;">
+  <section class="main-content" style="background-color:#fffBE7;">
     <div class="container-xl">
       <div class="text-center">
           <h1 class="mt-0 mb-2">Pelayanan Bali Drive Tour</h1>
