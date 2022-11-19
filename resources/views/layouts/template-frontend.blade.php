@@ -69,7 +69,7 @@
 
     @livewire('footer')
 
-    <div class="color-switcher">
+    {{-- <div class="color-switcher">
       <div class="switcher-btn">
         <i class="fas fa-cog"></i>
       </div>
@@ -85,7 +85,7 @@
         <span class="theme-buttons" data-color="#e0ac12" data-color-font="#fefefe" data-color-p="#fefefe"  data-color-intro2="#ffc312"style="background: #e0ac12;"></span>
         <span class="theme-buttons" data-color="#16a7cc" data-color-font="#fefefe" data-color-p="#fefefe" data-color-intro2="#17c0eb" style="background: #16a7cc;"></span>
       </div>
-    </div>
+    </div> --}}
 
     <!-- JAVASCRIPT FILES -->
     <script src="../js-frontend/jquery.min.js"></script>
