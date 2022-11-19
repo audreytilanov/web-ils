@@ -18,11 +18,11 @@ $a = 'layouts.template';
   </div>
   <div class="overlay"></div>
 </section>
-<section class="page-header" style="background-color: rgb(233, 214, 3)">
+<section class="page-header" style="background-color: rgb(224, 206, 8)">
   <div class="container-xl">
       <div class="text-center">
-          <h1 class="mt-0 mb-2 text-white">{{ ucfirst($judul) }}</h1>
-          <p class="text-white">
+          <h1 class="mt-0 mb-2 text-dark">{{ ucfirst($judul) }}</h1>
+          <p class="text-dark" style="font-weight: 600">
             <span>"</span>Banyak sekali tempat pariwisata yang harus anda kunjungi di Bali, berikut beberapa tempat terpopuler yang banyak di minati para wisatawan domestik maupun mancanegara yang kami telah rangkum menjadi paket paket Bali Drive Tour, apabila anda ingin mengetahui lebih banyak tentang paket Bali Drive Tour dan tujuan tujuan wisata silahkan baca lebih lanjut tentang tempat tempat pariwisata dan paket tour di Bali yang kami sediakan"
           </p>
           <nav aria-label="breadcrumb">
@@ -230,11 +230,11 @@ $a = 'layouts.template';
         </div>
     </div>
   </section>
-  <section class="main-content" style="background-color: rgb(233, 214, 3);">
+  <section class="main-content" style="background-color: rgb(224, 206, 8);color:black;">
     <div class="container-xl">
       <div class="text-center">
-          <h1 class="mt-0 mb-2">Pelayanan Bali Drive Tour</h1>
-          <p style="font-size: 17px">Bali Drive Tour sebagai jasa Bali Drive Tour memberikan beberapa pelayanan yang akan sangat membantu anda dalam perjalanan wisata anda. kami memberikan pelayanan satu atap mulai dari jasa Bali Drive Tour, ticketing, transport, dan beberapa aktivitas pariwisata lainnya. kami menyediakan pelayanan pelayanan tersebut dalam satu atap atau perusahaan yang bernama Bali Drive Tour, jadi apabila anda ingin berlibur kemanapun jangan takut untuk bertanya karena Bali Drive Tour sebagai jasa Bali Drive Tour atau tour & travel di Bali akan selalu siap membantu anda semua.<br>
+          <h1 class="mt-0 mb-2 text-dark">Pelayanan Bali Drive Tour</h1>
+          <p class="text-dark" style="font-size: 17px; font-weight:600;">Bali Drive Tour sebagai jasa Bali Drive Tour memberikan beberapa pelayanan yang akan sangat membantu anda dalam perjalanan wisata anda. kami memberikan pelayanan satu atap mulai dari jasa Bali Drive Tour, ticketing, transport, dan beberapa aktivitas pariwisata lainnya. kami menyediakan pelayanan pelayanan tersebut dalam satu atap atau perusahaan yang bernama Bali Drive Tour, jadi apabila anda ingin berlibur kemanapun jangan takut untuk bertanya karena Bali Drive Tour sebagai jasa Bali Drive Tour atau tour & travel di Bali akan selalu siap membantu anda semua.<br>
 
             beberapa hal yang harus anda ketahui tentang Bali Drive Tour dalam melakukan 4 pelayanan ini adalah, kami Bali Drive Tour sebagai jasa Bali Drive Tour melakukan dan menjalankan pelayanan ini dalam sebuah perusahaan tour & travel resmi jadi anda tidak perlu kuatir akan kemanan dan kenyamanan anda semua.
           </p>
@@ -253,8 +253,8 @@ $a = 'layouts.template';
               </div>
               <div class="details">
                 <ul class="meta list-inline mb-3">
-                  <li class="list-inline-item"><a style="cursor:default;font-size:30px;">Ticketing</a></li>
-                  <li class="list-inline-item"><a style="cursor:default;">kami tawarkan tiket pesawat dengan harga terbaik hanya untuk anda semua bersama Bali Drive Tour anda akan dapatkan itu semua. Pemesanan tiket & Hotel silahkan hubungi 081375042155.</a></li>
+                  <li class="list-inline-item"><a style="cursor:default;font-size:30px;color:black;">Ticketing</a></li>
+                  <li class="list-inline-item"><a style="cursor:default;color:black;">kami tawarkan tiket pesawat dengan harga terbaik hanya untuk anda semua bersama Bali Drive Tour anda akan dapatkan itu semua. Pemesanan tiket & Hotel silahkan hubungi 081375042155.</a></li>
                   {{-- <li class="list-inline-item">{{ date('d-m-Y', strtotime($content->created_at)); }}</li> --}}
                 </ul>
                 {{-- <h5 class="post-title"><a href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}">{{ strip_tags($content->title) }}</a></h5> --}}
@@ -274,8 +274,8 @@ $a = 'layouts.template';
               </div>
               <div class="details">
                 <ul class="meta list-inline mb-3">
-                  <li class="list-inline-item"><a style="cursor:default;font-size:30px;">Paket Tour</a></li>
-                  <li class="list-inline-item"><a style="cursor:default;">Dapatkan perjalanan wisata terbaik yang belum pernah anda dapatkan sebelumnya, dengan driver handal dan mengerti arti sebuah liburan. cek paket Bali Drive Tour</a></li>
+                  <li class="list-inline-item"><a style="cursor:default;font-size:30px;color:black;">Paket Tour</a></li>
+                  <li class="list-inline-item"><a style="cursor:default;color:black;">Dapatkan perjalanan wisata terbaik yang belum pernah anda dapatkan sebelumnya, dengan driver handal dan mengerti arti sebuah liburan. cek paket Bali Drive Tour</a></li>
                   {{-- <li class="list-inline-item">{{ date('d-m-Y', strtotime($content->created_at)); }}</li> --}}
                 </ul>
                 {{-- <h5 class="post-title"><a href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}">{{ strip_tags($content->title) }}</a></h5> --}}
@@ -295,8 +295,8 @@ $a = 'layouts.template';
               </div>
               <div class="details">
                 <ul class="meta list-inline mb-3">
-                  <li class="list-inline-item"><a style="cursor:default;font-size:30px;">Transport</a></li>
-                  <li class="list-inline-item"><a style="cursor:default;">Dapatkan kenyamanan berkendara bersama Bali Drive Tour. Dengan kendaraan terbaik dan bersih kami pastikan perjalanan Bali Drive Tour anda aman & nyaman. Pilih jenis kendaraan</a></li>
+                  <li class="list-inline-item"><a style="cursor:default;font-size:30px;color:black;">Transport</a></li>
+                  <li class="list-inline-item"><a style="cursor:default;color:black;">Dapatkan kenyamanan berkendara bersama Bali Drive Tour. Dengan kendaraan terbaik dan bersih kami pastikan perjalanan Bali Drive Tour anda aman & nyaman. Pilih jenis kendaraan</a></li>
                   {{-- <li class="list-inline-item">{{ date('d-m-Y', strtotime($content->created_at)); }}</li> --}}
                 </ul>
                 {{-- <h5 class="post-title"><a href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}">{{ strip_tags($content->title) }}</a></h5> --}}
@@ -316,8 +316,8 @@ $a = 'layouts.template';
               </div>
               <div class="details">
                 <ul class="meta list-inline mb-3">
-                  <li class="list-inline-item"><a style="cursor:default;font-size:30px;">Aktivitas Lain</a></li>
-                  <li class="list-inline-item"><a style="cursor:default;">Anda suka Hiking ? atau aktivitas lainnya ? bersama kami semua akan menjadi mungkin. Bali Drive Tour menyediakan pelayanan yang membuat anda terpukau. cek aktivitas</a></li>
+                  <li class="list-inline-item"><a style="cursor:default;font-size:30px;color:black;">Aktivitas Lain</a></li>
+                  <li class="list-inline-item"><a style="cursor:default;color:black;">Anda suka Hiking ? atau aktivitas lainnya ? bersama kami semua akan menjadi mungkin. Bali Drive Tour menyediakan pelayanan yang membuat anda terpukau. cek aktivitas</a></li>
                   {{-- <li class="list-inline-item">{{ date('d-m-Y', strtotime($content->created_at)); }}</li> --}}
                 </ul>
                 {{-- <h5 class="post-title"><a href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}">{{ strip_tags($content->title) }}</a></h5> --}}
