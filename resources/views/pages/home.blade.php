@@ -116,8 +116,8 @@ $a = 'layouts.template';
 <section class="main-content" style="margin-top:50px;background-color:orange;color:white!important;">
   <div class="container-xl">
     <div class="text-center">
-        <h3 class="mt-0 mb-2 text-white">Kenapa Bali Drive Tour</h3>
-        <p class="text-white" style="font-size: 17px;font-weight:400;">kenapa anda harus memilih kami ? kami menyediakan perjalanan Bali Drive Tour yang takkan terlupakan, dengan driver driver berpengalaman dan mengerti seluk beluk Bali anda semua akan mendapatkan Bali Drive Tour yang tak terlupakan.<br>
+        <h3 class="mt-0 mb-2 text-dark">Kenapa Bali Drive Tour</h3>
+        <p class="text-dark" style="font-size: 17px;font-weight:400;">kenapa anda harus memilih kami ? kami menyediakan perjalanan Bali Drive Tour yang takkan terlupakan, dengan driver driver berpengalaman dan mengerti seluk beluk Bali anda semua akan mendapatkan Bali Drive Tour yang tak terlupakan.<br>
           Bali Drive Tour menjanjikan perjalanan yang bersahabat dengan cara yang profesional. kami mengerti akan artinya kepuasan perjalanan wisata yang anda lakukan karena kami pun suka berwisata. sampai saat ini Bali Drive Tour memberikan perjalanan wisata yang tepat waktu dan disesuaikan dengan schedule schedule yang kami buat dan rancang untuk anda, atau kalau anda semua ingin menikmati perjalanan wisata dengan rancangan perjalanan anda sendiri kami siap membantu.<br>
           Bali Drive Tour memberikan beberapa destinasi pilihan untuk anda semua yang pastinya telah kami pilah agar anda semua merasa aman dan nyaman sepanjang liburan wisata anda. selain itu kami juga melayani dengan harga bersahabat, serta pelayanan yang akan membuat anda aman dan nyaman.
         </p>
