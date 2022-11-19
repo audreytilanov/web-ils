@@ -31,57 +31,18 @@ $a = 'layouts.template';
   </div>
 </section>
 <!-- section main content -->
-<section class="main-content" style="margin-top:50px;">
-<div class="container">
-  <div class="padding-30 rounded bordered"  data-aos="fade-right" data-aos-delay="300">
-    <div class="row gy-4">
-      @foreach ($content as $content)
-          
-      
-      <div class="col-md-6 col-sm-6">
-        <!-- post -->
-        <div class="post post-list clearfix">
-          <div class="thumb rounded">
-            <a href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}">
-              <div class="inner">
-                @if ($content->image)
-                <img src="{{ URL::asset('asset/wisata-hiburan/'.$content->image) }}" alt="post-title" />
-                @else
-                <h4>Image Not Found</h4>
-                @endif
-              </div>
-            </a>
-          </div>
-          <div class="details">
-            <ul class="meta list-inline mb-3">
-              <li class="list-inline-item"><a style="cursor:default;">balidrivetour</a></li>
-              <li class="list-inline-item">{{ date('d-m-Y', strtotime($content->created_at)); }}</li>
-            </ul>
-            <h5 class="post-title"><a href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}">{{ strip_tags($content->title) }}</a></h5>
-            <p class="excerpt mb-0">{{ Str::limit($content->desc, 100) }}</p>
-            <br>
-            <a href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}" class="btn btn-warning text-white hover-more" style="border-radius:50px;padding-left:10px!important;padding-right:10px!important;">&nbsp;&nbsp;&nbsp;Cek Paket&nbsp;&nbsp;&nbsp;</a>
+@foreach ($content as $content)
+<section class="main-banner" style="height: 350px!important" id="hero">
+    <div class="heroText">
+      <h1 class="text-white mt-5 mb-lg-4 text-center" data-aos="zoom-in" data-aos-delay="800">{{ strip_tags($content->title) }}</h1>
+      <p class="excerpt mb-0 text-white text-center">{{ $content->desc_left }}</p>
 
-            <div class="post-bottom clearfix d-flex align-items-center">
-              <div class="social-share me-auto">
-                <button class="toggle-button icon-share"></button>
-                <ul class="icons list-unstyled list-inline mb-0">
-                  <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                  <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                  <li class="list-inline-item"><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
-                  <li class="list-inline-item"><a href="#"><i class="far fa-envelope"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      @endforeach
     </div>
-  </div>
-</div>
-</section>
+    <div class="videoWrapper">
+      <img src="{{  URL::asset('asset/wisata-hiburan/'.$content->image)}}" alt="">
+    </div>
+    <div class="overlay"></div>
+  </section>
+  @endforeach
 
 @endsection

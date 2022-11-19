@@ -18,9 +18,6 @@
               <a class="nav-link text-center" href="{{ route('home.paket') }}">Paket Tour</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-center" href="{{ route('home.makanan') }}">Makanan</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link text-center" href="{{ route('home.hubungi') }}">Hubungi Kami</a>
             </li>
             <li>

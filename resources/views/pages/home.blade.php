@@ -102,6 +102,19 @@ $a = 'layouts.template';
       </div>
   </div>
 </section>
+@foreach ($contentMakanan as $content)
+<section class="main-banner" style="height: 400px!important" id="hero">
+    <div class="heroText">
+      <h1 class="text-white mt-5 mb-lg-4 text-center" data-aos="zoom-in" data-aos-delay="800">{{ strip_tags($content->title) }}</h1>
+      <p class="excerpt mb-0 text-white text-center">{{ $content->desc_left }}</p>
+
+    </div>
+    <div class="videoWrapper">
+      <img src="{{  URL::asset('asset/wisata-hiburan/'.$content->image)}}" alt="">
+    </div>
+    <div class="overlay"></div>
+  </section>
+  @endforeach
 @livewire('review')
 <section class="main-content" style="margin-top:50px;background-color:orange;color:white!important;">
   <div class="container-xl">

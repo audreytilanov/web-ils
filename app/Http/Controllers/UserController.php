@@ -18,9 +18,11 @@ class UserController extends Controller
     public function index(){
         $contentMobil = ComponentDesa::where('status_aktif','=','1')->get();
         $content = ComponentFood::where('status_aktif','=','1')->get();
+        $contentMakanan = ComponentWisataHiburan::where('status_aktif','=','1')->get();
+        // $contentImage = ChildComponentPantai::where('parent_id','=',$content->id)->get()->first();
         // $contentImage = ChildComponentPantai::where('parent_id','=',$content->id)->get()->first();
         $judul = "Paket Wisata Bali Drive Tour";
-        return view('pages.home', compact('judul','content', 'contentMobil'));
+        return view('pages.home', compact('judul','content', 'contentMobil','contentMakanan'));
     }
 
     public function indexAbout(){
