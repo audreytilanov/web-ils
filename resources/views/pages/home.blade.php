@@ -62,7 +62,7 @@ $a = 'layouts.template';
               <li class="list-inline-item text-white">{{ $content->status; }}</li>
             </ul>
             <h5 class="post-title"><a class="text-white" href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}">{{ strip_tags($content->title) }}</a></h5>
-            <p class="excerpt mb-0 text-white">{{ Str::limit($content->desc, 100) }}</p>
+            <p class="excerpt mb-0 text-white" style="font-weight:500;">{{ Str::limit($content->desc, 100) }}</p>
             <br>
             <a href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}" class="btn btn-warning text-white hover-more" style="border-radius:50px;padding-left:10px!important;padding-right:10px!important;">&nbsp;&nbsp;&nbsp;Cek Paket&nbsp;&nbsp;&nbsp;</a>
 
