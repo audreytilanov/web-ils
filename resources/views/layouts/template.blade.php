@@ -134,9 +134,10 @@
                             @if (auth()->user()->userHasPermissions->where('component_name', 'sejarah')->isNotEmpty())
                                 <li><a href="{{ Route('sejarah.index') }}">Booking</a></li>
                             @endif
-                            {{-- @if (auth()->user()->userHasPermissions->where('component_name', 'wisata_hiburan')->isNotEmpty())
-                                <li><a href="{{ Route('wisata.index') }}">Tempat Wisata Hiburan</a></li>
+                             @if (auth()->user()->userHasPermissions->where('component_name', 'wisata_hiburan')->isNotEmpty())
+                                <li><a href="{{ Route('wisata.index') }}">Makanan</a></li>
                             @endif
+                            {{--
                             @if (auth()->user()->userHasPermissions->where('component_name', 'pantai')->isNotEmpty())
                                 <li><a href="{{ Route('pantai.index') }}">Pantai</a></li>
                             @endif

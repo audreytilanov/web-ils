@@ -30,6 +30,13 @@ class UserController extends Controller
         return view('pages.list.about', compact('judul','content'));
     }
 
+    public function indexMakanan(){
+        $content = ComponentWisataHiburan::where('status_aktif','=','1')->get();
+        // $contentImage = ChildComponentPantai::where('parent_id','=',$content->id)->get()->first();
+        $judul = "Paket Wisata Bali Drive Tour";
+        return view('pages.list.food', compact('judul','content'));
+    }
+
     public function indexPaket(){
         $content = ComponentFood::where('status_aktif','=','1')->get();
         // $contentImage = ChildComponentPantai::where('parent_id','=',$content->id)->get()->first();

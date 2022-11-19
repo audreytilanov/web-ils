@@ -34,6 +34,7 @@ use App\Models\Review;
 Route::get('/', [UserController::class, 'index'])->name('home');
 Route::get('/tentang-kami', [UserController::class, 'indexAbout'])->name('home.about');
 Route::get('/paket', [UserController::class, 'indexPaket'])->name('home.paket');
+Route::get('/makanan', [UserController::class, 'indexMakanan'])->name('home.makanan');
 Route::get('/hubungi-kami', [UserController::class, 'indexHubungi'])->name('home.hubungi');
 Route::post('/save_addcontentPembangunan', [PembangunanController::class, 'save_addcontent'])->name('save_addcontentPembangunan');
 

@@ -12,7 +12,7 @@ $title = 'ILS 2021 | Admin';
             <div class="page-titles">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:void(0)">Table</a></li>
-                    <li class="breadcrumb-item active"><a href="#">Content Wisata Hiburan</a></li>
+                    <li class="breadcrumb-item active"><a href="#">Content Makanan</a></li>
                 </ol>
             </div>
             @if (session()->has('success'))
@@ -24,10 +24,10 @@ $title = 'ILS 2021 | Admin';
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Table Content Wisata Hiburan</h4>
+                        <h4 class="card-title">Table Content Makanan</h4>
                         @if (auth()->user()->userHasPermissions->where('component_name', 'wisata_hiburan')->where('permissions', 'can add')->isNotEmpty())
                             <a href="{{ Route('wisata.add') }}">
-                                <div class="btn btn-primary">Add Content Wisata Hiburan</div>
+                                <div class="btn btn-primary">Add Content Makanan</div>
                             </a>
                         @endif
                     </div>
@@ -39,8 +39,7 @@ $title = 'ILS 2021 | Admin';
                                         <th>#</th>
                                         <th>Slug</th>
                                         <th>Title</th>
-                                        <th>Deskripsi Kiri</th>
-                                        <th>Deskripsi Kanan</th>
+                                        <th>Deskripsi</th>
                                         <th>Image</th>
                                         <th>Status Aktif</th>
                                     </tr>
@@ -52,7 +51,6 @@ $title = 'ILS 2021 | Admin';
                                             <td>{{ $content->slug }}</td>
                                             <td>{{ $content->title }}</td>
                                             <td>{{ Str::words($content->desc_left, $words = 20, $end = '...') }}</td>
-                                            <td>{{ Str::words($content->desc_right, $words = 20, $end = '...') }}</td>
                                             <td><img src="{{ URL::asset('asset/wisata-hiburan/' . $content->image) }}"
                                                     alt="{{ $content->image }}" width="100px" height="auto"></td>
                                             @if ($content->status_aktif == 0)

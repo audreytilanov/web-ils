@@ -13,7 +13,7 @@
     <div class="page-titles">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{Route('home_admin')}}">Dashboard</a></li>
-        <li class="breadcrumb-item"><a href="javascript:void(0)">Content Wisata Hiburan</a></li>
+        <li class="breadcrumb-item"><a href="javascript:void(0)">Content Makanan</a></li>
       </ol>
     </div>
     <!-- row -->
@@ -22,7 +22,7 @@
       <div class="col-xl-12 col-xxl-12">
         <div class="card">
           <div class="card-header">
-            <h4 class="card-title">Edit List Content Wisata Hiburan</h4>
+            <h4 class="card-title">Edit List Content Makanan</h4>
           </div>
           <div class="card-body">
             <form action="{{Route('wisata.edit.save',['id' => $content->id])}}" method="POST" enctype="multipart/form-data" id="step-form-horizontal" class="step-form-horizontal" >
@@ -44,14 +44,8 @@
                     </div>
                     <div class="col-lg-12 mb-2">
                         <div class="form-group">
-                            <label class="text-label">Deskripsi Kiri*</label>
+                            <label class="text-label">Deskripsi*</label>
                             <textarea class="form-control" rows="5" id="desc_left" name="desc_left" >{{$content->desc_left}}</textarea>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 mb-2">
-                        <div class="form-group">
-                            <label class="text-label">Deskripsi Kanan*</label>
-                            <textarea class="form-control" rows="5" id="desc_right" name="desc_right" >{{$content->desc_right}}</textarea>
                         </div>
                     </div>
                     <div class="col-lg-12 mb-2">

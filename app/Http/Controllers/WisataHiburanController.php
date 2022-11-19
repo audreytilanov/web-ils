@@ -28,10 +28,9 @@ class WisataHiburanController extends Controller
             'slug'=>$request->slug,
             'title'=>$request->title,
             'desc_left'=>$request->desc_left,
-            'desc_right'=>$request->desc_right,
             'image'=>$request->image->getClientOriginalName(),
         ]);
-        return redirect()->route('wisata.index')->with('success', 'Berhasil Menambahkan Konten Wisata Hiburan');
+        return redirect()->route('wisata.index')->with('success', 'Berhasil Menambahkan Konten Makanan');
     }
 
     public function edit($id){
@@ -53,7 +52,6 @@ class WisataHiburanController extends Controller
             $temp->update([
                 'slug'=>$request->slug,
                 'desc_left'=>$request->desc_left,
-                'desc_right'=>$request->desc_right,
                 'image'=>$request->image->getClientOriginalName(),
                 'status_aktif' => $request->status_aktif
 
@@ -63,13 +61,12 @@ class WisataHiburanController extends Controller
                 'slug'=>$request->slug,
                 'title'=>$request->title,
                 'desc_left'=>$request->desc_left,
-                'desc_right'=>$request->desc_right,
                 'status_aktif' => $request->status_aktif
 
             ]);
         }
         
-        return redirect()->route('wisata.index')->with('success', 'Berhasil Mengubah Konten Wisata Hiburan');;
+        return redirect()->route('wisata.index')->with('success', 'Berhasil Mengubah Konten Makanan ');;
     }
 
     public function delete($id){
@@ -79,7 +76,7 @@ class WisataHiburanController extends Controller
 
         // dd($data);
         $data->delete();
-        return redirect()->route('wisata.index')->with('success', 'Berhasil Menghapus Konten Wisata Hiburan');
+        return redirect()->route('wisata.index')->with('success', 'Berhasil Menghapus Konten Makanan ');
     }
 
 }
