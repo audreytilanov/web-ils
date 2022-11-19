@@ -2,7 +2,7 @@
   <div class="rt-container">
     <div class="col-rt-12">
       <div class="Scriptcontent">
-        <div class="carrousel bordered">
+        <div class="carrousel bordered" style="height: 70vh">
           <h2>Apa yang mereka katakan tentang Bali?</h2>			
           @foreach ($contents as $content)
           <input type="radio" name="slides" id="radio-{{ $loop->iteration }}" checked>

@@ -36,7 +36,7 @@ $a = 'layouts.template';
   </div>
 </section>
 <!-- section main content -->
-<section class="main-content" style="margin-top:50px;">
+<section class="main-content" style="padding-top:50px;padding-bottom:50px;background-color:rgb(34, 122, 34);">
 <div class="container">
   <div class="padding-30 rounded bordered"  data-aos="fade-right" data-aos-delay="300">
     <div class="row gy-4">
@@ -59,10 +59,10 @@ $a = 'layouts.template';
           </div>
           <div class="details">
             <ul class="meta list-inline mb-3">
-              <li class="list-inline-item">{{ $content->status; }}</li>
+              <li class="list-inline-item text-white">{{ $content->status; }}</li>
             </ul>
-            <h5 class="post-title"><a href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}">{{ strip_tags($content->title) }}</a></h5>
-            <p class="excerpt mb-0">{{ Str::limit($content->desc, 100) }}</p>
+            <h5 class="post-title"><a class="text-white" href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}">{{ strip_tags($content->title) }}</a></h5>
+            <p class="excerpt mb-0 text-white">{{ Str::limit($content->desc, 100) }}</p>
             <br>
             <a href="{{ route('makanan.detail', ['slug'=>$content->slug]) }}" class="btn btn-warning text-white hover-more" style="border-radius:50px;padding-left:10px!important;padding-right:10px!important;">&nbsp;&nbsp;&nbsp;Cek Paket&nbsp;&nbsp;&nbsp;</a>
 
