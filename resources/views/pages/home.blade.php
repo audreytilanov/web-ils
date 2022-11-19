@@ -18,7 +18,7 @@ $a = 'layouts.template';
   </div>
   <div class="overlay"></div>
 </section>
-<section class="page-header" style="background-color: orange">
+<section class="page-header" style="background-color: rgb(233, 214, 3)">
   <div class="container-xl">
       <div class="text-center">
           <h1 class="mt-0 mb-2 text-white">{{ ucfirst($judul) }}</h1>
