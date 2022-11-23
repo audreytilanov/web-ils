@@ -84,7 +84,7 @@ $a = 'layouts.template';
   </div>
 </div>
 </section>
-<section class="page-header" style="background-color: rgb(69, 69, 69);">
+<section class="page-header" style="background-color: rgb(223, 17, 17)">
   <div class="container-xl">
       <div class="text-center text-white">
           <h1 class="mt-0 mb-2 text-white">Bali Drive Tour Special Promo</h1>
